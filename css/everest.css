@@ -1,0 +1,997 @@
+/* Mount Everest & Indian Himalayan Mountaineering Stylesheet */
+:root {
+  --e-bg-black: #06090e;
+  --e-bg-dark: #0b1118;
+  --e-bg-card: #101b26;
+  --e-bg-surface: #172738;
+  --e-ice-white: #f8fafc;
+  --e-ice-frost: #e0f2fe;
+  --e-ice-blue: #38bdf8;
+  --e-accent-saffron: #f59e0b;
+  --e-accent-amber: #d97706;
+  --e-accent-crimson: #ef4444;
+  --e-border-subtle: rgba(255, 255, 255, 0.08);
+  --e-border-active: rgba(245, 158, 11, 0.4);
+  --e-text-primary: #f8fafc;
+  --e-text-secondary: #94a3b8;
+  --e-text-muted: #64748b;
+  --font-cinzel: 'Cinzel', serif;
+  --font-syne: 'Syne', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --e-radius-sm: 6px;
+  --e-radius-md: 12px;
+  --e-radius-lg: 20px;
+  --e-shadow-epic: 0 25px 50px -15px rgba(0, 0, 0, 0.8);
+}
+
+body.everest-theme {
+  background-color: var(--e-bg-black);
+  color: var(--e-text-primary);
+  font-family: var(--font-sans);
+  padding-top: 45px;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(245, 158, 11, 0.08), transparent 50%),
+    radial-gradient(ellipse at 90% 40%, rgba(56, 189, 248, 0.05), transparent 45%);
+  background-attachment: fixed;
+}
+
+/* Header & Nav */
+.everest-header {
+  position: sticky;
+  top: 45px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background: rgba(6, 9, 14, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--e-border-subtle);
+}
+
+.everest-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--e-text-primary);
+}
+
+.brand-peak-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--e-radius-sm);
+  background: #142230;
+  border: 1px solid var(--e-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--e-accent-saffron);
+}
+
+.brand-peak-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.brand-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-main-title {
+  font-family: var(--font-cinzel);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+}
+
+.brand-main-title span {
+  color: var(--e-accent-saffron);
+}
+
+.brand-sub-title {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--e-text-secondary);
+  text-transform: uppercase;
+}
+
+.everest-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.everest-nav a {
+  text-decoration: none;
+  color: var(--e-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.everest-nav a:hover {
+  color: var(--e-accent-saffron);
+}
+
+.everest-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.himalaya-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-sm);
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--e-text-secondary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.himalaya-audio-btn:hover {
+  border-color: var(--e-accent-saffron);
+  color: #ffffff;
+}
+
+.himalaya-audio-btn.active {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: var(--e-accent-saffron);
+  color: var(--e-accent-saffron);
+}
+
+.btn-primary-everest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #06090e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--e-radius-sm);
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-primary-everest:hover {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-everest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--e-text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--e-radius-sm);
+  text-decoration: none;
+  border: 1px solid var(--e-border-subtle);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary-everest:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Hero Section */
+.everest-hero {
+  position: relative;
+  min-height: calc(100vh - 45px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 56px 48px;
+  overflow: hidden;
+}
+
+.everest-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.everest-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.85) contrast(1.08);
+}
+
+.everest-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 9, 14, 0.35) 0%,
+    rgba(6, 9, 14, 0.15) 35%,
+    rgba(6, 9, 14, 0.85) 80%,
+    rgba(6, 9, 14, 1) 100%
+  );
+}
+
+.everest-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: flex-end;
+}
+
+.hero-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--e-accent-saffron);
+  margin-bottom: 16px;
+}
+
+.hero-tag-row .pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--e-accent-saffron);
+  box-shadow: 0 0 8px var(--e-accent-saffron);
+}
+
+.everest-hero-title {
+  font-family: var(--font-cinzel);
+  font-size: clamp(38px, 4.8vw, 68px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.everest-hero-title span {
+  color: var(--e-accent-saffron);
+}
+
+.everest-hero-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Summit Weather & Telemetry HUD Card */
+.summit-hud-card {
+  background: rgba(11, 17, 24, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-md);
+  padding: 28px;
+  box-shadow: var(--e-shadow-epic);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hud-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--e-border-subtle);
+  padding-bottom: 12px;
+}
+
+.hud-summit-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--e-text-secondary);
+}
+
+.hud-live-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--e-ice-blue);
+}
+
+.hud-live-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--e-ice-blue);
+}
+
+.summit-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.summit-metric-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-sm);
+  padding: 12px;
+}
+
+.summit-metric-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--e-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.summit-metric-val {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.summit-metric-val span {
+  font-size: 11px;
+  color: var(--e-accent-saffron);
+  font-weight: 500;
+}
+
+.summit-deathzone-note {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--e-radius-sm);
+  padding: 12px 16px;
+  font-size: 12px;
+  color: #fca5a5;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sections */
+.everest-section {
+  padding: 110px 48px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.everest-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 64px;
+}
+
+.everest-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--e-accent-saffron);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.everest-title {
+  font-family: var(--font-cinzel);
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.everest-subtitle {
+  font-size: 16px;
+  color: var(--e-text-secondary);
+  line-height: 1.7;
+}
+
+/* Heritage & Radhanath Sickdhar Section */
+.heritage-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+  background: var(--e-bg-dark);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-lg);
+  padding: 48px;
+}
+
+.heritage-story-text h3 {
+  font-family: var(--font-cinzel);
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.heritage-story-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--e-text-secondary);
+  margin-bottom: 18px;
+}
+
+.heritage-stat-card {
+  background: var(--e-bg-card);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-md);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heritage-stat-row {
+  border-bottom: 1px solid var(--e-border-subtle);
+  padding-bottom: 14px;
+}
+
+.heritage-stat-num {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--e-accent-saffron);
+}
+
+.heritage-stat-label {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.heritage-stat-desc {
+  font-size: 12px;
+  color: var(--e-text-muted);
+}
+
+/* Interactive Altitude Route Scrubber */
+.altitude-route-container {
+  background: var(--e-bg-dark);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-lg);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.route-scrubber-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.route-camp-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--e-bg-card);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-sm);
+  color: var(--e-text-secondary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.route-camp-button:hover {
+  background: var(--e-bg-surface);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.route-camp-button.active {
+  border-color: var(--e-accent-saffron);
+  background: rgba(245, 158, 11, 0.1);
+  color: #ffffff;
+}
+
+.camp-button-info strong {
+  display: block;
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.route-camp-button.active .camp-button-info strong {
+  color: var(--e-accent-saffron);
+}
+
+.camp-altitude-pill {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--e-ice-blue);
+  background: rgba(56, 189, 248, 0.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.route-telemetry-display {
+  background: var(--e-bg-card);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-md);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.telemetry-stage-name {
+  font-family: var(--font-cinzel);
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.telemetry-stage-alt {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--e-accent-saffron);
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.telemetry-stage-narrative {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--e-text-secondary);
+  margin-bottom: 24px;
+}
+
+.stage-vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  border-top: 1px solid var(--e-border-subtle);
+  padding-top: 20px;
+}
+
+.stage-vital-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stage-vital-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--e-text-muted);
+}
+
+.stage-vital-value {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Legendary Climbers Section */
+.climber-showcase-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+  background: var(--e-bg-dark);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-lg);
+  padding: 48px;
+}
+
+.climber-portrait-frame {
+  border-radius: var(--e-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--e-border-subtle);
+  box-shadow: var(--e-shadow-epic);
+}
+
+.climber-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.climber-tabs-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.climber-tab-pill {
+  padding: 8px 16px;
+  background: var(--e-bg-card);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-sm);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--e-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.climber-tab-pill.active {
+  background: var(--e-accent-saffron);
+  color: #06090e;
+  border-color: var(--e-accent-saffron);
+}
+
+.climber-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.climber-hero-name {
+  font-family: var(--font-cinzel);
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.climber-year-badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--e-accent-saffron);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.climber-bio-p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--e-text-secondary);
+}
+
+.climber-quote-box {
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 3px solid var(--e-accent-saffron);
+  padding: 16px 20px;
+  font-style: italic;
+  color: #fef3c7;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 0 var(--e-radius-sm) var(--e-radius-sm) 0;
+}
+
+/* Full Width Alpine Ridge Section */
+.alpine-feature-banner {
+  position: relative;
+  min-height: 520px;
+  border-radius: var(--e-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--e-border-subtle);
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+  padding: 64px;
+}
+
+.alpine-feature-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.alpine-feature-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.alpine-feature-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(6, 9, 14, 0.92) 0%, rgba(6, 9, 14, 0.75) 50%, rgba(6, 9, 14, 0.3) 100%);
+}
+
+.alpine-feature-content {
+  position: relative;
+  z-index: 5;
+  max-width: 600px;
+}
+
+/* Expedition Gear Grid */
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gear-card {
+  background: var(--e-bg-dark);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-md);
+  padding: 24px;
+  transition: transform 0.2s ease;
+}
+
+.gear-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.gear-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.gear-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.gear-desc {
+  font-size: 13px;
+  color: var(--e-text-secondary);
+  line-height: 1.5;
+}
+
+/* Base Camp Night Split */
+.basecamp-night-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  margin: 80px 0;
+}
+
+.basecamp-night-image {
+  border-radius: var(--e-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--e-border-subtle);
+}
+
+.basecamp-night-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Everest Modal Drawer */
+.everest-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 6, 10, 0.85);
+  backdrop-filter: blur(14px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.everest-modal-overlay.open {
+  display: flex;
+}
+
+.everest-modal-card {
+  background: var(--e-bg-dark);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-md);
+  max-width: 520px;
+  width: 100%;
+  padding: 36px;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+}
+
+.everest-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: var(--e-text-muted);
+  cursor: pointer;
+}
+
+.everest-modal-close:hover {
+  color: #ffffff;
+}
+
+.everest-form-group {
+  margin-bottom: 18px;
+}
+
+.everest-form-group label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--e-text-secondary);
+  margin-bottom: 6px;
+}
+
+.everest-form-group input, .everest-form-group select, .everest-form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--e-bg-card);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: var(--e-radius-sm);
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.everest-form-group input:focus, .everest-form-group select:focus, .everest-form-group textarea:focus {
+  border-color: var(--e-accent-saffron);
+}
+
+/* Everest Footer */
+.everest-footer {
+  border-top: 1px solid var(--e-border-subtle);
+  background: #040609;
+  padding: 72px 48px 36px;
+}
+
+.everest-footer-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.everest-footer-brand p {
+  font-size: 13px;
+  color: var(--e-text-muted);
+  max-width: 340px;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.everest-footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--e-accent-saffron);
+  margin-bottom: 16px;
+}
+
+.everest-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.everest-footer-links a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--e-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.everest-footer-links a:hover {
+  color: #ffffff;
+}
+
+.everest-footer-bottom {
+  max-width: 1320px;
+  margin: 0 auto;
+  border-top: 1px solid var(--e-border-subtle);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--e-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .everest-hero-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .heritage-split, .altitude-route-container, .climber-showcase-container, .basecamp-night-section {
+    grid-template-columns: 1fr;
+  }
+  .gear-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .everest-footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .everest-header {
+    padding: 12px 20px;
+  }
+  .everest-nav {
+    display: none;
+  }
+  .everest-hero {
+    padding: 24px 20px 48px;
+  }
+  .everest-section {
+    padding: 60px 20px;
+  }
+  .gear-grid {
+    grid-template-columns: 1fr;
+  }
+  .everest-footer-inner {
+    grid-template-columns: 1fr;
+  }
+}

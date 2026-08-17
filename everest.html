@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Himalayan Apex — A cinematic tribute to India's eternal connection with Mount Everest, celebrating legendary Indian mountaineers, high-altitude expeditions, and the 1852 mathematical discovery of the world's highest peak.">
+  <title>HIMALAYAN APEX // India's Legacy on Mount Everest & High-Altitude Summits</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/everest.css">
+</head>
+<body class="everest-theme">
+
+  <!-- Global Project Switcher Bar -->
+  <header class="project-switcher-bar">
+    <div class="switcher-brand-tag everest-active">
+      <span class="indicator-dot"></span>
+      <span>Experience Mode: <strong>Himalayan Everest</strong></span>
+    </div>
+    <div class="switcher-nav-pills">
+      <a href="everest.html" class="switcher-pill active everest">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
+        Himalayan Everest (8,848m)
+      </a>
+      <a href="nomad.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Nomad Foils
+      </a>
+      <a href="kyoto.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        Kyoto Ceramic Studio
+      </a>
+      <a href="index.html" class="switcher-pill">
+        Portal Overview
+      </a>
+    </div>
+    <div class="switcher-status">
+      <span>Summit 8,848.86m</span>
+      <span>•</span>
+      <span>Himalayan Heritage</span>
+    </div>
+  </header>
+
+  <!-- Everest Navigation Header -->
+  <nav class="everest-header">
+    <a href="everest.html" class="everest-brand">
+      <div class="brand-peak-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M8 3l4 8 5-5 5 15H2L8 3z"/>
+        </svg>
+      </div>
+      <div class="brand-title-group">
+        <span class="brand-main-title">HIMALAYAN <span>APEX</span></span>
+        <span class="brand-sub-title">8,848.86M · INDIAN EXPEDITION TRIBUTE</span>
+      </div>
+    </a>
+
+    <div class="everest-nav">
+      <a href="#discovery">1852 Discovery</a>
+      <a href="#route">Altitude Scrubber</a>
+      <a href="#climbers">Legendary Climbers</a>
+      <a href="#gear">Survival Gear</a>
+      <a href="#basecamp">Base Camp Night</a>
+    </div>
+
+    <div class="everest-actions">
+      <button class="himalaya-audio-btn" id="himalayaAudioToggle" aria-label="Toggle Himalayan wind and prayer bell ambiance">
+        <span>🔇</span> Mountain Soundscape
+      </button>
+      <button class="btn-primary-everest js-open-everest-modal">
+        Expedition Inquiry
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="everest-hero">
+    <div class="everest-hero-bg">
+      <img src="assets/images/everest_hero_summit.jpg" alt="Breathtaking sunrise over Mount Everest pyramid summit with prayer flags fluttering in foreground">
+    </div>
+    <div class="everest-hero-overlay"></div>
+
+    <div class="everest-hero-content">
+      <div>
+        <div class="hero-tag-row">
+          <span class="pulse-dot"></span>
+          <span>THE GODDESS MOTHER OF THE WORLD · CHOMOLUNGMA / SAGARMATHA</span>
+        </div>
+        <h1 class="everest-hero-title">
+          THE HIGHEST REALM<br>OF <span>HUMAN WILL</span>.
+        </h1>
+        <p class="everest-hero-desc">
+          From the brilliant calculations of Radhanath Sickdhar in 1852 to legendary Indian climbers who braved the Death Zone, India’s mountaineering spirit stands forever etched upon the icy ramparts of Mount Everest.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#route" class="btn-primary-everest">
+            Ascend the Route (8,848m)
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#climbers" class="btn-secondary-everest">
+            Explore Indian Legends
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Summit Telemetry HUD Widget -->
+      <div class="summit-hud-card">
+        <div class="hud-card-top">
+          <span class="hud-summit-label">EVEREST SUMMIT APEX TELEMETRY</span>
+          <span class="hud-live-tag">LIVE METRICS</span>
+        </div>
+
+        <div class="summit-metrics-grid">
+          <div class="summit-metric-item">
+            <div class="summit-metric-label">ELEVATION</div>
+            <div class="summit-metric-val">8,848.9 <span>M</span></div>
+          </div>
+          <div class="summit-metric-item">
+            <div class="summit-metric-label">TEMP</div>
+            <div class="summit-metric-val">-34 <span>°C</span></div>
+          </div>
+          <div class="summit-metric-item">
+            <div class="summit-metric-label">EFFECTIVE O₂</div>
+            <div class="summit-metric-val">33 <span>%</span></div>
+          </div>
+        </div>
+
+        <div class="summit-deathzone-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span><strong>Death Zone Warning:</strong> Above 8,000m, atmospheric pressure is one-third of sea level. Supplementary oxygen is critical for cellular survival.</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1852 Discovery & Indian Heritage Section -->
+  <section class="everest-section" id="discovery">
+    <div class="everest-section-header">
+      <span class="everest-eyebrow">MATHEMATICAL TRIUMPH & HERITAGE</span>
+      <h2 class="everest-title">WHEN INDIA CALCULATED THE ROOF OF THE WORLD</h2>
+      <p class="everest-subtitle">
+        Long before human boots ever stood atop its summit, Mount Everest’s identity as Earth’s highest point was unlocked through the mathematical genius of an Indian prodigy in Dehradun.
+      </p>
+    </div>
+
+    <div class="heritage-split">
+      <div class="heritage-story-text">
+        <h3>Radhanath Sickdhar & Peak XV (1852)</h3>
+        <p>
+          In 1852, working from the headquarters of the Great Trigonometrical Survey in Dehradun and Calcutta, Indian mathematician and Chief Computer <strong>Radhanath Sickdhar</strong> computed the raw trigonometric data collected by theodolites.
+        </p>
+        <p>
+          Correcting for atmospheric refraction and spherical geometry across 240 kilometers of distance, Sickdhar burst into the Surveyor General’s office announcing: <em>"Sir, I have discovered the highest mountain in the world!"</em> Peak XV was measured at exactly 29,000 feet.
+        </p>
+        <p>
+          Following the 1953 historic first ascent, Prime Minister Jawaharlal Nehru established the <strong>Himalayan Mountaineering Institute (HMI)</strong> in Darjeeling with Tenzing Norgay as Director of Field Training, birthing India's modern alpine legacy.
+        </p>
+      </div>
+
+      <div class="heritage-stat-card">
+        <div class="heritage-stat-row">
+          <div class="heritage-stat-num">1852</div>
+          <div class="heritage-stat-label">Peak XV Measured</div>
+          <div class="heritage-stat-desc">Calculated by Radhanath Sickdhar using spherical trigonometry.</div>
+        </div>
+
+        <div class="heritage-stat-row">
+          <div class="heritage-stat-num">1954</div>
+          <div class="heritage-stat-label">HMI Darjeeling Founded</div>
+          <div class="heritage-stat-desc">Pioneering institution that has trained over 50,000 Indian mountaineers.</div>
+        </div>
+
+        <div>
+          <div class="heritage-stat-num">1965</div>
+          <div class="heritage-stat-label">Historic 9-Climber Summit</div>
+          <div class="heritage-stat-desc">Capt. M.S. Kohli led India's first successful Everest expedition placing 9 on top.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Altitude Route Scrubber -->
+  <section class="everest-section" id="route">
+    <div class="everest-section-header">
+      <span class="everest-eyebrow">SOUTH COL EXPEDITION TRAVERSE</span>
+      <h2 class="everest-title">FROM BASE CAMP TO THE STRATOSPHERE</h2>
+      <p class="everest-subtitle">
+        Select each high-altitude camp along the Southeast Ridge to inspect route terrain, physiological oxygen levels, and extreme alpine risks.
+      </p>
+    </div>
+
+    <div class="altitude-route-container">
+      <!-- Camp Selector Buttons -->
+      <div class="route-scrubber-controls">
+        <button class="route-camp-button active" data-stage="bc">
+          <div class="camp-button-info">
+            <strong>01. Everest Base Camp (EBC)</strong>
+            <span>Glacial Moraine & Khumbu Gateway</span>
+          </div>
+          <span class="camp-altitude-pill">5,364 M</span>
+        </button>
+
+        <button class="route-camp-button" data-stage="c1">
+          <div class="camp-button-info">
+            <strong>02. Khumbu Icefall & Camp I</strong>
+            <span>Bottomless Crevasses & Ladder Traverses</span>
+          </div>
+          <span class="camp-altitude-pill">6,065 M</span>
+        </button>
+
+        <button class="route-camp-button" data-stage="c2">
+          <div class="camp-button-info">
+            <strong>03. Western Cwm (Camp II)</strong>
+            <span>The Valley of Silence Amphitheater</span>
+          </div>
+          <span class="camp-altitude-pill">6,400 M</span>
+        </button>
+
+        <button class="route-camp-button" data-stage="c3">
+          <div class="camp-button-info">
+            <strong>04. The Lhotse Face (Camp III)</strong>
+            <span>4,000-Foot Vertical Wall of Blue Glacial Ice</span>
+          </div>
+          <span class="camp-altitude-pill">7,162 M</span>
+        </button>
+
+        <button class="route-camp-button" data-stage="c4">
+          <div class="camp-button-info">
+            <strong>05. South Col & Death Zone (Camp IV)</strong>
+            <span>Gateway to the Final Summit Push</span>
+          </div>
+          <span class="camp-altitude-pill">7,906 M</span>
+        </button>
+
+        <button class="route-camp-button" data-stage="summit">
+          <div class="camp-button-info">
+            <strong>06. The Summit Apex</strong>
+            <span>Hillary Step, Southeast Ridge & Top of Earth</span>
+          </div>
+          <span class="camp-altitude-pill" style="color: var(--e-accent-saffron); background: rgba(245, 158, 11, 0.15);">8,848.86 M</span>
+        </button>
+      </div>
+
+      <!-- Live Updating Route Telemetry -->
+      <div class="route-telemetry-display">
+        <div>
+          <h3 class="telemetry-stage-name" id="routeStageName">Everest Base Camp (EBC)</h3>
+          <div class="telemetry-stage-alt" id="routeStageAlt">5,364 M / 17,598 FT</div>
+          <p class="telemetry-stage-narrative" id="routeStageDesc">
+            Situated on the shifting Khumbu Glacier. Here, expedition teams establish tent cities, acclimatize for weeks, and conduct the sacred Buddhist Puja ceremony seeking blessing and safe passage from Chomolungma.
+          </p>
+        </div>
+
+        <div class="stage-vitals-grid">
+          <div class="stage-vital-item">
+            <span class="stage-vital-label">TEMPERATURE</span>
+            <span class="stage-vital-value" id="routeStageTemp">-12°C</span>
+          </div>
+          <div class="stage-vital-item">
+            <span class="stage-vital-label">OXYGEN DENSITY</span>
+            <span class="stage-vital-value" id="routeStageOxygen" style="color: var(--e-ice-blue);">52% O₂</span>
+          </div>
+          <div class="stage-vital-item">
+            <span class="stage-vital-label">PRESSURE</span>
+            <span class="stage-vital-value" id="routeStagePressure">530 hPa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legendary Indian Climbers Gallery -->
+  <section class="everest-section" id="climbers">
+    <div class="everest-section-header">
+      <span class="everest-eyebrow">HALL OF SUMMIT HEROES</span>
+      <h2 class="everest-title">PIONEERS WHO DARED THE STRATOSPHERE</h2>
+      <p class="everest-subtitle">
+        Explore the extraordinary human stories of Indian mountaineers whose grit, compassion, and courage redefined world mountaineering history.
+      </p>
+    </div>
+
+    <!-- Climber Selection Tabs -->
+    <div class="climber-tabs-list" style="justify-content: center;">
+      <button class="climber-tab-pill active" data-climber="kohli">Capt. M.S. Kohli (1965)</button>
+      <button class="climber-tab-pill" data-climber="bachendri">Bachendri Pal (1984)</button>
+      <button class="climber-tab-pill" data-climber="santosh">Santosh Yadav (1992/93)</button>
+      <button class="climber-tab-pill" data-climber="arunima">Arunima Sinha (2013)</button>
+      <button class="climber-tab-pill" data-climber="poorna">Malavath Poorna (2014)</button>
+      <button class="climber-tab-pill" data-climber="anshu">Anshu Jamsenpa (2017)</button>
+    </div>
+
+    <div class="climber-showcase-container">
+      <div class="climber-portrait-frame">
+        <img src="assets/images/everest_climber_portrait.jpg" alt="Heroic Indian mountaineer in extreme Himalayan down suit with Indian flag patch">
+      </div>
+
+      <div class="climber-profile-card">
+        <div>
+          <div class="climber-year-badge" id="climberYearBadge">1965 INDIAN EXPEDITION LEADER</div>
+          <h3 class="climber-hero-name" id="climberHeroName">Captain M.S. Kohli</h3>
+        </div>
+
+        <p class="climber-bio-p" id="climberBioP">
+          Leader of the monumental 1965 Indian Mount Everest Expedition which placed an unprecedented 9 climbers on the summit of Everest — a world record that stood unbroken for 17 years. This expedition ignited modern mountaineering across India.
+        </p>
+
+        <div class="climber-quote-box" id="climberQuoteBox">
+          "The mountain does not yield to strength alone; it yields to humility, unyielding discipline, and brotherhood."
+        </div>
+
+        <div style="margin-top: 12px;">
+          <button class="btn-secondary-everest js-open-everest-modal" style="width: fit-content;">
+            Support Youth Mountaineering Scholarships →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Width Alpine Ridge Feature Banner -->
+  <div class="everest-section" style="padding-top: 0; padding-bottom: 0;">
+    <div class="alpine-feature-banner">
+      <div class="alpine-feature-bg">
+        <img src="assets/images/everest_himalayan_ridge.jpg" alt="Mountaineer on sharp knife edge ridge near the Hillary step on Everest">
+      </div>
+      <div class="alpine-feature-gradient"></div>
+
+      <div class="alpine-feature-content">
+        <span class="everest-eyebrow">THE KNIFE EDGE</span>
+        <h2 class="everest-title" style="font-size: clamp(32px, 3.8vw, 52px);">ONE FOOT IN TIBET.<br>ONE FOOT IN NEPAL.</h2>
+        <p class="everest-subtitle" style="color: #e2e8f0;">
+          Traversing the razor-sharp South Summit ridge at 8,750 meters. With a 10,000-foot sheer drop down the Kangshung Face to the right and 8,000 feet down the Southwest Face to the left, every step demands total mastery over fear.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extreme Alpine Gear & Survival Anatomy -->
+  <section class="everest-section" id="gear">
+    <div class="everest-section-header">
+      <span class="everest-eyebrow">ENGINEERED FOR -50°C</span>
+      <h2 class="everest-title">HIGH-ALTITUDE SURVIVAL ANATOMY</h2>
+      <p class="everest-subtitle">
+        Every gram of gear carried into the Death Zone has been forged to withstand hurricane-force winds, absolute sub-zero freezes, and complete hypoxia.
+      </p>
+    </div>
+
+    <div class="gear-grid">
+      <div class="gear-card">
+        <div class="gear-icon">🧥</div>
+        <h3 class="gear-name">8000M Monolithic Down Suit</h3>
+        <p class="gear-desc">Gore-Tex Pro waterproof breathable shell packed with 900-fill pure hydrophobic goose down to insulate against -50°C temperatures.</p>
+      </div>
+
+      <div class="gear-card">
+        <div class="gear-icon">💨</div>
+        <h3 class="gear-name">Phaikon Oxygen Regulator</h3>
+        <p class="gear-desc">Carbon-wrapped titanium cylinders delivering 2 to 4 liters of pressurized supplemental O₂ per minute with anti-freeze demand valves.</p>
+      </div>
+
+      <div class="gear-card">
+        <div class="gear-icon">⛏️</div>
+        <h3 class="gear-name">Forged Chro-Moly Crampons</h3>
+        <p class="gear-desc">12-point aggressive front-point crampons engineered to bite into bullet-hard blue glacial ice on the Lhotse Face.</p>
+      </div>
+
+      <div class="gear-card">
+        <div class="gear-icon">📡</div>
+        <h3 class="gear-name">Iridium Satellite Beacon</h3>
+        <p class="gear-desc">Direct satellite transceiver delivering hourly telemetry, barometric storm warnings, and SOS emergency coordinates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Base Camp at Night Section -->
+  <section class="everest-section" id="basecamp">
+    <div class="basecamp-night-section">
+      <div class="basecamp-night-image">
+        <img src="assets/images/everest_base_camp_night.jpg" alt="Everest Base Camp tents glowing under the starry Milky Way Himalayan night sky">
+      </div>
+
+      <div>
+        <span class="everest-eyebrow">SANCTUARY BENEATH THE STARS</span>
+        <h2 class="everest-title">NIGHT ON THE KHUMBU GLACIER</h2>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--e-text-secondary); margin-bottom: 20px;">
+          At 5,364 meters, the air is so crisp and pure that the Milky Way appears close enough to touch. Inside the glowing geodesic tents, climbers review weather charts, drink warm ginger tea, and listen to the ancient grinding pulse of the glacier beneath them.
+        </p>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--e-text-secondary); margin-bottom: 28px;">
+          Before any expedition departs through the dangerous Khumbu Icefall, the Sherpa Lamas perform the <em>Puja</em>, stringing hundreds of colorful prayer flags into the sky to ask the mountain deity for safe passage and return.
+        </p>
+
+        <button class="btn-primary-everest js-open-everest-modal">
+          Apply for Himalayan Expedition
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memorial & Expedition Foundation Modal Drawer -->
+  <div class="everest-modal-overlay" id="everestModal">
+    <div class="everest-modal-card">
+      <button class="everest-modal-close" id="closeEverestModal" aria-label="Close modal">✕</button>
+      
+      <span class="everest-eyebrow">HIMALAYAN EXPEDITION & FOUNDATION</span>
+      <h3 style="font-family: var(--font-cinzel); font-size: 24px; color: #fff; margin: 8px 0 20px;">Join the Himalayan Legacy</h3>
+      
+      <form id="everestInquiryForm">
+        <div class="everest-form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="e.g. Major H.P.S. Ahluwalia" required>
+        </div>
+        <div class="everest-form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="climber@himalaya.org" required>
+        </div>
+        <div class="everest-form-group">
+          <label>Expedition / Inquiry Interest</label>
+          <select required>
+            <option value="ebc">Everest Base Camp Trek (Nepal / 5,364m)</option>
+            <option value="hmi">HMI Basic / Advanced Mountaineering Course (Darjeeling)</option>
+            <option value="summit">6,000m - 7,000m Peak Training (Stock Kangri / Mera Peak)</option>
+            <option value="scholarship">Sponsor Underprivileged Youth Mountaineer Scholarship</option>
+            <option value="memorial">Everest Environmental Clean-Up Foundation</option>
+          </select>
+        </div>
+        <div class="everest-form-group">
+          <label>Mountaineering Experience / Message</label>
+          <textarea rows="3" placeholder="Tell us about your high-altitude treks or fitness background..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary-everest" style="width: 100%; margin-top: 10px;">
+          Submit Expedition Application
+        </button>
+      </form>
+
+      <div id="everestConfirmMsg" style="display: none; text-align: center; padding: 24px 0;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(245, 158, 11, 0.15); color: #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">🏔️</div>
+        <h4 style="font-family: var(--font-cinzel); font-size: 22px; color: #fff; margin-bottom: 8px;">Inquiry Received</h4>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.7;">
+          The Himalayan Expedition council will review your submission and contact you with acclimatization schedules and training prerequisites within 48 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Everest Footer -->
+  <footer class="everest-footer">
+    <div class="everest-footer-inner">
+      <div class="everest-footer-brand">
+        <div class="everest-brand">
+          <div class="brand-peak-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M8 3l4 8 5-5 5 15H2L8 3z"/>
+            </svg>
+          </div>
+          <div class="brand-title-group">
+            <span class="brand-main-title">HIMALAYAN <span>APEX</span></span>
+            <span class="brand-sub-title">8,848.86M · INDIAN EXPEDITIONS</span>
+          </div>
+        </div>
+        <p>
+          Dedicated to the enduring legacy of Indian mountaineers, Sherpa guides, and high-altitude explorers who have touched the roof of planet Earth.
+        </p>
+      </div>
+
+      <div>
+        <div class="everest-footer-col-title">EXPEDITION ROUTE</div>
+        <ul class="everest-footer-links">
+          <li><a href="#route">Khumbu Icefall</a></li>
+          <li><a href="#route">Western Cwm</a></li>
+          <li><a href="#route">Lhotse Face</a></li>
+          <li><a href="#route">The Death Zone (8,000m)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="everest-footer-col-title">INDIAN HEROES</div>
+        <ul class="everest-footer-links">
+          <li><a href="#climbers">Capt. M.S. Kohli (1965)</a></li>
+          <li><a href="#climbers">Bachendri Pal (1984)</a></li>
+          <li><a href="#climbers">Santosh Yadav (1992/93)</a></li>
+          <li><a href="#climbers">Arunima Sinha (2013)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="everest-footer-col-title">INSTITUTIONS</div>
+        <ul class="everest-footer-links">
+          <li><a href="#discovery">HMI Darjeeling</a></li>
+          <li><a href="#discovery">NIM Uttarkashi</a></li>
+          <li><a href="#discovery">Indian Mountaineering Foundation</a></li>
+          <li><a href="nomad.html" style="color: var(--e-accent-saffron);">Explore Nomad Foils →</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="everest-footer-bottom">
+      <div>© 2026 Himalayan Apex Tribute. Dedicated to the eternal spirit of Indian Mountaineering.</div>
+      <div>
+        <a href="index.html" style="color: #94a3b8; text-decoration: none; margin-left: 16px;">Back to Showcase Gateway →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/everest.js"></script>
+</body>
+</html>

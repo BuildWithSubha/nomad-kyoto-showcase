@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dual Landing Page Suite featuring Nomad Foils (Electric Carbon-Fiber Hydrofoil Boards) and Kisen Ceramics Kyoto (Handcrafted Wood-Fired Matcha Bowls & Teaware).">
-  <title>DUAL BRAND SHOWCASE // Nomad Foils & Kisen Ceramics Kyoto</title>
+  <meta name="description" content="Master Portal Showcase: Nomad Foils (Electric Hydrofoils), Kisen Ceramics Kyoto (Wood-Fired Teaware), and Himalayan Apex (India's Mount Everest Mountaineering Legacy).">
+  <title>TRIPLE BRAND SHOWCASE // Nomad Foils · Kyoto Ceramics · Himalayan Everest</title>
   
   <link rel="stylesheet" href="css/common.css">
   <style>
     :root {
       --portal-dark: #070a0f;
-      --portal-light: #f7f4ee;
     }
 
     body.portal-body {
-      background: #090d14;
+      background: #080c14;
       color: #f8fafc;
       font-family: 'Plus Jakarta Sans', sans-serif;
       padding-top: 45px;
@@ -25,15 +24,15 @@
 
     .portal-hero {
       text-align: center;
-      padding: 64px 24px 32px;
-      max-width: 900px;
+      padding: 60px 24px 28px;
+      max-width: 960px;
       margin: 0 auto;
     }
 
     .portal-eyebrow {
       font-family: 'Space Grotesk', monospace;
       font-size: 11px;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       color: #00e5ff;
       text-transform: uppercase;
       margin-bottom: 12px;
@@ -41,7 +40,7 @@
     }
 
     .portal-main-title {
-      font-size: clamp(32px, 4vw, 56px);
+      font-size: clamp(32px, 4.2vw, 54px);
       font-weight: 700;
       letter-spacing: -0.03em;
       line-height: 1.1;
@@ -53,18 +52,18 @@
       font-size: 16px;
       color: #94a3b8;
       line-height: 1.6;
-      max-width: 680px;
-      margin: 0 auto 40px;
+      max-width: 720px;
+      margin: 0 auto 36px;
     }
 
-    /* Dual Showcase Split Cards */
+    /* Triple Showcase Grid */
     .portal-grid-showcase {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      max-width: 1320px;
-      margin: 0 auto 64px;
-      padding: 0 32px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1360px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
       width: 100%;
       flex-grow: 1;
     }
@@ -76,19 +75,19 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 40px;
+      padding: 32px 28px;
       min-height: 520px;
       text-decoration: none;
       color: inherit;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.09);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
     }
 
     .portal-card:hover {
       transform: translateY(-6px);
       border-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.95);
     }
 
     .portal-card-bg {
@@ -108,7 +107,7 @@
     }
 
     .portal-card:hover .portal-card-bg img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
     .portal-card-gradient {
@@ -121,11 +120,15 @@
     }
 
     .portal-card.nomad-portal .portal-card-gradient {
-      background: linear-gradient(180deg, rgba(6, 10, 15, 0.2) 0%, rgba(6, 10, 15, 0.85) 60%, rgba(6, 10, 15, 0.98) 100%);
+      background: linear-gradient(180deg, rgba(6, 10, 15, 0.15) 0%, rgba(6, 10, 15, 0.8) 55%, rgba(6, 10, 15, 0.98) 100%);
     }
 
     .portal-card.kyoto-portal .portal-card-gradient {
-      background: linear-gradient(180deg, rgba(27, 23, 22, 0.2) 0%, rgba(27, 23, 22, 0.85) 60%, rgba(27, 23, 22, 0.98) 100%);
+      background: linear-gradient(180deg, rgba(27, 23, 22, 0.15) 0%, rgba(27, 23, 22, 0.8) 55%, rgba(27, 23, 22, 0.98) 100%);
+    }
+
+    .portal-card.everest-portal .portal-card-gradient {
+      background: linear-gradient(180deg, rgba(6, 9, 14, 0.15) 0%, rgba(6, 9, 14, 0.8) 55%, rgba(6, 9, 14, 0.98) 100%);
     }
 
     .portal-card-content {
@@ -133,18 +136,18 @@
       z-index: 5;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .portal-tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      padding: 6px 12px;
+      padding: 5px 12px;
       border-radius: 9999px;
       width: fit-content;
     }
@@ -163,36 +166,48 @@
       font-family: 'Noto Serif JP', serif;
     }
 
+    .everest-portal .portal-tag {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      font-family: 'Space Grotesk', monospace;
+    }
+
     .portal-brand-title {
-      font-size: clamp(26px, 2.5vw, 36px);
+      font-size: 24px;
       font-weight: 700;
       color: #ffffff;
-      line-height: 1.1;
+      line-height: 1.15;
     }
 
     .kyoto-portal .portal-brand-title {
       font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
       font-weight: 400;
-      font-size: clamp(30px, 3vw, 42px);
+    }
+
+    .everest-portal .portal-brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 24px;
+      font-weight: 700;
     }
 
     .portal-brand-desc {
-      font-size: 14px;
+      font-size: 13px;
       color: #cbd5e1;
       line-height: 1.6;
-      max-width: 480px;
     }
 
     .portal-feature-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 4px;
+      gap: 6px;
+      margin-top: 2px;
     }
 
     .feature-pill {
-      font-size: 11px;
-      padding: 4px 10px;
+      font-size: 10px;
+      padding: 3px 8px;
       background: rgba(255, 255, 255, 0.08);
       border-radius: 4px;
       color: #e2e8f0;
@@ -201,14 +216,14 @@
     .portal-cta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-top: 8px;
+      margin-top: 6px;
       width: fit-content;
       transition: all 0.2s ease;
     }
@@ -220,7 +235,7 @@
 
     .nomad-portal .portal-cta-btn:hover {
       background: #ffffff;
-      box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.6);
     }
 
     .kyoto-portal .portal-cta-btn {
@@ -230,19 +245,29 @@
 
     .kyoto-portal .portal-cta-btn:hover {
       background: #f7d6c8;
-      box-shadow: 0 0 20px rgba(212, 163, 115, 0.4);
+      box-shadow: 0 0 16px rgba(212, 163, 115, 0.5);
     }
 
-    /* Comparison Table Section */
+    .everest-portal .portal-cta-btn {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #06090e;
+    }
+
+    .everest-portal .portal-cta-btn:hover {
+      background: #fbbf24;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
+    }
+
+    /* Comparison Table */
     .portal-meta-section {
-      max-width: 1320px;
+      max-width: 1360px;
       margin: 0 auto 60px;
-      padding: 0 32px;
+      padding: 0 24px;
       width: 100%;
     }
 
     .meta-box {
-      background: #0d141e;
+      background: #0c121b;
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 32px;
@@ -263,7 +288,7 @@
     }
 
     .meta-table th, .meta-table td {
-      padding: 12px 16px;
+      padding: 12px 14px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       text-align: left;
     }
@@ -281,15 +306,11 @@
       color: #cbd5e1;
     }
 
-    .meta-table td:nth-child(2) {
-      color: #00e5ff;
-    }
+    .meta-table td:nth-child(2) { color: #00e5ff; }
+    .meta-table td:nth-child(3) { color: #d4a373; }
+    .meta-table td:nth-child(4) { color: #f59e0b; }
 
-    .meta-table td:nth-child(3) {
-      color: #d4a373;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
       .portal-grid-showcase {
         grid-template-columns: 1fr;
       }
@@ -310,31 +331,35 @@
     <div class="switcher-nav-pills">
       <a href="nomad.html" class="switcher-pill">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        Nomad Foils (Ocean E-Foil)
+        Nomad Foils
       </a>
       <a href="kyoto.html" class="switcher-pill">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-        Kyoto Ceramic Studio
+        Kyoto Ceramics
+      </a>
+      <a href="everest.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
+        Himalayan Everest
       </a>
       <a href="index.html" class="switcher-pill active">
         Portal Overview
       </a>
     </div>
     <div class="switcher-status">
-      <span>2 Production Landing Pages Built</span>
+      <span>3 Production Landing Pages</span>
     </div>
   </header>
 
   <!-- Portal Hero -->
   <header class="portal-hero">
     <span class="portal-eyebrow">AESTHETIC & INTERACTIVE SHOWCASE</span>
-    <h1 class="portal-main-title">Craftsmanship Across Two Worlds</h1>
+    <h1 class="portal-main-title">Craftsmanship Across Three Horizons</h1>
     <p class="portal-main-desc">
-      Explore two distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & vessel inspection tools, custom typography, and zero placeholders.
+      Explore three distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & route simulation tools, custom typography, and zero placeholders.
     </p>
   </header>
 
-  <!-- Portal Dual Cards -->
+  <!-- Portal Triple Cards -->
   <main class="portal-grid-showcase">
     
     <!-- Nomad Foils Card -->
@@ -346,20 +371,19 @@
       <div class="portal-card-content">
         <div class="portal-tag">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          HIGH-TECH OCEAN EXPLORATION
+          OCEAN HYDROFOILS
         </div>
-        <h2 class="portal-brand-title">Nomad Foils // Electric Carbon Hydrofoils</h2>
+        <h2 class="portal-brand-title">Nomad Foils // Electric Carbon E-Foils</h2>
         <p class="portal-brand-desc">
-          Electric carbon-fiber hydrofoil boards engineered for silent open-ocean riding, downwind carving, and effortless aquatic flight.
+          Electric carbon-fiber hydrofoil boards engineered for silent open-ocean riding, downwind swell carving, and weightless aquatic flight.
         </p>
         <div class="portal-feature-badges">
-          <span class="feature-pill">Live Flight HUD Simulator</span>
-          <span class="feature-pill">Interactive Hotspot Anatomy</span>
-          <span class="feature-pill">Ocean Range & Swell Calculator</span>
-          <span class="feature-pill">Customizer Matrix</span>
+          <span class="feature-pill">Live Flight HUD</span>
+          <span class="feature-pill">Hotspot Anatomy</span>
+          <span class="feature-pill">Range Simulator</span>
         </div>
         <div class="portal-cta-btn">
-          Enter Nomad Foils Experience →
+          Explore Nomad Foils →
         </div>
       </div>
     </a>
@@ -372,20 +396,44 @@
       <div class="portal-card-gradient"></div>
       <div class="portal-card-content">
         <div class="portal-tag">
-          木泉窯 · KYOTO WABI-SABI ATELIER
+          木泉窯 · KYOTO WABI-SABI
         </div>
         <h2 class="portal-brand-title">Kisen Ceramics Kyoto // Handcrafted Teaware</h2>
         <p class="portal-brand-desc">
           Small-batch, wood-fired matcha bowls (chawan) and handcrafted teaware sculpted from native Kyoto clay and fired in a 7-day Anagama kiln.
         </p>
         <div class="portal-feature-badges">
-          <span class="feature-pill">Interactive Glaze & Vessel Loupe</span>
-          <span class="feature-pill">7-Day Kiln Temperature Scrubber</span>
-          <span class="feature-pill">Web Audio Tearoom Soundscape</span>
-          <span class="feature-pill">Kiribako Box Presentation</span>
+          <span class="feature-pill">Glaze Loupe</span>
+          <span class="feature-pill">7-Day Kiln Timeline</span>
+          <span class="feature-pill">Web Audio Soundscape</span>
         </div>
         <div class="portal-cta-btn">
-          Enter Kyoto Studio Experience →
+          Explore Kyoto Studio →
+        </div>
+      </div>
+    </a>
+
+    <!-- Himalayan Everest Card -->
+    <a href="everest.html" class="portal-card everest-portal">
+      <div class="portal-card-bg">
+        <img src="assets/images/everest_hero_summit.jpg" alt="Mount Everest Himalayan Summit at Sunrise with Prayer Flags">
+      </div>
+      <div class="portal-card-gradient"></div>
+      <div class="portal-card-content">
+        <div class="portal-tag">
+          8,848M · HIMALAYAN EXPEDITIONS
+        </div>
+        <h2 class="portal-brand-title">Himalayan Apex // India's Everest Legacy</h2>
+        <p class="portal-brand-desc">
+          Celebrating India's connection to Mount Everest, from Radhanath Sickdhar's 1852 calculation to legendary Indian climbers in the Death Zone.
+        </p>
+        <div class="portal-feature-badges">
+          <span class="feature-pill">Altitude Scrubber</span>
+          <span class="feature-pill">Summit Telemetry</span>
+          <span class="feature-pill">Indian Pioneers</span>
+        </div>
+        <div class="portal-cta-btn">
+          Ascend the Summit →
         </div>
       </div>
     </a>
@@ -395,40 +443,46 @@
   <!-- Architectural Feature Summary Table -->
   <section class="portal-meta-section">
     <div class="meta-box">
-      <h3 class="meta-title">Brand Architecture & Design System Overview</h3>
+      <h3 class="meta-title">Design System & Experience Architecture Overview</h3>
       <table class="meta-table">
         <thead>
           <tr>
             <th>Dimension</th>
             <th>Nomad Foils</th>
             <th>Kisen Ceramics Kyoto</th>
+            <th>Himalayan Apex (Everest)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Brand Domain</td>
-            <td>Electric Ocean Hydrofoil Technology</td>
+            <td>Electric Ocean Hydrofoil Tech</td>
             <td>Wood-Fired Japanese Teaware Atelier</td>
+            <td>High-Altitude Alpine Mountaineering</td>
           </tr>
           <tr>
-            <td>Color Palette</td>
-            <td>Oceanic Obsidian (#060A0F), Titanium Slate, Electric Cyan (#00E5FF)</td>
-            <td>Mineral Rice Paper (#F6F3EB), Sumi Charcoal (#1B1716), Terracotta (#B46244)</td>
+            <td>Palette</td>
+            <td>Oceanic Obsidian & Cyan</td>
+            <td>Rice Paper, Charcoal & Terracotta</td>
+            <td>Glacier Obsidian, Ice Blue & Saffron</td>
           </tr>
           <tr>
             <td>Typography</td>
-            <td>Space Grotesk & Plus Jakarta Sans</td>
-            <td>Cormorant Garamond, Noto Serif JP, Cinzel</td>
+            <td>Space Grotesk & Jakarta Sans</td>
+            <td>Cormorant Garamond & Noto Serif JP</td>
+            <td>Cinzel & Space Grotesk</td>
           </tr>
           <tr>
             <td>Interactive Modules</td>
-            <td>Realtime Throttle HUD, Swell Range Estimator, Hotspot Anatomy, Board Configurator</td>
-            <td>Tactile Glaze Loupe, 7-Day Kiln Temp Scrubber, Web Audio Soundscape, Kiribako Specs</td>
+            <td>Throttle HUD & Swell Estimator</td>
+            <td>Glaze Loupe & 7-Day Kiln Scrubber</td>
+            <td>Altitude Route Scrubber & Summit HUD</td>
           </tr>
           <tr>
-            <td>Key Visuals</td>
-            <td>Generated 8K Open-Ocean E-Foil, Studio Carbon Weaves, Titanium Hardware</td>
-            <td>Generated Tatami Steaming Matcha, Artisan Wheel Hands, Museum Chawan Vessel</td>
+            <td>Audio Experience</td>
+            <td>Live Dynamic Telemetry</td>
+            <td>Japanese Water Chime Synth</td>
+            <td>Himalayan High Wind & Tibetan Bell</td>
           </tr>
         </tbody>
       </table>
