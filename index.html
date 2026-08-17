@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Master Portal Showcase: The Taj Mahal (Mughal Architecture), Himalayan Everest (Indian Mountaineering), Nomad Foils (Electric Hydrofoils), and Kisen Ceramics Kyoto (Wood-Fired Teaware).">
-  <title>FOUR HORIZONS SHOWCASE // Taj Mahal · Everest · Nomad Foils · Kyoto Ceramics</title>
+  <meta name="description" content="Five Horizons Showcase: Amazon Rainforest, The Taj Mahal, Himalayan Everest, Nomad Foils, and Kisen Ceramics Kyoto.">
+  <title>FIVE HORIZONS SHOWCASE // Amazon · Taj Mahal · Everest · Nomad Foils · Kyoto</title>
   
   <link rel="stylesheet" href="css/common.css">
   <style>
@@ -13,7 +13,7 @@
     }
 
     body.portal-body {
-      background: #080c14;
+      background: #06090e;
       color: #f8fafc;
       font-family: 'Plus Jakarta Sans', sans-serif;
       padding-top: 45px;
@@ -25,7 +25,7 @@
     .portal-hero {
       text-align: center;
       padding: 60px 24px 28px;
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
@@ -33,7 +33,7 @@
       font-family: 'Space Grotesk', monospace;
       font-size: 11px;
       letter-spacing: 0.22em;
-      color: #f5d061;
+      color: #34d399;
       text-transform: uppercase;
       margin-bottom: 12px;
       display: inline-block;
@@ -52,16 +52,16 @@
       font-size: 16px;
       color: #94a3b8;
       line-height: 1.6;
-      max-width: 720px;
+      max-width: 740px;
       margin: 0 auto 36px;
     }
 
-    /* Quad Showcase Grid */
+    /* 5-Card Showcase Grid */
     .portal-grid-showcase {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
-      max-width: 1440px;
+      max-width: 1480px;
       margin: 0 auto 60px;
       padding: 0 24px;
       width: 100%;
@@ -75,13 +75,13 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 28px 24px;
-      min-height: 520px;
+      padding: 28px 22px;
+      min-height: 480px;
       text-decoration: none;
       color: inherit;
       border: 1px solid rgba(255, 255, 255, 0.09);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.75);
     }
 
     .portal-card:hover {
@@ -97,6 +97,7 @@
       width: 100%;
       height: 100%;
       z-index: 1;
+      background: #0d141e;
     }
 
     .portal-card-bg img {
@@ -119,20 +120,24 @@
       z-index: 2;
     }
 
+    .portal-card.amazon-portal .portal-card-gradient {
+      background: linear-gradient(180deg, rgba(4, 15, 9, 0.15) 0%, rgba(4, 15, 9, 0.8) 50%, rgba(4, 15, 9, 0.98) 100%);
+    }
+
     .portal-card.taj-portal .portal-card-gradient {
-      background: linear-gradient(180deg, rgba(7, 9, 13, 0.15) 0%, rgba(7, 9, 13, 0.8) 55%, rgba(7, 9, 13, 0.98) 100%);
+      background: linear-gradient(180deg, rgba(7, 9, 13, 0.15) 0%, rgba(7, 9, 13, 0.8) 50%, rgba(7, 9, 13, 0.98) 100%);
     }
 
     .portal-card.everest-portal .portal-card-gradient {
-      background: linear-gradient(180deg, rgba(6, 9, 14, 0.15) 0%, rgba(6, 9, 14, 0.8) 55%, rgba(6, 9, 14, 0.98) 100%);
+      background: linear-gradient(180deg, rgba(6, 9, 14, 0.15) 0%, rgba(6, 9, 14, 0.8) 50%, rgba(6, 9, 14, 0.98) 100%);
     }
 
     .portal-card.nomad-portal .portal-card-gradient {
-      background: linear-gradient(180deg, rgba(6, 10, 15, 0.15) 0%, rgba(6, 10, 15, 0.8) 55%, rgba(6, 10, 15, 0.98) 100%);
+      background: linear-gradient(180deg, rgba(6, 10, 15, 0.15) 0%, rgba(6, 10, 15, 0.8) 50%, rgba(6, 10, 15, 0.98) 100%);
     }
 
     .portal-card.kyoto-portal .portal-card-gradient {
-      background: linear-gradient(180deg, rgba(27, 23, 22, 0.15) 0%, rgba(27, 23, 22, 0.8) 55%, rgba(27, 23, 22, 0.98) 100%);
+      background: linear-gradient(180deg, rgba(27, 23, 22, 0.15) 0%, rgba(27, 23, 22, 0.8) 50%, rgba(27, 23, 22, 0.98) 100%);
     }
 
     .portal-card-content {
@@ -154,6 +159,13 @@
       padding: 4px 10px;
       border-radius: 9999px;
       width: fit-content;
+    }
+
+    .amazon-portal .portal-tag {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      font-family: 'Space Grotesk', monospace;
     }
 
     .taj-portal .portal-tag {
@@ -185,25 +197,16 @@
     }
 
     .portal-brand-title {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.15;
     }
 
-    .taj-portal .portal-brand-title {
-      font-family: 'Cinzel', serif;
-    }
-
-    .everest-portal .portal-brand-title {
-      font-family: 'Cinzel', serif;
-    }
-
-    .kyoto-portal .portal-brand-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      font-weight: 400;
-    }
+    .amazon-portal .portal-brand-title { font-family: 'Syne', sans-serif; }
+    .taj-portal .portal-brand-title { font-family: 'Cinzel', serif; }
+    .everest-portal .portal-brand-title { font-family: 'Cinzel', serif; }
+    .kyoto-portal .portal-brand-title { font-family: 'Cormorant Garamond', serif; font-size: 23px; font-weight: 400; }
 
     .portal-brand-desc {
       font-size: 12px;
@@ -230,15 +233,25 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 9px 16px;
+      padding: 8px 14px;
       border-radius: 6px;
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-top: 6px;
+      margin-top: 4px;
       width: fit-content;
       transition: all 0.2s ease;
+    }
+
+    .amazon-portal .portal-cta-btn {
+      background: linear-gradient(135deg, #34d399, #059669);
+      color: #022c19;
+    }
+
+    .amazon-portal .portal-cta-btn:hover {
+      background: #6ee7b7;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.6);
     }
 
     .taj-portal .portal-cta-btn {
@@ -283,14 +296,14 @@
 
     /* Comparison Table */
     .portal-meta-section {
-      max-width: 1440px;
+      max-width: 1480px;
       margin: 0 auto 60px;
       padding: 0 24px;
       width: 100%;
     }
 
     .meta-box {
-      background: #0c121b;
+      background: #0a0f16;
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 32px;
@@ -308,12 +321,15 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 12px;
+      overflow-x: auto;
+      display: block;
     }
 
     .meta-table th, .meta-table td {
       padding: 12px 12px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       text-align: left;
+      min-width: 150px;
     }
 
     .meta-table th {
@@ -329,25 +345,11 @@
       color: #cbd5e1;
     }
 
-    .meta-table td:nth-child(2) { color: #f5d061; }
-    .meta-table td:nth-child(3) { color: #f59e0b; }
-    .meta-table td:nth-child(4) { color: #00e5ff; }
-    .meta-table td:nth-child(5) { color: #d4a373; }
-
-    @media (max-width: 1200px) {
-      .portal-grid-showcase {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 680px) {
-      .portal-grid-showcase {
-        grid-template-columns: 1fr;
-      }
-      .portal-card {
-        min-height: 420px;
-      }
-    }
+    .meta-table td:nth-child(2) { color: #34d399; }
+    .meta-table td:nth-child(3) { color: #f5d061; }
+    .meta-table td:nth-child(4) { color: #f59e0b; }
+    .meta-table td:nth-child(5) { color: #00e5ff; }
+    .meta-table td:nth-child(6) { color: #d4a373; }
   </style>
 </head>
 <body class="portal-body">
@@ -359,6 +361,10 @@
       <span>Experience Mode: <strong>Master Portal</strong></span>
     </div>
     <div class="switcher-nav-pills">
+      <a href="amazon.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Amazon Rainforest
+      </a>
       <a href="tajmahal.html" class="switcher-pill">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         Taj Mahal (Agra)
@@ -380,22 +386,45 @@
       </a>
     </div>
     <div class="switcher-status">
-      <span>4 Production Landing Pages</span>
+      <span>5 Production Landing Pages</span>
     </div>
   </header>
 
   <!-- Portal Hero -->
   <header class="portal-hero">
     <span class="portal-eyebrow">AESTHETIC & INTERACTIVE SUITE</span>
-    <h1 class="portal-main-title">Craftsmanship Across Four Horizons</h1>
+    <h1 class="portal-main-title">Craftsmanship Across Five Horizons</h1>
     <p class="portal-main-desc">
-      Explore four distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & loupe tools, authentic audio synthesis, and zero placeholders.
+      Explore five distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & loupe tools, authentic audio synthesis, and zero placeholders.
     </p>
   </header>
 
-  <!-- Portal Quad Cards -->
+  <!-- Portal 5-Card Grid -->
   <main class="portal-grid-showcase">
     
+    <!-- Amazon Rainforest Card -->
+    <a href="amazon.html" class="portal-card amazon-portal">
+      <div class="portal-card-bg" style="background: linear-gradient(135deg, #022013, #073b22);"></div>
+      <div class="portal-card-gradient"></div>
+      <div class="portal-card-content">
+        <div class="portal-tag">
+          6.7M KM² TROPICAL BIOME
+        </div>
+        <h2 class="portal-brand-title">Amazon Rainforest // Living Lungs</h2>
+        <p class="portal-brand-desc">
+          Earth's greatest rainforest, 4-layer vertical canopy, extraordinary wildlife, and indigenous guardianship.
+        </p>
+        <div class="portal-feature-badges">
+          <span class="feature-pill">Canopy Elevator</span>
+          <span class="feature-pill">Wildlife Inspector</span>
+          <span class="feature-pill">Rain Soundscape</span>
+        </div>
+        <div class="portal-cta-btn">
+          Explore Amazon →
+        </div>
+      </div>
+    </a>
+
     <!-- Taj Mahal Card -->
     <a href="tajmahal.html" class="portal-card taj-portal">
       <div class="portal-card-bg">
@@ -429,11 +458,11 @@
       <div class="portal-card-gradient"></div>
       <div class="portal-card-content">
         <div class="portal-tag">
-          8,848M · HIMALAYAN EXPEDITIONS
+          8,848M · HIMALAYAN SUMMITS
         </div>
-        <h2 class="portal-brand-title">Himalayan Apex // India's Everest Legacy</h2>
+        <h2 class="portal-brand-title">Himalayan Apex // Everest Legacy</h2>
         <p class="portal-brand-desc">
-          Celebrating India's connection to Mount Everest, from Radhanath Sickdhar's 1852 calculation to Indian climbers in the Death Zone.
+          Celebrating India's connection to Mount Everest, from Radhanath Sickdhar's 1852 calculation to climbers in the Death Zone.
         </p>
         <div class="portal-feature-badges">
           <span class="feature-pill">Altitude Scrubber</span>
@@ -499,7 +528,7 @@
 
   </main>
 
-  <!-- Architectural Feature Summary Table -->
+  <!-- Comparison Table -->
   <section class="portal-meta-section">
     <div class="meta-box">
       <h3 class="meta-title">Design System & Experience Architecture Overview</h3>
@@ -507,47 +536,53 @@
         <thead>
           <tr>
             <th>Dimension</th>
+            <th>Amazon Rainforest</th>
             <th>The Taj Mahal</th>
             <th>Himalayan Apex</th>
             <th>Nomad Foils</th>
-            <th>Kisen Ceramics Kyoto</th>
+            <th>Kisen Ceramics</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Brand Domain</td>
+            <td>Tropical Rainforest Biome</td>
             <td>Mughal Heritage & Architecture</td>
-            <td>High-Altitude Alpine Mountaineering</td>
-            <td>Electric Ocean Hydrofoil Tech</td>
+            <td>High-Altitude Mountaineering</td>
+            <td>Electric Ocean Hydrofoils</td>
             <td>Wood-Fired Japanese Teaware</td>
           </tr>
           <tr>
             <td>Palette</td>
-            <td>Makrana Ivory, Royal Onyx & Gold</td>
-            <td>Glacier Obsidian, Frost & Saffron</td>
+            <td>Canopy Emerald & Fern</td>
+            <td>Makrana Ivory & Gold</td>
+            <td>Glacier Obsidian & Saffron</td>
             <td>Oceanic Obsidian & Cyan</td>
-            <td>Rice Paper, Charcoal & Terracotta</td>
+            <td>Rice Paper & Terracotta</td>
           </tr>
           <tr>
             <td>Typography</td>
-            <td>Cinzel & Cormorant Garamond</td>
+            <td>Syne & Jakarta Sans</td>
+            <td>Cinzel & Cormorant</td>
             <td>Cinzel & Space Grotesk</td>
-            <td>Space Grotesk & Jakarta Sans</td>
-            <td>Cormorant Garamond & Noto Serif JP</td>
+            <td>Space Grotesk & Jakarta</td>
+            <td>Cormorant & Noto Serif</td>
           </tr>
           <tr>
             <td>Interactive Modules</td>
-            <td>Dawn-to-Moonlight & Pietra Dura</td>
-            <td>Altitude Scrubber & Summit HUD</td>
-            <td>Throttle HUD & Swell Estimator</td>
-            <td>Glaze Loupe & 7-Day Kiln Scrubber</td>
+            <td>4-Layer Canopy Elevator</td>
+            <td>Dawn-to-Moonlight Mode</td>
+            <td>Altitude Route Scrubber</td>
+            <td>Throttle HUD & Estimator</td>
+            <td>Glaze Loupe & Kiln Scrubber</td>
           </tr>
           <tr>
             <td>Audio Experience</td>
+            <td>Tropical Rain & Tree Frogs</td>
             <td>Classical Tanpura Drone</td>
-            <td>Himalayan Wind & Tibetan Bell</td>
-            <td>Flight Telemetry Simulation</td>
-            <td>Japanese Water Chime Synth</td>
+            <td>High Wind & Tibetan Bell</td>
+            <td>Flight Dynamics HUD</td>
+            <td>Japanese Water Chime</td>
           </tr>
         </tbody>
       </table>

@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 8px 24px;
-  background: rgba(8, 12, 18, 0.92);
+  background: rgba(6, 10, 15, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -71,6 +71,11 @@ body {
   box-shadow: 0 0 8px #d4af37;
 }
 
+.switcher-brand-tag.amazon-active .indicator-dot {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
 .switcher-nav-pills {
   display: flex;
   align-items: center;
@@ -80,7 +85,7 @@ body {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   overflow-x: auto;
-  max-width: 80vw;
+  max-width: 82vw;
 }
 
 .switcher-pill {
@@ -129,6 +134,11 @@ body {
   color: #1c1404;
 }
 
+.switcher-pill.active.amazon {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: #022c19;
+}
+
 .switcher-status {
   display: flex;
   align-items: center;
@@ -137,7 +147,7 @@ body {
   color: #64748b;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1150px) {
   .switcher-status {
     display: none;
   }
@@ -145,12 +155,16 @@ body {
 
 @media (max-width: 768px) {
   .project-switcher-bar {
-    padding: 6px 10px;
+    padding: 6px 8px;
   }
   .switcher-brand-tag {
     display: none;
   }
   .switcher-nav-pills {
     max-width: 100%;
+  }
+  .switcher-pill {
+    padding: 4px 8px;
+    font-size: 10px;
   }
 }

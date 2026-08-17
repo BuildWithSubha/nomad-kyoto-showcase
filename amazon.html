@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Amazon Rainforest (Amazonia) — A cinematic nature documentary exploring Earth's largest tropical rainforest, 4-layer vertical canopy, extraordinary wildlife, and indigenous guardianship.">
+  <title>THE AMAZON RAINFOREST // The Living Lungs of Earth & Biodiversity Expedition</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/amazon.css">
+</head>
+<body class="amazon-theme">
+
+  <!-- Global Project Switcher Bar -->
+  <header class="project-switcher-bar">
+    <div class="switcher-brand-tag amazon-active">
+      <span class="indicator-dot"></span>
+      <span>Experience Mode: <strong>Amazon Rainforest</strong></span>
+    </div>
+    <div class="switcher-nav-pills">
+      <a href="amazon.html" class="switcher-pill active amazon">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Amazon Rainforest
+      </a>
+      <a href="tajmahal.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Taj Mahal (Agra)
+      </a>
+      <a href="everest.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
+        Himalayan Everest
+      </a>
+      <a href="nomad.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Nomad Foils
+      </a>
+      <a href="kyoto.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        Kyoto Ceramics
+      </a>
+      <a href="index.html" class="switcher-pill">
+        Portal Overview
+      </a>
+    </div>
+    <div class="switcher-status">
+      <span>6.7M km² Biome</span>
+      <span>•</span>
+      <span>South America</span>
+    </div>
+  </header>
+
+  <!-- Amazon Navigation Header -->
+  <nav class="amazon-header">
+    <a href="amazon.html" class="amazon-brand">
+      <div class="amazon-leaf-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="amazon-brand-title">AMAZON <span>RAINFOREST</span></div>
+    </a>
+
+    <div class="amazon-nav">
+      <a href="#canopy">4 Canopy Layers</a>
+      <a href="#wildlife">Wildlife Encounters</a>
+      <a href="#rivers">Meeting of Waters</a>
+      <a href="#indigenous">Indigenous Heritage</a>
+      <a href="#conservation">Conservation</a>
+    </div>
+
+    <div class="amazon-actions">
+      <button class="rainforest-audio-btn" id="rainforestAudioToggle" aria-label="Toggle tropical rain and jungle soundscape">
+        <span>🔇</span> Rain & Jungle Ambiance
+      </button>
+      <button class="btn-primary-amazon js-open-amazon-modal">
+        Expedition Inquiry
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="amazon-hero">
+    <div class="amazon-hero-bg">
+      <div class="amazon-hero-bg-art"></div>
+    </div>
+    <div class="amazon-hero-overlay"></div>
+
+    <div class="amazon-hero-content">
+      <div>
+        <div class="amazon-tag-row">
+          <span class="pulse-dot"></span>
+          <span>THE WORLD’S LARGEST TROPICAL BIOME · 6.7 MILLION KM²</span>
+        </div>
+        <h1 class="amazon-hero-title">
+          THE BEATING HEART<br>OF <span>PLANET EARTH</span>.
+        </h1>
+        <p class="amazon-hero-desc">
+          Spanning nine South American nations, the Amazon Basin holds over 390 billion trees, one in ten known species on Earth, and generates 20% of all freshwater flowing into the global ocean.
+        </p>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <a href="#canopy" class="btn-primary-amazon">
+            Explore 4 Canopy Layers
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#wildlife" class="btn-secondary-amazon">
+            Wildlife Directory
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Biosphere Telemetry HUD Widget -->
+      <div class="biosphere-hud-card">
+        <div class="hud-card-top">
+          <span class="hud-summit-label">AMAZON BIOSPHERE TELEMETRY</span>
+          <span style="font-size: 11px; color: var(--a-bio-emerald); font-family: var(--font-mono);">LIVE DYNAMICS</span>
+        </div>
+
+        <div class="biosphere-metrics-grid">
+          <div class="bio-metric-item">
+            <div class="bio-metric-label">TREE POPULATION</div>
+            <div class="bio-metric-val">390 <span>BILLION</span></div>
+          </div>
+          <div class="bio-metric-item">
+            <div class="bio-metric-label">RIVER FLOW</div>
+            <div class="bio-metric-val">209K <span>M³/S</span></div>
+          </div>
+          <div class="bio-metric-item">
+            <div class="bio-metric-label">CANOPY HUMIDITY</div>
+            <div class="bio-metric-val">88 <span>%</span></div>
+          </div>
+        </div>
+
+        <div class="bio-alert-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span><strong>Flying Rivers Phenomenon:</strong> A single mature Amazonian tree transpires up to 1,000 liters of water vapor daily into the atmosphere, creating atmospheric aerial rivers that regulate rainfall across South America.</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 4-Layer Vertical Canopy Elevator -->
+  <section class="amazon-section" id="canopy">
+    <div class="amazon-section-header">
+      <span class="amazon-eyebrow">STRATIFIED BOTANICAL ARCHITECTURE</span>
+      <h2 class="amazon-title">ASCEND THE FOUR CANOPY LAYERS</h2>
+      <p class="amazon-subtitle">
+        From the sun-deprived, dark forest floor to colossal emergent trees soaring 65 meters above the jungle canopy, select each altitude level to inspect microclimates and life forms.
+      </p>
+    </div>
+
+    <div class="canopy-elevator-container">
+      <!-- Layer Selector Controls -->
+      <div class="canopy-layer-controls">
+        <button class="canopy-layer-btn active" data-layer="floor">
+          <div class="layer-btn-info">
+            <strong>01. The Forest Floor</strong>
+            <span>2% Sunlight, Fungal Networks & Apex Jaguars</span>
+          </div>
+          <span class="layer-altitude-pill">0 — 2 M</span>
+        </button>
+
+        <button class="canopy-layer-btn" data-layer="understory">
+          <div class="layer-btn-info">
+            <strong>02. The Understory Layer</strong>
+            <span>Humid Trap, Poison Dart Frogs & Tree Boas</span>
+          </div>
+          <span class="layer-altitude-pill">2 — 20 M</span>
+        </button>
+
+        <button class="canopy-layer-btn" data-layer="canopy">
+          <div class="layer-btn-info">
+            <strong>03. The Main Canopy Layer</strong>
+            <span>90% of all Organisms, Toucans & Spider Monkeys</span>
+          </div>
+          <span class="layer-altitude-pill">20 — 45 M</span>
+        </button>
+
+        <button class="canopy-layer-btn" data-layer="emergent">
+          <div class="layer-btn-info">
+            <strong>04. The Emergent Layer</strong>
+            <span>Giant Ancient Kapok Trees & Harpy Eagles</span>
+          </div>
+          <span class="layer-altitude-pill">45 — 65+ M</span>
+        </button>
+      </div>
+
+      <!-- Live Updating Details Display -->
+      <div class="canopy-details-display">
+        <div>
+          <h3 class="canopy-layer-title" id="canopyLayerTitle">01. The Forest Floor</h3>
+          <div class="canopy-layer-alt" id="canopyLayerAlt">0 — 2 METERS ELEVATION</div>
+          <p class="canopy-layer-desc" id="canopyLayerDesc">
+            Deep shadowed realm receiving less than 2% of sunlight. Here, trillions of leafcutter ants, fungi, and decomposers recycle fallen biomass in days. The stealthy Black Jaguar (Panthera onca) prowls silently across damp leaf litter.
+          </p>
+        </div>
+
+        <div class="canopy-stats-row">
+          <div class="canopy-stat-item">
+            <span class="canopy-stat-label">SUNLIGHT PENETRATION</span>
+            <span class="canopy-stat-val" id="canopyStatSun">1.8%</span>
+          </div>
+          <div class="canopy-stat-item">
+            <span class="canopy-stat-label">HUMIDITY</span>
+            <span class="canopy-stat-val" id="canopyStatHum">94%</span>
+          </div>
+          <div class="canopy-stat-item">
+            <span class="canopy-stat-label">KEY SPECIES</span>
+            <span class="canopy-stat-val" id="canopyStatBio" style="font-size: 13px;">Jaguars, Tapirs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wildlife & Biodiversity Grid -->
+  <section class="amazon-section" id="wildlife">
+    <div class="amazon-section-header">
+      <span class="amazon-eyebrow">APEX BIODIVERSITY</span>
+      <h2 class="amazon-title">CREATURES OF THE PRIMEVAL FOREST</h2>
+      <p class="amazon-subtitle">
+        Home to 1,300 bird species, 427 mammals, 3,000 freshwater fish, and over 2.5 million species of insects.
+      </p>
+    </div>
+
+    <div class="wildlife-grid">
+      <div class="wildlife-card">
+        <div class="wildlife-icon">🐆</div>
+        <h3 class="wildlife-species-name">Black Jaguar</h3>
+        <div class="wildlife-latin">Panthera onca</div>
+        <p class="wildlife-bio-desc">
+          Apex predator with an extraordinary crushing bite force capable of piercing turtle carapaces and caiman skulls directly.
+        </p>
+      </div>
+
+      <div class="wildlife-card">
+        <div class="wildlife-icon">🦅</div>
+        <h3 class="wildlife-species-name">Harpy Eagle</h3>
+        <div class="wildlife-latin">Harpia harpyja</div>
+        <p class="wildlife-bio-desc">
+          Colossal raptor wielding rear talons larger than a grizzly bear's claws, hunting sloths and monkeys from emergent canopy branches.
+        </p>
+      </div>
+
+      <div class="wildlife-card">
+        <div class="wildlife-icon">🐬</div>
+        <h3 class="wildlife-species-name">Pink River Dolphin</h3>
+        <div class="wildlife-latin">Inia geoffrensis (Boto)</div>
+        <p class="wildlife-bio-desc">
+          Freshwater dolphin with unfused neck vertebrae allowing 90° head turns to navigate flooded jungle tree trunks (*Igapó*).
+        </p>
+      </div>
+
+      <div class="wildlife-card">
+        <div class="wildlife-icon">🐸</div>
+        <h3 class="wildlife-species-name">Poison Dart Frog</h3>
+        <div class="wildlife-latin">Dendrobates tinctorius</div>
+        <p class="wildlife-bio-desc">
+          Aposematic brightly colored amphibian secreting potent lipophilic alkaloid batrachotoxins derived from eating rainforest formicid ants.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Encontro das Águas (Meeting of the Waters) -->
+  <section class="amazon-section" id="rivers">
+    <div class="river-mixer-container">
+      <div>
+        <span class="amazon-eyebrow">HYDROLOGIC WONDER · MANAUS</span>
+        <h2 class="amazon-title">ENCONTRO DAS ÁGUAS</h2>
+        <p style="font-size: 15px; line-height: 1.8; color: #d1fae5; margin-bottom: 20px; font-weight: 300;">
+          Near Manaus, Brazil, the dark acidic <strong>Rio Negro</strong> and the sandy, pale <strong>Rio Solimões</strong> converge to form the main stem of the Amazon River.
+        </p>
+        <p style="font-size: 15px; line-height: 1.8; color: #d1fae5; margin-bottom: 24px; font-weight: 300;">
+          Due to profound differences in water temperature, speed, and sediment density, the two rivers flow side-by-side without mixing for over <strong>6 kilometers</strong>, creating a striking black-and-tan boundary visible from orbit.
+        </p>
+        <button class="btn-primary-amazon js-open-amazon-modal">
+          Book River Expedition
+        </button>
+      </div>
+
+      <div class="river-comparison-box">
+        <div class="river-card river-rio-negro">
+          <h4 class="river-name">Rio Negro (Blackwater)</h4>
+          <div class="river-spec-list">
+            <div><strong>Color:</strong> Black Tea / Humic Acid</div>
+            <div><strong>Temp:</strong> 28°C (Warmer)</div>
+            <div><strong>Speed:</strong> 2.0 km/h</div>
+            <div><strong>Acidity:</strong> pH 3.8 — 4.9</div>
+          </div>
+        </div>
+
+        <div class="river-card river-rio-solimoes">
+          <h4 class="river-name" style="color: #fde68a;">Rio Solimões (Whitewater)</h4>
+          <div class="river-spec-list">
+            <div><strong>Color:</strong> Sand / Andean Silt</div>
+            <div><strong>Temp:</strong> 22°C (Colder)</div>
+            <div><strong>Speed:</strong> 6.0 km/h (3x Faster)</div>
+            <div><strong>Acidity:</strong> pH 6.2 — 7.2 (Neutral)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Indigenous Guardianship -->
+  <section class="amazon-section" id="indigenous">
+    <div class="indigenous-split-grid">
+      <div>
+        <span class="amazon-eyebrow">ANCESTRAL GUARDIANS</span>
+        <h2 class="amazon-title">400 INDIGENOUS NATIONS</h2>
+        <p style="font-size: 15px; line-height: 1.8; color: #d1fae5; margin-bottom: 18px; font-weight: 300;">
+          For over 12,000 years, Indigenous peoples including the <strong>Yanomami</strong>, <strong>Kayapo</strong>, <strong>Asháninka</strong>, and <strong>Ticuna</strong> have stewarded the Amazon Basin through sophisticated agroforestry, terra preta soil enhancement, and deep ethnobotanical wisdom.
+        </p>
+        <p style="font-size: 15px; line-height: 1.8; color: #d1fae5; margin-bottom: 24px; font-weight: 300;">
+          Satellite scientific studies confirm that Indigenous-managed territories experience significantly lower deforestation rates than surrounding public lands, proving that ancestral sovereignty is the most effective shield for global climate stability.
+        </p>
+        <button class="btn-secondary-amazon js-open-amazon-modal">
+          Support Indigenous Conservation Funds →
+        </button>
+      </div>
+
+      <div style="background: var(--a-bg-card); border: 1px solid var(--a-border-emerald); border-radius: var(--a-radius-md); padding: 32px; display: flex; flex-direction: column; gap: 20px;">
+        <div style="border-bottom: 1px solid var(--a-border-subtle); padding-bottom: 14px;">
+          <div style="font-family: var(--font-syne); font-size: 32px; font-weight: 800; color: var(--a-bio-emerald);">1.5M+</div>
+          <div style="font-size: 13px; font-weight: 600; color: #ffffff;">Indigenous Peoples in the Basin</div>
+        </div>
+        <div style="border-bottom: 1px solid var(--a-border-subtle); padding-bottom: 14px;">
+          <div style="font-family: var(--font-syne); font-size: 32px; font-weight: 800; color: var(--a-bio-emerald);">300+</div>
+          <div style="font-size: 13px; font-weight: 600; color: #ffffff;">Distinct Indigenous Languages</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-syne); font-size: 32px; font-weight: 800; color: var(--a-bio-emerald);">80%</div>
+          <div style="font-size: 13px; font-weight: 600; color: #ffffff;">Of Earth's Remaining Biodiversity Protected by Indigenous Lands</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conservation & Eco-Expedition Modal Drawer -->
+  <div class="amazon-modal-overlay" id="amazonModal">
+    <div class="amazon-modal-card">
+      <button class="amazon-modal-close" id="closeAmazonModal" aria-label="Close modal">✕</button>
+      
+      <span class="amazon-eyebrow">AMAZON EXPEDITION & CONSERVATION</span>
+      <h3 style="font-family: var(--font-syne); font-size: 24px; color: #fff; margin: 8px 0 20px;">Join the Amazon Conservation Effort</h3>
+      
+      <form id="amazonInquiryForm">
+        <div class="amazon-form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="e.g. Dr. Raoni Metuktire" required>
+        </div>
+        <div class="amazon-form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="raoni@amazon-alliance.org" required>
+        </div>
+        <div class="amazon-form-group">
+          <label>Expedition / Action Category</label>
+          <select required>
+            <option value="research">Scientific Biodiversity & Canopy Research Grant</option>
+            <option value="ecotour">Low-Impact Indigenous Eco-Expedition (Manaus / Iquitos)</option>
+            <option value="reforest">Adopt 100 Hectares of Primary Rainforest Corridor</option>
+            <option value="indigenous">Indigenous Land Defense & Legal Defense Fund</option>
+          </select>
+        </div>
+        <div class="amazon-form-group">
+          <label>Message / Project Proposal</label>
+          <textarea rows="3" placeholder="Tell us about your conservation goals or expedition dates..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary-amazon" style="width: 100%; margin-top: 10px;">
+          Submit Conservation Inquiry
+        </button>
+      </form>
+
+      <div id="amazonConfirmMsg" style="display: none; text-align: center; padding: 24px 0;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">🌿</div>
+        <h4 style="font-family: var(--font-syne); font-size: 22px; color: #fff; margin-bottom: 8px;">Inquiry Received</h4>
+        <p style="font-size: 14px; color: #a7f3d0; line-height: 1.7;">
+          The Amazon Alliance will review your proposal and connect you with biological station coordinators in Manaus within 48 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Amazon Footer -->
+  <footer class="amazon-footer">
+    <div class="amazon-footer-inner">
+      <div class="amazon-footer-brand">
+        <div class="amazon-brand">
+          <div class="amazon-leaf-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="amazon-brand-title">AMAZON <span>RAINFOREST</span></div>
+        </div>
+        <p>
+          Dedicated to the ecological preservation, biodiversity research, and indigenous guardianship of the Amazon Basin.
+        </p>
+      </div>
+
+      <div>
+        <div class="amazon-footer-col-title">CANOPY LAYERS</div>
+        <ul class="amazon-footer-links">
+          <li><a href="#canopy">The Forest Floor (0-2m)</a></li>
+          <li><a href="#canopy">The Understory (2-20m)</a></li>
+          <li><a href="#canopy">Main Canopy (20-45m)</a></li>
+          <li><a href="#canopy">Emergent Layer (45-65m)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="amazon-footer-col-title">WILDLIFE</div>
+        <ul class="amazon-footer-links">
+          <li><a href="#wildlife">Black Jaguar</a></li>
+          <li><a href="#wildlife">Harpy Eagle</a></li>
+          <li><a href="#wildlife">Pink River Dolphin</a></li>
+          <li><a href="#wildlife">Poison Dart Frog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="amazon-footer-col-title">EXPEDITIONS</div>
+        <ul class="amazon-footer-links">
+          <li><a href="#rivers">Manaus River Crossing</a></li>
+          <li><a href="#indigenous">Indigenous Alliances</a></li>
+          <li><a href="tajmahal.html">Explore The Taj Mahal</a></li>
+          <li><a href="index.html" style="color: var(--a-bio-emerald);">View Master Portal →</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="amazon-footer-bottom">
+      <div>© 2026 The Amazon Biome Expedition. Protecting Earth's vital biosphere.</div>
+      <div>
+        <a href="index.html" style="color: #a7f3d0; text-decoration: none;">Return to Showcase Portal →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/amazon.js"></script>
+</body>
+</html>

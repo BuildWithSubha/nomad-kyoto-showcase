@@ -49,4 +49,5 @@ server.listen(PORT, () => {
   console.log(`- Kyoto Ceramics: http://localhost:${PORT}/kyoto.html`);
   console.log(`- Himalayan Everest: http://localhost:${PORT}/everest.html`);
   console.log(`- The Taj Mahal: http://localhost:${PORT}/tajmahal.html`);
+  console.log(`- Amazon Rainforest: http://localhost:${PORT}/amazon.html`);
 });
