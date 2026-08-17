@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nomad Foils designs aerospace-grade electric carbon-fiber hydrofoil boards engineered for silent open-ocean riding, big swell carving, and limitless aquatic flight.">
+  <title>NOMAD FOILS // Electric Carbon-Fiber Hydrofoils for Open Ocean Riding</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/nomad.css">
+</head>
+<body class="nomad-theme">
+
+  <!-- Global Project Switcher Bar -->
+  <header class="project-switcher-bar">
+    <div class="switcher-brand-tag">
+      <span class="indicator-dot"></span>
+      <span>Experience Mode: <strong>Nomad Foils</strong></span>
+    </div>
+    <div class="switcher-nav-pills">
+      <a href="nomad.html" class="switcher-pill active nomad">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Nomad Foils (Ocean E-Foil)
+      </a>
+      <a href="kyoto.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        Kyoto Ceramic Studio
+      </a>
+      <a href="index.html" class="switcher-pill">
+        Portal Overview
+      </a>
+    </div>
+    <div class="switcher-status">
+      <span>Toray T1000 Carbon</span>
+      <span>•</span>
+      <span>Open-Ocean Spec</span>
+    </div>
+  </header>
+
+  <!-- Nomad Foils Header -->
+  <nav class="nomad-header">
+    <a href="nomad.html" class="nomad-brand">
+      <div class="brand-symbol">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M4 18L12 4L20 18L12 14L4 18Z"/>
+        </svg>
+      </div>
+      <div class="brand-text">NOMAD <span>//</span> FOILS</div>
+    </a>
+
+    <div class="nomad-nav">
+      <a href="#engineering">Engineering</a>
+      <a href="#simulator">Range Simulator</a>
+      <a href="#craftsmanship">Craftsmanship</a>
+      <a href="#specs">Specifications</a>
+      <a href="#configurator">Configurator</a>
+    </div>
+
+    <div class="header-actions">
+      <div class="ocean-telemetry-badge">
+        <span class="wave-pulse"></span>
+        <span>PACIFIC SWELL · 2.4M · 14KTS</span>
+      </div>
+      <button class="btn-primary-nomad js-open-reserve-modal">
+        Book Flight
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="nomad-hero">
+    <div class="hero-background-media">
+      <img src="assets/images/nomad_hero_ocean.jpg" alt="Nomad Electric Carbon-Fiber Hydrofoil surfing open ocean swell">
+    </div>
+    <div class="hero-gradient-overlay"></div>
+
+    <div class="hero-content-wrapper">
+      <div class="hero-text-block">
+        <div class="hero-eyebrow">
+          <span>● AERONAUTICAL HYDRO-DYNAMIC DESIGN</span>
+        </div>
+        <h1 class="hero-title">
+          SILENT FLIGHT<br>ACROSS OPEN WATER.
+        </h1>
+        <p class="hero-description">
+          Engineered with full-monocoque Toray T1000 carbon fiber and powered by a dual-stage whisper turbine. Glide weightlessly across deep ocean swells with zero emissions and surgical precision.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#configurator" class="btn-primary-nomad">
+            Configure Nomad X-1
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#engineering" class="btn-outline-nomad">
+            Explore Propulsion & Hull
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Flight Telemetry HUD Widget -->
+      <div class="hero-hud-card" id="flightHud">
+        <div class="hud-header">
+          <div class="hud-title">LIVE TELEMETRY HUD // FLIGHTASSIST™</div>
+          <div class="hud-status-indicator">SYSTEM READY</div>
+        </div>
+
+        <div class="hud-telemetry-grid">
+          <div class="hud-metric-box">
+            <div class="hud-metric-label">SPEED</div>
+            <div class="hud-metric-val" id="hudSpeed">18.5 <span>KTS</span></div>
+          </div>
+          <div class="hud-metric-box">
+            <div class="hud-metric-label">ALTITUDE</div>
+            <div class="hud-metric-val" id="hudAltitude">52 <span>CM</span></div>
+          </div>
+          <div class="hud-metric-box">
+            <div class="hud-metric-label">OUTPUT</div>
+            <div class="hud-metric-val" id="hudPower">3.2 <span>KW</span></div>
+          </div>
+        </div>
+
+        <div class="hud-throttle-control">
+          <div class="throttle-label-row">
+            <span>VIRTUAL WIRELESS THROTTLE</span>
+            <span id="hudThrottlePercent">65%</span>
+          </div>
+          <input type="range" min="0" max="100" value="65" class="hud-range-slider" id="hudThrottleSlider" aria-label="Virtual Throttle Control">
+          <div class="hud-note">Drag throttle to simulate flight dynamics and hydro-lift</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Engineering & Anatomy Section -->
+  <section class="nomad-section" id="engineering">
+    <div class="section-header-centered">
+      <span class="section-eyebrow">AEROSPACE ARCHITECTURE</span>
+      <h2 class="section-title">BUILT FOR THE RAW OPEN OCEAN.</h2>
+      <p class="section-subtitle">
+        Every curve, taper, and composite layer is sculpted to eliminate drag and withstand punishing oceanic loads.
+      </p>
+    </div>
+
+    <div class="anatomy-container">
+      <div class="anatomy-visual-frame">
+        <img src="assets/images/nomad_board_studio.jpg" alt="Nomad Foils carbon fiber hydrofoil studio anatomy view">
+        
+        <!-- Interactive Hotspots -->
+        <button class="hotspot-point hotspot-deck active" data-target="deck" title="Monocoque Carbon Hull"></button>
+        <button class="hotspot-point hotspot-mast" data-target="mast" title="High-Modulus Carbon Mast"></button>
+        <button class="hotspot-point hotspot-motor" data-target="motor" title="Whisper-Drive Propulsion"></button>
+        <button class="hotspot-point hotspot-wing" data-target="wing" title="Anhedral Front Wing"></button>
+      </div>
+
+      <div class="anatomy-details-list">
+        <div class="anatomy-detail-card active" data-id="deck">
+          <div class="card-step-num">01 / HULL MATRIX</div>
+          <h3 class="card-heading">Toray T1000 Carbon Monocoque</h3>
+          <p class="card-body-text">
+            Autoclave-cured pre-preg carbon fiber composite delivering an ultra-stiff chassis weighing just 5.8kg dry. Features integrated titanium leash plug and magnetic power disconnect.
+          </p>
+        </div>
+
+        <div class="anatomy-detail-card" data-id="mast">
+          <div class="card-step-num">02 / FLIGHT MAST</div>
+          <h3 class="card-heading">80cm High-Modulus Tapered Mast</h3>
+          <p class="card-body-text">
+            Engineered specifically to breach deep ocean swell peaks without cavitating. Milled CNC titanium fuselage junction with internal liquid-cooling conduits.
+          </p>
+        </div>
+
+        <div class="anatomy-detail-card" data-id="motor">
+          <div class="card-step-num">03 / PROPULSION</div>
+          <h3 class="card-heading">Whisper-Drive 6.5kW Turbine</h3>
+          <p class="card-body-text">
+            Direct-drive magnetic brushless pod with hydrodynamic torpedo cowling. Generates instant 45 Nm torque with near-zero acoustic resonance beneath the surface.
+          </p>
+        </div>
+
+        <div class="anatomy-detail-card" data-id="wing">
+          <div class="card-step-num">04 / HYDRO-FOIL</div>
+          <h3 class="card-heading">High-Aspect Glide 920 Wing</h3>
+          <p class="card-body-text">
+            Anhedral wing profile optimized for endless swell connectivity and low-speed takeoff at just 8 knots, allowing effortless downwind ocean carving.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Flight Range & Swell Simulator -->
+  <section class="nomad-section" id="simulator">
+    <div class="section-header-centered">
+      <span class="section-eyebrow">MISSION PLANNING SIMULATOR</span>
+      <h2 class="section-title">ESTIMATE YOUR OCEAN RANGE.</h2>
+      <p class="section-subtitle">
+        Calculate precise flight endurance, cruise speed, and battery consumption tailored to your body weight and ocean conditions.
+      </p>
+    </div>
+
+    <div class="simulator-box">
+      <div class="calc-controls-col">
+        
+        <!-- Weight Slider -->
+        <div class="calc-control-group">
+          <div class="calc-label-row">
+            <span>RIDER WEIGHT</span>
+            <span class="calc-value-badge" id="riderWeightDisplay">78 kg (172 lbs)</span>
+          </div>
+          <input type="range" min="50" max="120" value="78" class="hud-range-slider" id="riderWeightSlider" aria-label="Rider Weight Slider">
+        </div>
+
+        <!-- Wing Profile Selector -->
+        <div class="calc-control-group">
+          <div class="calc-label-row">
+            <span>FRONT WING PROFILE</span>
+          </div>
+          <div class="button-selection-group">
+            <button class="calc-toggle-btn active" data-calc-wing="glide">
+              <strong>Glide 920</strong>
+              Maximum Range & Swell Carving
+            </button>
+            <button class="calc-toggle-btn" data-calc-wing="carve">
+              <strong>Carve 780</strong>
+              High-Speed Agility & Breaches
+            </button>
+          </div>
+        </div>
+
+        <!-- Swell Condition Selector -->
+        <div class="calc-control-group">
+          <div class="calc-label-row">
+            <span>WATER & SWELL STATE</span>
+          </div>
+          <div class="button-selection-group">
+            <button class="calc-toggle-btn active" data-calc-swell="calm">
+              <strong>Glass / Light Chop</strong>
+              Standard Cruise
+            </button>
+            <button class="calc-toggle-btn" data-calc-swell="swell">
+              <strong>Open Ocean Swell</strong>
+              Hydro-Energy Harvesting
+            </button>
+            <button class="calc-toggle-btn" data-calc-swell="downwind" style="grid-column: span 2;">
+              <strong>Downwind Runner (20kt Wind)</strong>
+              Surfing Wave Energy (+18% Range)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Realtime Calculated Results -->
+      <div class="calc-results-col">
+        <div>
+          <div class="results-top-title">SIMULATED FLIGHT TELEMETRY</div>
+          <div class="results-metrics-stack">
+            <div class="large-result-item">
+              <span class="result-name">MAX FLIGHT RANGE</span>
+              <div class="result-number" id="calcResultRange">42.5 <span>KM</span></div>
+            </div>
+            <div class="large-result-item">
+              <span class="result-name">RIDE TIME ON SWELL</span>
+              <div class="result-number" id="calcResultTime">116 <span>MIN</span></div>
+            </div>
+            <div class="large-result-item">
+              <span class="result-name">OPTIMAL CRUISE SPEED</span>
+              <div class="result-number" id="calcResultCruise">19 <span>KTS</span></div>
+            </div>
+            <div class="large-result-item">
+              <span class="result-name">ENERGY DENSITY RATE</span>
+              <div class="result-number" id="calcResultEfficiency">52 <span>WH/KM</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <button class="btn-primary-nomad js-open-reserve-modal" style="width: 100%;">
+            Reserve Board with this Configuration
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Feature Focus: Carbon Craftsmanship -->
+  <section class="nomad-section" id="craftsmanship">
+    <div class="split-feature-section">
+      <div class="split-feature-image">
+        <img src="assets/images/nomad_carbon_detail.jpg" alt="Macro detail of 3K carbon fiber weave and titanium hardware">
+      </div>
+      <div>
+        <span class="section-eyebrow">TACTILE PERFECTION</span>
+        <h2 class="section-title">PRECISION IN EVERY FIBER.</h2>
+        <p class="section-subtitle">
+          Constructed in limited runs with multi-axial carbon weaves bonded under 7 bars of pressure. No shortcuts, no compromises.
+        </p>
+
+        <div class="feature-pill-list">
+          <div class="feature-pill-item">
+            <div class="feature-pill-icon">✓</div>
+            <div class="feature-pill-text">
+              <h4>Titanium Grade 5 Hardpoints</h4>
+              <p>Corrosion-proof aerospace fasteners that permanently resist salt-water electrolysis.</p>
+            </div>
+          </div>
+
+          <div class="feature-pill-item">
+            <div class="feature-pill-icon">✓</div>
+            <div class="feature-pill-text">
+              <h4>Cryo-Cooled Smart Battery Matrix</h4>
+              <p>21700 cylindrical cells encapsulated in waterproof thermal gel for maximum power burst under load.</p>
+            </div>
+          </div>
+
+          <div class="feature-pill-item">
+            <div class="feature-pill-icon">✓</div>
+            <div class="feature-pill-text">
+              <h4>Haptic Wireless Controller</h4>
+              <p>Waterproof Bluetooth 5.3 trigger with OLED color display and vibration alerts for battery milestones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specification Matrix -->
+  <section class="nomad-section" id="specs">
+    <div class="section-header-centered">
+      <span class="section-eyebrow">BENCHMARK PERFORMANCE</span>
+      <h2 class="section-title">ENGINEERING SPECIFICATIONS</h2>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-item-box">
+        <div class="spec-category">VELOCITY</div>
+        <div class="spec-val-big">55 KM/H</div>
+        <div class="spec-caption">Max top speed with Hyper-Carve wing profile</div>
+      </div>
+
+      <div class="spec-item-box">
+        <div class="spec-category">ENDURANCE</div>
+        <div class="spec-val-big">135 MIN</div>
+        <div class="spec-caption">Continuous ocean flight on 2.4kWh Endurance Pack</div>
+      </div>
+
+      <div class="spec-item-box">
+        <div class="spec-category">CHASSIS WEIGHT</div>
+        <div class="spec-val-big">14.8 KG</div>
+        <div class="spec-caption">Total board dry weight excluding modular battery</div>
+      </div>
+
+      <div class="spec-item-box">
+        <div class="spec-category">FAST CHARGING</div>
+        <div class="spec-val-big">45 MIN</div>
+        <div class="spec-caption">0 to 80% with high-output 1800W Marine Fast Charger</div>
+      </div>
+
+      <div class="spec-item-box">
+        <div class="spec-category">WATER INGRESS</div>
+        <div class="spec-val-big">IP68</div>
+        <div class="spec-caption">Hermetically sealed magnetic locking battery bay</div>
+      </div>
+
+      <div class="spec-item-box">
+        <div class="spec-category">ACOUSTIC LEVEL</div>
+        <div class="spec-val-big">&lt; 38 DB</div>
+        <div class="spec-caption">Silent underwater magnetic drive footprint</div>
+      </div>
+
+      <div class="spec-item-box">
+        <div class="spec-category">MAST CLEARANCE</div>
+        <div class="spec-val-big">85 CM</div>
+        <div class="spec-caption">Deep swell clearance preventing hull-slap breaches</div>
+      </div>
+
+      <div class="spec-item-box">
+        <div class="spec-category">WARRANTY</div>
+        <div class="spec-val-big">3 YEARS</div>
+        <div class="spec-caption">Global hull, electronic, and drivetrain coverage</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Board Configurator -->
+  <section class="nomad-section" id="configurator">
+    <div class="section-header-centered">
+      <span class="section-eyebrow">BESPOKE ORDER</span>
+      <h2 class="section-title">CUSTOMIZE YOUR NOMAD X-1</h2>
+      <p class="section-subtitle">
+        Select your carbon finish, mast length, and battery pack. Each unit is individually serialized and hand-assembled.
+      </p>
+    </div>
+
+    <div class="configurator-wrapper">
+      <div class="config-options-column">
+        
+        <!-- Finish Option -->
+        <div>
+          <div class="config-section-title">01. CARBON HULL FINISH</div>
+          <div class="finish-selection-row">
+            <div class="finish-option-card active">
+              <div class="finish-swatch swatch-matte"></div>
+              <div class="finish-name">Matte 3K Twill</div>
+            </div>
+            <div class="finish-option-card">
+              <div class="finish-swatch swatch-gloss"></div>
+              <div class="finish-name">Obsidian Gloss</div>
+            </div>
+            <div class="finish-option-card">
+              <div class="finish-swatch swatch-stealth"></div>
+              <div class="finish-name">Stealth Slate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mast Length Option -->
+        <div>
+          <div class="config-section-title">02. MAST ARCHITECTURE</div>
+          <div class="button-selection-group">
+            <button class="calc-toggle-btn active" data-config-mast="75">
+              <strong>75cm Coastal Mast</strong>
+              All-around versatility & bays
+            </button>
+            <button class="calc-toggle-btn" data-config-mast="85">
+              <strong>85cm Big-Swell Mast</strong>
+              Deep ocean chop & rolling waves (+$450)
+            </button>
+          </div>
+        </div>
+
+        <!-- Battery Pack Option -->
+        <div>
+          <div class="config-section-title">03. ENERGY CELL MODULE</div>
+          <div class="button-selection-group">
+            <button class="calc-toggle-btn active" data-config-battery="1.8">
+              <strong>1.8kWh Standard Pack</strong>
+              Ultra-light, 90 min flight
+            </button>
+            <button class="calc-toggle-btn" data-config-battery="2.4">
+              <strong>2.4kWh Endurance Pack</strong>
+              135 min flight, high burst output (+$1,200)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Config Summary -->
+      <div class="config-summary-card">
+        <div>
+          <div class="results-top-title">BUILD CONFIGURATION SUMMARY</div>
+          
+          <div class="summary-spec-list">
+            <div class="summary-spec-row">
+              <span>Model</span>
+              <span>Nomad X-1 Open-Ocean</span>
+            </div>
+            <div class="summary-spec-row">
+              <span>Finish</span>
+              <span id="summaryFinish">Matte 3K Twill</span>
+            </div>
+            <div class="summary-spec-row">
+              <span>Mast Option</span>
+              <span id="summaryMast">75cm Coastal Mast</span>
+            </div>
+            <div class="summary-spec-row">
+              <span>Battery Module</span>
+              <span id="summaryBattery">1.8kWh Standard Pack</span>
+            </div>
+            <div class="summary-spec-row">
+              <span>Controller</span>
+              <span>Haptic Bluetooth 5.3 Trigger</span>
+            </div>
+            <div class="summary-spec-row">
+              <span>FlightAssist™</span>
+              <span>Integrated 6-Axis Array</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="config-price-row">
+            <div>
+              <div style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono);">TOTAL ESTIMATED PRICE</div>
+              <div class="price-tag-big" id="summaryTotalPrice">$12,800</div>
+            </div>
+            <button class="btn-primary-nomad js-open-reserve-modal">
+              Reserve Production Slot
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation / Test Flight Modal Drawer -->
+  <div class="nomad-modal-overlay" id="nomadModal">
+    <div class="nomad-modal-card">
+      <button class="modal-close-btn" id="closeNomadModal" aria-label="Close modal">✕</button>
+      
+      <div id="modalFormContainer">
+        <span class="section-eyebrow">RESERVATION & TEST FLIGHT</span>
+        <h3 style="font-size: 24px; color: #fff; margin: 8px 0 20px;">EXPERIENCE NOMAD IN THE OCEAN</h3>
+        
+        <form id="nomadReservationForm">
+          <div class="modal-form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="e.g. Kai Lenny" required>
+          </div>
+          <div class="modal-form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="kai@oceanflight.com" required>
+          </div>
+          <div class="modal-form-group">
+            <label>Preferred Ocean Flight Location</label>
+            <select required>
+              <option value="hawaii">Maui & Oahu, Hawaii</option>
+              <option value="california">Santa Cruz & Newport, California</option>
+              <option value="portugal">Cascais & Nazaré, Portugal</option>
+              <option value="australia">Gold Coast & Byron Bay, Australia</option>
+              <option value="private">Private Yacht / Global Delivery</option>
+            </select>
+          </div>
+          <div class="modal-form-group">
+            <label>Foiling Experience Level</label>
+            <select>
+              <option value="beginner">First Time E-Foiler</option>
+              <option value="intermediate">Surfer / Kite / Wing Foiler</option>
+              <option value="expert">Advanced Ocean Downwind Foiler</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary-nomad" style="width: 100%; margin-top: 10px;">
+            Confirm Reservation Request
+          </button>
+        </form>
+      </div>
+
+      <div id="modalConfirmationMessage" style="display: none; text-align: center; padding: 24px 0;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(0, 229, 255, 0.15); color: #00e5ff; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">✓</div>
+        <h4 style="font-size: 20px; color: #fff; margin-bottom: 8px;">Reservation Received</h4>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6;">
+          Your flight concierge will contact you within 24 hours with ocean slot confirmation and board build timing.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nomad Footer -->
+  <footer class="nomad-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <div class="nomad-brand">
+          <div class="brand-symbol">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M4 18L12 4L20 18L12 14L4 18Z"/>
+            </svg>
+          </div>
+          <div class="brand-text">NOMAD <span>//</span> FOILS</div>
+        </div>
+        <p>
+          Architects of carbon-fiber electric hydrodynamics. Precision engineered for open ocean freeriding and deep swell exploration.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">TECHNOLOGY</div>
+        <ul class="footer-links-list">
+          <li><a href="#engineering">T1000 Monocoque</a></li>
+          <li><a href="#engineering">Whisper-Drive Turbine</a></li>
+          <li><a href="#simulator">FlightAssist™ AI</a></li>
+          <li><a href="#specs">Hydrofoil Physics</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">EXPERIENCE</div>
+        <ul class="footer-links-list">
+          <li><a href="#simulator">Ocean Swell Simulator</a></li>
+          <li><a href="#configurator">Bespoke Customizer</a></li>
+          <li><a href="#" class="js-open-reserve-modal">Test Flight Centers</a></li>
+          <li><a href="kyoto.html">Explore Kyoto Studio</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">GLOBAL HUBS</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Maui, Hawaii</a></li>
+          <li><a href="#">Cascais, Portugal</a></li>
+          <li><a href="#">Byron Bay, Australia</a></li>
+          <li><a href="#">support@nomadfoils.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>© 2026 Nomad Foils Inc. All rights reserved. Built with carbon precision.</div>
+      <div>
+        <a href="kyoto.html" style="color: #94a3b8; text-decoration: none; margin-left: 16px;">View Kyoto Ceramic Studio →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nomad.js"></script>
+</body>
+</html>

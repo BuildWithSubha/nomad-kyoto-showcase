@@ -1,0 +1,128 @@
+/* Common Design Tokens & Switcher Bar */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Global Top Experience Switcher */
+.project-switcher-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+  background: rgba(10, 14, 20, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.switcher-brand-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #e2e8f0;
+}
+
+.switcher-brand-tag .indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00e5ff;
+  box-shadow: 0 0 8px #00e5ff;
+}
+
+.switcher-brand-tag.kyoto-active .indicator-dot {
+  background: #b46244;
+  box-shadow: 0 0 8px #b46244;
+}
+
+.switcher-nav-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.switcher-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #94a3b8;
+  transition: all 0.25s ease;
+}
+
+.switcher-pill:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.switcher-pill.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.switcher-pill.active.nomad {
+  background: linear-gradient(135deg, #00e5ff, #0284c7);
+  color: #050b14;
+}
+
+.switcher-pill.active.kyoto {
+  background: linear-gradient(135deg, #d4a373, #b46244);
+  color: #1a1614;
+}
+
+.switcher-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .switcher-status {
+    display: none;
+  }
+  .project-switcher-bar {
+    padding: 6px 14px;
+  }
+  .switcher-pill {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+}

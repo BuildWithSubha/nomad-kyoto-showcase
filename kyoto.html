@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kisen Studio Kyoto — Handcrafted wood-fired matcha bowls (chawan) and artisan teaware fired in an authentic seven-day Anagama kiln in the eastern hills of Kyoto.">
+  <title>KISEN CERAMICS KYOTO // Wood-Fired Matcha Bowls & Handcrafted Teaware</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/kyoto.css">
+</head>
+<body class="kyoto-theme">
+
+  <!-- Global Project Switcher Bar -->
+  <header class="project-switcher-bar">
+    <div class="switcher-brand-tag kyoto-active">
+      <span class="indicator-dot"></span>
+      <span>Experience Mode: <strong>Kyoto Ceramic Studio</strong></span>
+    </div>
+    <div class="switcher-nav-pills">
+      <a href="nomad.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Nomad Foils (Ocean E-Foil)
+      </a>
+      <a href="kyoto.html" class="switcher-pill active kyoto">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        Kyoto Ceramic Studio
+      </a>
+      <a href="index.html" class="switcher-pill">
+        Portal Overview
+      </a>
+    </div>
+    <div class="switcher-status">
+      <span>Batch #14 Firing</span>
+      <span>•</span>
+      <span>Higashiyama, Kyoto</span>
+    </div>
+  </header>
+
+  <!-- Kyoto Studio Header -->
+  <nav class="kyoto-header">
+    <a href="kyoto.html" class="kyoto-brand">
+      <span class="brand-kanji">木泉</span>
+      <span class="brand-name-latin">KISEN</span>
+      <span class="brand-location">KYOTO</span>
+    </a>
+
+    <div class="kyoto-nav">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#vessels">Vessel Collection</a>
+      <a href="#anagama">7-Day Kiln</a>
+      <a href="#atelier">Artisan Craft</a>
+      <a href="#packaging">Kiribako Box</a>
+    </div>
+
+    <div class="kyoto-header-actions">
+      <button class="ambient-audio-btn" id="ambientAudioToggle" aria-label="Toggle Kyoto tearoom soundscape">
+        <span>🔇</span> Tearoom Ambiance
+      </button>
+      <button class="btn-primary-kyoto js-open-kyoto-modal">
+        Reserve Batch #14
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="kyoto-hero">
+    <div class="kyoto-hero-bg">
+      <img src="assets/images/kyoto_hero_matcha.jpg" alt="Authentic wood-fired matcha bowl with frothy green matcha tea in Kyoto tatami room">
+    </div>
+    <div class="kyoto-hero-overlay"></div>
+
+    <div class="kyoto-hero-content">
+      <div>
+        <div class="hero-kanji-watermark">
+          <span>木泉窯 · HIGASHIYAMA ATELIER</span>
+          <span class="dot"></span>
+          <span>ANAGAMA WOOD FIRING</span>
+        </div>
+        <h1 class="kyoto-hero-title">
+          Formed by Hand.<br>Born in <em>Seven Days of Flame</em>.
+        </h1>
+        <p class="kyoto-hero-p">
+          Small-batch, wood-fired matcha bowls and handcrafted teaware sculpted from native Kyoto clay. Each piece captures the unrepeatable choreography of red pine ash, ember glow, and wabi-sabi stillness.
+        </p>
+        <div class="kyoto-hero-actions">
+          <a href="#vessels" class="btn-primary-kyoto">
+            Explore Vessels
+          </a>
+          <a href="#anagama" class="btn-secondary-kyoto">
+            The Anagama Journey
+          </a>
+        </div>
+      </div>
+
+      <!-- Batch Status Card -->
+      <div class="hero-batch-card">
+        <div class="batch-card-header">
+          <div class="batch-tag">AUTUMN ANAGAMA ALLOCATION</div>
+          <div class="batch-live-pill">AVAILABLE FOR ACQUISITION</div>
+        </div>
+
+        <div class="batch-stats-grid">
+          <div class="batch-stat-box">
+            <div class="batch-stat-label">FIRING DURATION</div>
+            <div class="batch-stat-value">168 <span>HRS</span></div>
+          </div>
+          <div class="batch-stat-box">
+            <div class="batch-stat-label">PEAK HEAT</div>
+            <div class="batch-stat-value">1,310°<span>C</span></div>
+          </div>
+          <div class="batch-stat-box">
+            <div class="batch-stat-label">BATCH REMAINING</div>
+            <div class="batch-stat-value">12 <span>PCS</span></div>
+          </div>
+        </div>
+
+        <div style="font-size: 12px; color: #d6d3d1; font-style: italic; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px;">
+          "No two vessels emerge the same. The fire paints what human hands cannot plan."
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Wabi-Sabi Philosophy Section -->
+  <section class="kyoto-section" id="philosophy">
+    <div class="kyoto-section-header">
+      <span class="kyoto-section-eyebrow">美の哲学 · WABI-SABI</span>
+      <h2 class="kyoto-section-title">The Beauty of Imperfection & Earth</h2>
+      <p class="kyoto-section-subtitle">
+        In Japanese tea culture (*Chado*), the chawan is not merely an object—it is an intimate companion that cradles warm water, whisked powdered tea, and the quiet rhythm of the present moment.
+      </p>
+    </div>
+
+    <div class="philosophy-grid">
+      <div class="philosophy-quote-card">
+        <p class="quote-text">
+          We do not apply synthetic glazes. We surrender our vessels to seven sleepless days of split red-pine embers, letting the natural ash glaze bloom wherever the draft chooses.
+        </p>
+        <div class="quote-author">Master Potter Kenzo Ogawa · Kisen Studio</div>
+      </div>
+
+      <div class="philosophy-text-col">
+        <p>
+          Nestled among the cedar groves of eastern Kyoto, our studio adheres to centuries-old ceramic traditions. We age our local Shigaraki and Kurama mountain clays for up to five years, allowing organic minerals to ferment and develop micro-cavities that retain tea warmth.
+        </p>
+        <p>
+          When you hold a Kisen chawan in two hands, the natural weight, organic lip texture, and tactile warmth slow your breath, inviting a deep meditative pause into your daily life.
+        </p>
+        <div style="margin-top: 24px;">
+          <a href="#atelier" class="btn-secondary-kyoto">
+            Read Artisan Studio Story →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Vessel Curator & Glaze Inspection -->
+  <section class="kyoto-section" id="vessels" style="background: var(--k-bg-secondary); border-radius: var(--k-radius-lg);">
+    <div class="kyoto-section-header">
+      <span class="kyoto-section-eyebrow">茶碗選集 · CURATED COLLECTION</span>
+      <h2 class="kyoto-section-title">Explore Wood-Fired Teaware</h2>
+      <p class="kyoto-section-subtitle">
+        Click between vessel profiles and touch interactive glaze points to inspect ash melt, flame scorch, and tactile clay qualities.
+      </p>
+    </div>
+
+    <!-- Vessel Selection Tabs -->
+    <div class="vessel-tabs-row" style="justify-content: center;">
+      <button class="vessel-tab-btn active" data-vessel="yakishime">01. Kuro-Yakishime Chawan</button>
+      <button class="vessel-tab-btn" data-vessel="shino">02. Shino Hakeme Chawan</button>
+      <button class="vessel-tab-btn" data-vessel="tenmoku">03. Tenmoku Oil-Spot Bowl</button>
+      <button class="vessel-tab-btn" data-vessel="kyusu">04. Iga Yakishime Kyusu</button>
+    </div>
+
+    <div class="vessel-inspector-wrapper">
+      <!-- Interactive Visual Frame with Glaze Hotspots -->
+      <div class="vessel-view-stage">
+        <img src="assets/images/kyoto_chawan_solo.jpg" alt="Japanese wood-fired matcha bowl detail inspection view" id="vesselImage">
+        
+        <!-- Interactive Glaze Hotspots -->
+        <button class="glaze-hotspot glaze-spot-ash active" data-spot="ash" title="Natural Ash Glaze"></button>
+        <button class="glaze-hotspot glaze-spot-flame" data-spot="flame" title="Flame Scorch Flash"></button>
+        <button class="glaze-hotspot glaze-spot-foot" data-spot="foot" title="Kodai Foot Rim"></button>
+        <button class="glaze-hotspot glaze-spot-rim" data-spot="rim" title="Wabi-Sabi Lip Rim"></button>
+      </div>
+
+      <!-- Spec Sheet -->
+      <div class="vessel-spec-sheet">
+        <div>
+          <h3 class="vessel-name-title" id="vesselName">Kuro-Yakishime Chawan</h3>
+          <div class="vessel-japanese-name" id="vesselKanji">黒焼締茶碗 — Un-glazed Wood Fired Bowl</div>
+          <p class="vessel-description-text" id="vesselDesc">
+            Unglazed coarse Shigaraki mountain clay fired for 168 continuous hours in red pine embers. The deep charcoal surface is naturally glazed by melting pine ash deposits drifting through the Anagama kiln draft.
+          </p>
+        </div>
+
+        <div class="vessel-data-matrix">
+          <div class="vessel-data-item">
+            <div class="vessel-data-label">CLAY PROVENANCE</div>
+            <div class="vessel-data-val" id="vesselClay">Shigaraki Mountain Clay</div>
+          </div>
+          <div class="vessel-data-item">
+            <div class="vessel-data-label">NATURAL GLAZE</div>
+            <div class="vessel-data-val" id="vesselGlaze">Pine Ash Deposit (Biidoro)</div>
+          </div>
+          <div class="vessel-data-item">
+            <div class="vessel-data-label">FIRING TEMPERATURE</div>
+            <div class="vessel-data-val" id="vesselTemp">1,290°C (Cone 11)</div>
+          </div>
+          <div class="vessel-data-item">
+            <div class="vessel-data-label">DIMENSIONS & MASS</div>
+            <div class="vessel-data-val" id="vesselDimensions">Ø 12.8cm × H 8.4cm · 340g</div>
+          </div>
+        </div>
+
+        <!-- Glaze Feature Highlight -->
+        <div style="background: #faf8f5; border: 1px solid var(--k-border-subtle); padding: 16px; border-radius: var(--k-radius-sm);">
+          <div style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--k-accent-terracotta); margin-bottom: 4px; font-weight: 600;">INSPECTED FEATURE NOTE</div>
+          <div style="font-size: 13px; color: var(--k-text-dark); line-height: 1.5;" id="glazeFeatureNote">
+            Natural Ash Glaze (Biidoro): Airborne red pine ash deposits melt at 1280°C into spontaneous olive-green glass pools.
+          </div>
+        </div>
+
+        <div style="margin-top: 16px;">
+          <button class="btn-primary-kyoto js-open-kyoto-modal" style="width: 100%;">
+            Inquire for Vessel Acquisition
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 7-Day Anagama Firing Journey -->
+  <section class="kyoto-section" id="anagama">
+    <div class="anagama-timeline-section">
+      <div class="kyoto-section-header">
+        <span class="kyoto-section-eyebrow" style="color: #d4a373;">穴窯の七日間 · THE 168-HOUR FIRING</span>
+        <h2 class="kyoto-section-title">The Anagama Kiln Journey</h2>
+        <p class="kyoto-section-subtitle">
+          For seven consecutive days, five potters take continuous 4-hour shifts stoking split Japanese red pine (*Akamatsu*) around the clock. Select a firing stage below to inspect the kiln's transformation.
+        </p>
+      </div>
+
+      <!-- Live Kiln Temp Indicator -->
+      <div class="kiln-temp-display-row">
+        <div class="kiln-current-temp" id="kilnTempDisplay">1,240°C</div>
+        <div class="kiln-phase-badge" id="kilnPhaseBadge">Ash Vitrification & Ember Melting</div>
+      </div>
+
+      <!-- Scrubber Track -->
+      <div class="timeline-scrubber-track">
+        <div class="timeline-day-card" data-day="day1">
+          <div class="day-card-number">DAY 01 - 02</div>
+          <div class="day-card-title">Water Smoke & Dry</div>
+          <div class="day-card-temp">100°C - 500°C</div>
+        </div>
+
+        <div class="timeline-day-card" data-day="day3">
+          <div class="day-card-number">DAY 03 - 04</div>
+          <div class="day-card-title">Carbon Reduction</div>
+          <div class="day-card-temp">600°C - 950°C</div>
+        </div>
+
+        <div class="timeline-day-card active" data-day="day5">
+          <div class="day-card-number">DAY 05 - 06</div>
+          <div class="day-card-title">Ash Vitrification</div>
+          <div class="day-card-temp">1050°C - 1280°C</div>
+        </div>
+
+        <div class="timeline-day-card" data-day="day7">
+          <div class="day-card-number">DAY 07 (PEAK)</div>
+          <div class="day-card-title">Thermal Flash & Seal</div>
+          <div class="day-card-temp">1,310°C Peak</div>
+        </div>
+
+        <div class="timeline-day-card" data-day="day10">
+          <div class="day-card-number">DAYS 08 - 14</div>
+          <div class="day-card-title">Slow Annealing</div>
+          <div class="day-card-temp">Natural Cooling</div>
+        </div>
+      </div>
+
+      <!-- Firing Notes -->
+      <div class="firing-phase-details-box" id="firingPhaseDetails">
+        Pine logs are fed in 3-minute intervals around the clock. Volatile wood ash floats through the chamber, fusing with silica in the clay to form unglazed crystalline glaze pools (Biidoro).
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Craft & Studio Atelier Story -->
+  <section class="kyoto-section" id="atelier">
+    <div class="atelier-story-grid">
+      <div class="atelier-image-frame">
+        <img src="assets/images/kyoto_artisan_craft.jpg" alt="Experienced Japanese master potter shaping a wood-fired ceramic bowl on a wheel in Kyoto studio">
+      </div>
+
+      <div>
+        <span class="kyoto-section-eyebrow">職人の技 · LIVING HERITAGE</span>
+        <h2 class="kyoto-section-title">Shaped by Decades of Intuition</h2>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--k-text-muted); margin-bottom: 20px;">
+          Pottery on the wheel is a silent conversation between muscle memory and the density of the earth. Every bowl is shaped by hand with no measuring calipers—allowing organic variations that fit the natural curvature of human palms.
+        </p>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--k-text-muted); margin-bottom: 28px;">
+          Before entering the kiln, vessels air-dry on untreated cedar boards for twelve weeks, absorbing the ambient humidity changes of the Kyoto mountain seasons.
+        </p>
+
+        <button class="btn-primary-kyoto js-open-kyoto-modal">
+          Schedule Private Atelier Visit
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packaging & Kiribako Box Presentation -->
+  <section class="kyoto-section" id="packaging">
+    <div class="kyoto-section-header">
+      <span class="kyoto-section-eyebrow">桐箱 · PRESENTATION & PROVENANCE</span>
+      <h2 class="kyoto-section-title">The Complete Teaware Experience</h2>
+      <p class="kyoto-section-subtitle">
+        Every wood-fired piece is wrapped and delivered in traditional Japanese presentation worthy of tea masters and discerning collectors.
+      </p>
+    </div>
+
+    <div class="kiribako-box">
+      <div class="kiribako-item">
+        <div class="kiribako-icon">🎋</div>
+        <h3 class="kiribako-title">Signed Paulownia Box (桐箱)</h3>
+        <p class="kiribako-desc">
+          Custom-fitted Paulownia wood box (*Kiribako*) inscribed by hand in sumi ink with the kiln seal, bowl name, and master potter signature.
+        </p>
+      </div>
+
+      <div class="kiribako-item">
+        <div class="kiribako-icon">🌿</div>
+        <h3 class="kiribako-title">Turmeric Wrapping Cloth (鬱金布)</h3>
+        <p class="kiribako-desc">
+          Traditionally dyed with natural turmeric (*Ukon-nuno*) to naturally protect fine ceramics against moisture and insects for generations.
+        </p>
+      </div>
+
+      <div class="kiribako-item">
+        <div class="kiribako-icon">📜</div>
+        <h3 class="kiribako-title">Kiln Certificate of Firing</h3>
+        <p class="kiribako-desc">
+          Individually stamped archival parchment detailing the exact kiln chamber position, pine wood provenance, and firing coordinates.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation / Acquisition Modal Drawer -->
+  <div class="kyoto-modal-overlay" id="kyotoModal">
+    <div class="kyoto-modal-card">
+      <button class="kyoto-modal-close" id="closeKyotoModal" aria-label="Close modal">✕</button>
+      
+      <span class="kyoto-section-eyebrow">BATCH #14 ALLOCATION</span>
+      <h3 style="font-family: var(--font-serif); font-size: 26px; color: var(--k-text-dark); margin: 6px 0 20px;">Reserve a Wood-Fired Vessel</h3>
+      
+      <form id="kyotoInquiryForm">
+        <div class="kyoto-form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="e.g. Sōshitsu Sen" required>
+        </div>
+        <div class="kyoto-form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="sen@tea-chanoyu.jp" required>
+        </div>
+        <div class="kyoto-form-group">
+          <label>Preferred Vessel Type</label>
+          <select required>
+            <option value="yakishime">Kuro-Yakishime Matcha Bowl (¥48,000 / $320)</option>
+            <option value="shino">Shino Hakeme Chawan (¥52,000 / $350)</option>
+            <option value="tenmoku">Tenmoku Oil-Spot Chawan (¥64,000 / $430)</option>
+            <option value="kyusu">Iga Side-Handle Kyusu (¥38,000 / $260)</option>
+            <option value="custom">Private Atelier Visit / Custom Commission</option>
+          </select>
+        </div>
+        <div class="kyoto-form-group">
+          <label>Inquiry or Packaging Note</label>
+          <textarea rows="3" placeholder="Specify if this is for tea ceremony practice, gift in Kiribako, or collection..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary-kyoto" style="width: 100%; margin-top: 10px;">
+          Submit Allocation Request
+        </button>
+      </form>
+
+      <div id="kyotoConfirmMsg" style="display: none; text-align: center; padding: 24px 0;">
+        <div style="font-size: 32px; color: var(--k-accent-terracotta); margin-bottom: 12px;">木泉</div>
+        <h4 style="font-family: var(--font-serif); font-size: 22px; margin-bottom: 8px;">Inquiry Received With Gratitude</h4>
+        <p style="font-size: 14px; color: var(--k-text-muted); line-height: 1.7;">
+          Our studio curator in Kyoto will review your request and reply with photographs of individual available pieces within 48 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kyoto Studio Footer -->
+  <footer class="kyoto-footer">
+    <div class="kyoto-footer-inner">
+      <div class="kyoto-footer-brand">
+        <div class="kyoto-brand" style="color: #f6f3eb;">
+          <span class="brand-kanji" style="color: #d4a373;">木泉</span>
+          <span class="brand-name-latin" style="color: #f6f3eb;">KISEN</span>
+          <span class="brand-location" style="color: #a8a29e;">KYOTO</span>
+        </div>
+        <p>
+          Wood-fired ceramic studio in the hills of Higashiyama, Kyoto. Practicing traditional Anagama firing, wabi-sabi aesthetics, and handcrafted teaware for tea practitioners worldwide.
+        </p>
+      </div>
+
+      <div>
+        <div class="kyoto-footer-col-title">COLLECTION</div>
+        <ul class="kyoto-footer-list">
+          <li><a href="#vessels">Matcha Chawan</a></li>
+          <li><a href="#vessels">Yakishime Kyusu</a></li>
+          <li><a href="#vessels">Yunomi Cups</a></li>
+          <li><a href="#packaging">Kiribako Boxes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="kyoto-footer-col-title">ATELIER</div>
+        <ul class="kyoto-footer-list">
+          <li><a href="#philosophy">Wabi-Sabi Philosophy</a></li>
+          <li><a href="#anagama">168-Hour Kiln Firing</a></li>
+          <li><a href="#atelier">Potter's Wheel Craft</a></li>
+          <li><a href="#" class="js-open-kyoto-modal">Studio Visit Booking</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="kyoto-footer-col-title">STUDIO LOCATION</div>
+        <ul class="kyoto-footer-list">
+          <li>Higashiyama-ku, Kyoto 605-0862</li>
+          <li>Japan (By appointment)</li>
+          <li>atelier@kisen-kyoto.jp</li>
+          <li><a href="nomad.html" style="color: #d4a373;">View Nomad Foils →</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kyoto-footer-bottom">
+      <div>© 2026 Kisen Studio Kyoto (木泉窯). All rights reserved. Handcrafted with reverence.</div>
+      <div>
+        <a href="nomad.html" style="color: #a8a29e; text-decoration: none;">Explore Nomad Hydrofoils →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/kyoto.js"></script>
+</body>
+</html>
