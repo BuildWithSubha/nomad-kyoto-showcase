@@ -1,0 +1,849 @@
+/* Taj Mahal — Royal Mughal Heritage Stylesheet */
+:root {
+  --t-bg-dark: #07090d;
+  --t-bg-surface: #0e121a;
+  --t-bg-card: #141b26;
+  --t-ivory-light: #faf8f3;
+  --t-ivory-muted: #e7e2d6;
+  --t-gold-bright: #f5d061;
+  --t-gold-royal: #d4af37;
+  --t-gold-dark: #aa820a;
+  --t-lapis-blue: #1e3a8a;
+  --t-carnelian: #b84a39;
+  --t-turquoise: #0d9488;
+  --t-border-gold: rgba(212, 175, 55, 0.2);
+  --t-border-subtle: rgba(255, 255, 255, 0.08);
+  --t-text-primary: #faf8f3;
+  --t-text-secondary: #cbd5e1;
+  --t-text-muted: #8492a6;
+  --font-cinzel: 'Cinzel', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --t-radius-sm: 6px;
+  --t-radius-md: 12px;
+  --t-radius-lg: 20px;
+  --t-shadow-royal: 0 20px 45px -10px rgba(0, 0, 0, 0.8);
+}
+
+body.taj-theme {
+  background-color: var(--t-bg-dark);
+  color: var(--t-text-primary);
+  font-family: var(--t-sans);
+  padding-top: 45px;
+  transition: background-color 0.8s ease, color 0.8s ease;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.08), transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(30, 58, 138, 0.06), transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Dynamic Lighting Modes */
+body.taj-theme.light-dawn {
+  --t-bg-dark: #0b090e;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(244, 114, 182, 0.12), transparent 60%),
+                    radial-gradient(ellipse at 80% 50%, rgba(251, 146, 60, 0.08), transparent 50%);
+}
+
+body.taj-theme.light-noon {
+  --t-bg-dark: #090d14;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(224, 242, 254, 0.1), transparent 60%),
+                    radial-gradient(ellipse at 20% 40%, rgba(212, 175, 55, 0.06), transparent 50%);
+}
+
+body.taj-theme.light-sunset {
+  --t-bg-dark: #120906;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(234, 88, 12, 0.15), transparent 60%),
+                    radial-gradient(ellipse at 70% 60%, rgba(184, 74, 57, 0.12), transparent 50%);
+}
+
+body.taj-theme.light-night {
+  --t-bg-dark: #04060a;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.1), transparent 60%),
+                    radial-gradient(ellipse at 80% 50%, rgba(14, 165, 233, 0.05), transparent 50%);
+}
+
+/* Header Navigation */
+.taj-header {
+  position: sticky;
+  top: 45px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background: rgba(7, 9, 13, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--t-border-gold);
+}
+
+.taj-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--t-text-primary);
+}
+
+.taj-emblem-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--t-gold-royal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--t-gold-bright);
+}
+
+.taj-emblem-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.taj-brand-title {
+  font-family: var(--font-cinzel);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+}
+
+.taj-brand-title span {
+  color: var(--t-gold-bright);
+}
+
+.taj-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.taj-nav a {
+  text-decoration: none;
+  color: var(--t-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.taj-nav a:hover {
+  color: var(--t-gold-bright);
+}
+
+.taj-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tanpura-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-sm);
+  font-size: 12px;
+  font-family: var(--font-sans);
+  color: var(--t-gold-bright);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tanpura-audio-btn:hover {
+  background: rgba(212, 175, 55, 0.15);
+}
+
+.tanpura-audio-btn.active {
+  background: var(--t-gold-royal);
+  color: #0c0a04;
+  font-weight: 600;
+}
+
+.btn-primary-taj {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #f5d061, #d4af37);
+  color: #0d0a03;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--t-radius-sm);
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-primary-taj:hover {
+  background: linear-gradient(135deg, #fff2b2, #f5d061);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-taj {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--t-text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--t-radius-sm);
+  text-decoration: none;
+  border: 1px solid var(--t-border-subtle);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary-taj:hover {
+  border-color: var(--t-gold-bright);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+/* Hero Section */
+.taj-hero {
+  position: relative;
+  min-height: calc(100vh - 45px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 56px 48px;
+  overflow: hidden;
+}
+
+.taj-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.taj-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transition: filter 0.8s ease, opacity 0.8s ease;
+}
+
+.taj-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 9, 13, 0.35) 0%,
+    rgba(7, 9, 13, 0.15) 30%,
+    rgba(7, 9, 13, 0.85) 80%,
+    rgba(7, 9, 13, 1) 100%
+  );
+}
+
+.taj-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: flex-end;
+}
+
+.taj-eyebrow-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-cinzel);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--t-gold-bright);
+  margin-bottom: 14px;
+}
+
+.taj-hero-title {
+  font-family: var(--font-cinzel);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.taj-hero-title em {
+  font-family: var(--font-cormorant);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--t-gold-bright);
+}
+
+.taj-hero-quote {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e2e8f0;
+  max-width: 560px;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.taj-hero-quote span {
+  font-size: 13px;
+  color: var(--t-gold-bright);
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-cinzel);
+  letter-spacing: 0.08em;
+}
+
+/* Time of Day Lighting Controller Widget */
+.time-of-day-card {
+  background: rgba(14, 18, 26, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-md);
+  padding: 24px;
+  box-shadow: var(--t-shadow-royal);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.time-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--t-border-subtle);
+  padding-bottom: 12px;
+}
+
+.time-card-title {
+  font-family: var(--font-cinzel);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--t-gold-bright);
+}
+
+.time-button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.time-light-btn {
+  padding: 10px 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--t-border-subtle);
+  border-radius: var(--t-radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--t-text-secondary);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.time-light-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--t-gold-bright);
+  color: #ffffff;
+}
+
+.time-light-btn.active {
+  background: var(--t-gold-royal);
+  color: #080a0e;
+  border-color: var(--t-gold-bright);
+  font-weight: 700;
+}
+
+.time-light-desc {
+  font-size: 12px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px 14px;
+  border-radius: var(--t-radius-sm);
+  border: 1px solid var(--t-border-subtle);
+}
+
+/* Sections */
+.taj-section {
+  padding: 110px 48px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.taj-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 64px;
+}
+
+.taj-eyebrow {
+  font-family: var(--font-cinzel);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--t-gold-bright);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.taj-title {
+  font-family: var(--font-cinzel);
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.taj-subtitle {
+  font-size: 16px;
+  color: var(--t-text-secondary);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Chronicle Story Split */
+.chronicle-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  background: var(--t-bg-surface);
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-lg);
+  padding: 48px;
+}
+
+.chronicle-text h3 {
+  font-family: var(--font-cinzel);
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.chronicle-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--t-text-secondary);
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+.chronicle-stats-card {
+  background: var(--t-bg-card);
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-md);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chronicle-stat-item {
+  border-bottom: 1px solid var(--t-border-subtle);
+  padding-bottom: 14px;
+}
+
+.chronicle-stat-num {
+  font-family: var(--font-cinzel);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--t-gold-bright);
+}
+
+.chronicle-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.chronicle-stat-desc {
+  font-size: 12px;
+  color: var(--t-text-muted);
+}
+
+/* Interactive Pietra Dura Gemstone Loupe */
+.pietra-dura-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+  background: var(--t-bg-surface);
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-lg);
+  padding: 48px;
+}
+
+.pietra-media-frame {
+  position: relative;
+  border-radius: var(--t-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--t-border-gold);
+  box-shadow: var(--t-shadow-royal);
+}
+
+.pietra-media-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gemstone Hotspots */
+.gem-hotspot {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.25);
+  border: 1px solid var(--t-gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 5;
+}
+
+.gem-hotspot::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--t-gold-bright);
+}
+
+.gem-hotspot:hover, .gem-hotspot.active {
+  background: var(--t-gold-bright);
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.8);
+  transform: scale(1.18);
+}
+
+.gem-hotspot:hover::before, .gem-hotspot.active::before {
+  background: #080a0e;
+}
+
+.gem-spot-lapis { top: 48%; left: 49%; }
+.gem-spot-malachite { top: 32%; left: 32%; }
+.gem-spot-carnelian { top: 62%; left: 38%; }
+.gem-spot-marble { top: 22%; left: 65%; }
+
+/* Gemstone Explorer Panel */
+.gemstone-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gem-name-heading {
+  font-family: var(--font-cinzel);
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.gem-origin-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--t-gold-bright);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gem-desc-p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--t-text-secondary);
+}
+
+.gem-types-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.gem-chip {
+  padding: 10px;
+  background: var(--t-bg-card);
+  border: 1px solid var(--t-border-subtle);
+  border-radius: var(--t-radius-sm);
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.gem-chip strong {
+  display: block;
+  color: var(--t-gold-bright);
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+
+/* Architectural Symmetry & Geometry Grid */
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.arch-card {
+  background: var(--t-bg-surface);
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-md);
+  padding: 24px;
+  transition: transform 0.25s ease;
+}
+
+.arch-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+.arch-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: var(--t-gold-bright);
+}
+
+.arch-card-title {
+  font-family: var(--font-cinzel);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.arch-card-desc {
+  font-size: 13px;
+  color: var(--t-text-secondary);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Full Moon Night Viewing Section */
+.moonlight-section-wrapper {
+  background: #04060a;
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-lg);
+  padding: 56px 48px;
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.moonlight-media-frame {
+  border-radius: var(--t-radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.moonlight-media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Modal Drawer */
+.taj-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 6, 10, 0.85);
+  backdrop-filter: blur(16px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.taj-modal-overlay.open {
+  display: flex;
+}
+
+.taj-modal-card {
+  background: var(--t-bg-surface);
+  border: 1px solid var(--t-border-gold);
+  border-radius: var(--t-radius-md);
+  max-width: 540px;
+  width: 100%;
+  padding: 38px;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
+}
+
+.taj-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: var(--t-text-muted);
+  cursor: pointer;
+}
+
+.taj-modal-close:hover {
+  color: var(--t-gold-bright);
+}
+
+.taj-form-group {
+  margin-bottom: 18px;
+}
+
+.taj-form-group label {
+  display: block;
+  font-family: var(--font-cinzel);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--t-gold-bright);
+  margin-bottom: 6px;
+}
+
+.taj-form-group input, .taj-form-group select, .taj-form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--t-bg-card);
+  border: 1px solid var(--t-border-subtle);
+  border-radius: var(--t-radius-sm);
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.taj-form-group input:focus, .taj-form-group select:focus, .taj-form-group textarea:focus {
+  border-color: var(--t-gold-bright);
+}
+
+/* Footer */
+.taj-footer {
+  border-top: 1px solid var(--t-border-gold);
+  background: #040508;
+  padding: 72px 48px 36px;
+}
+
+.taj-footer-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.taj-footer-brand p {
+  font-size: 13px;
+  color: var(--t-text-muted);
+  max-width: 340px;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.taj-footer-col-title {
+  font-family: var(--font-cinzel);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--t-gold-bright);
+  margin-bottom: 16px;
+}
+
+.taj-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.taj-footer-links a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--t-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.taj-footer-links a:hover {
+  color: var(--t-gold-bright);
+}
+
+.taj-footer-bottom {
+  max-width: 1320px;
+  margin: 0 auto;
+  border-top: 1px solid var(--t-border-subtle);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--t-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .taj-hero-content, .chronicle-grid, .pietra-dura-container, .moonlight-section-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .architecture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .taj-footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .taj-header {
+    padding: 12px 20px;
+  }
+  .taj-nav {
+    display: none;
+  }
+  .taj-hero {
+    padding: 24px 20px 48px;
+  }
+  .taj-section {
+    padding: 60px 20px;
+  }
+  .architecture-grid {
+    grid-template-columns: 1fr;
+  }
+  .time-button-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .taj-footer-inner {
+    grid-template-columns: 1fr;
+  }
+}

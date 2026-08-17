@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 8px 24px;
-  background: rgba(8, 12, 18, 0.9);
+  background: rgba(8, 12, 18, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -66,6 +66,11 @@ body {
   box-shadow: 0 0 8px #f59e0b;
 }
 
+.switcher-brand-tag.taj-active .indicator-dot {
+  background: #d4af37;
+  box-shadow: 0 0 8px #d4af37;
+}
+
 .switcher-nav-pills {
   display: flex;
   align-items: center;
@@ -74,13 +79,15 @@ body {
   padding: 4px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+  max-width: 80vw;
 }
 
 .switcher-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 14px;
+  padding: 5px 12px;
   border-radius: 16px;
   font-size: 11px;
   font-weight: 600;
@@ -117,6 +124,11 @@ body {
   color: #0c0a09;
 }
 
+.switcher-pill.active.taj {
+  background: linear-gradient(135deg, #fce7a2, #d4af37);
+  color: #1c1404;
+}
+
 .switcher-status {
   display: flex;
   align-items: center;
@@ -125,21 +137,20 @@ body {
   color: #64748b;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .switcher-status {
     display: none;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .project-switcher-bar {
     padding: 6px 10px;
   }
-  .switcher-pill {
-    padding: 4px 8px;
-    font-size: 10px;
-  }
   .switcher-brand-tag {
     display: none;
+  }
+  .switcher-nav-pills {
+    max-width: 100%;
   }
 }

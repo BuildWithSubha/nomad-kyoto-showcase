@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Taj Mahal in Agra, India — A cinematic tribute to the world's most iconic monument of eternal love, Mughal symmetry, and translucent Makrana white marble craftsmanship.">
+  <title>THE TAJ MAHAL // Monument of Eternal Love & Mughal Architecture · Agra, India</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/tajmahal.css">
+</head>
+<body class="taj-theme light-dawn">
+
+  <!-- Global Project Switcher Bar -->
+  <header class="project-switcher-bar">
+    <div class="switcher-brand-tag taj-active">
+      <span class="indicator-dot"></span>
+      <span>Experience Mode: <strong>The Taj Mahal</strong></span>
+    </div>
+    <div class="switcher-nav-pills">
+      <a href="tajmahal.html" class="switcher-pill active taj">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Taj Mahal (Agra)
+      </a>
+      <a href="everest.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
+        Himalayan Everest
+      </a>
+      <a href="nomad.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Nomad Foils
+      </a>
+      <a href="kyoto.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        Kyoto Ceramics
+      </a>
+      <a href="index.html" class="switcher-pill">
+        Portal Overview
+      </a>
+    </div>
+    <div class="switcher-status">
+      <span>UNESCO World Heritage</span>
+      <span>•</span>
+      <span>Agra, India</span>
+    </div>
+  </header>
+
+  <!-- Taj Mahal Navigation Header -->
+  <nav class="taj-header">
+    <a href="tajmahal.html" class="taj-brand">
+      <div class="taj-emblem-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3v18M3 12h18M6 6l12 12M6 18L18 6"/>
+        </svg>
+      </div>
+      <div class="taj-brand-title">TAJ <span>MAHAL</span></div>
+    </a>
+
+    <div class="taj-nav">
+      <a href="#chronicle">1632 Chronicle</a>
+      <a href="#pietradura">Parchin Kari Inlays</a>
+      <a href="#geometry">Sacred Geometry</a>
+      <a href="#moonlight">Full Moon Nocturne</a>
+    </div>
+
+    <div class="taj-actions">
+      <button class="tanpura-audio-btn" id="tanpuraAudioToggle" aria-label="Toggle Tanpura classical drone soundscape">
+        <span>🔇</span> Tanpura Ambiance
+      </button>
+      <button class="btn-primary-taj js-open-taj-modal">
+        Night View Reservation
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Time-of-Day Lighting Mode -->
+  <header class="taj-hero">
+    <div class="taj-hero-bg">
+      <img src="assets/images/taj_hero_sunrise.jpg" alt="Taj Mahal at sunrise reflected in central lotus pool in Agra India" id="tajHeroImg">
+    </div>
+    <div class="taj-hero-overlay"></div>
+
+    <div class="taj-hero-content">
+      <div>
+        <div class="taj-eyebrow-tag">
+          <span>👑 MUGHAL IMPERIAL ARCHITECTURE · 1632–1653 AD</span>
+        </div>
+        <h1 class="taj-hero-title">
+          THE CROWN OF<br><em>IMMORTAL LOVE</em>.
+        </h1>
+        <blockquote class="taj-hero-quote">
+          "You knew, Emperor Shah Jahan, that wealth and power pass like clouds in the wind... but you wished that this solitary tear would remain forever crystal-clear on the cheek of time."
+          <span>— Rabindranath Tagore, Nobel Laureate</span>
+        </blockquote>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <a href="#pietradura" class="btn-primary-taj">
+            Explore Parchin Kari Inlays
+          </a>
+          <a href="#chronicle" class="btn-secondary-taj">
+            The 22-Year Chronicle
+          </a>
+        </div>
+      </div>
+
+      <!-- Time of Day Lighting Mode Widget -->
+      <div class="time-of-day-card">
+        <div class="time-card-header">
+          <span class="time-card-title">DYNAMIC LIGHTING TRANSFORMATION</span>
+          <span style="font-size: 11px; color: var(--t-gold-bright); font-family: var(--font-mono);">MAKRANA OPTICS</span>
+        </div>
+
+        <div class="time-button-grid">
+          <button class="time-light-btn active" data-time="dawn">01. Dawn</button>
+          <button class="time-light-btn" data-time="noon">02. Midday</button>
+          <button class="time-light-btn" data-time="sunset">03. Sunset</button>
+          <button class="time-light-btn" data-time="night">04. Moonlit</button>
+        </div>
+
+        <div class="time-light-desc" id="timeLightDesc">
+          The translucent Makrana marble catches the first soft rays of morning sun, blushing with delicate tones of rose quartz, pale amber, and pearl pink across the reflection pool.
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1632 Chronicle & Imperial Love Section -->
+  <section class="taj-section" id="chronicle">
+    <div class="taj-section-header">
+      <span class="taj-eyebrow">THE EMPEROR'S TRIBUTE</span>
+      <h2 class="taj-title">AN ODE CARVED IN TRANSLUCENT MARBLE</h2>
+      <p class="taj-subtitle">
+        Commissioned in 1632 by Mughal Emperor Shah Jahan to house the tomb of his beloved empress Mumtaz Mahal, the monument stands as humanity's most sublime testament to devotion.
+      </p>
+    </div>
+
+    <div class="chronicle-grid">
+      <div class="chronicle-text">
+        <h3>Twenty-Two Years of Devotion</h3>
+        <p>
+          Following the tragic passing of Mumtaz Mahal in Burhanpur, the grief-stricken Emperor enlisted the finest master architects, stonemasons, lapidaries, and calligraphers from Persia, the Ottoman Empire, Central Asia, and across Hindustan under Chief Architect <strong>Ustad Ahmad Lahori</strong>.
+        </p>
+        <p>
+          Over 1,000 royal elephants transported blocks of pure white crystalline marble from the quarries of Makrana in Rajasthan across 300 kilometers of desert. The result was not merely a mausoleum, but a physical manifestation of paradise (*Jannat*) described in Persian poetry.
+        </p>
+        <div style="margin-top: 24px;">
+          <a href="#geometry" class="btn-secondary-taj">
+            Inspect Architectural Geometry →
+          </a>
+        </div>
+      </div>
+
+      <div class="chronicle-stats-card">
+        <div class="chronicle-stat-item">
+          <div class="chronicle-stat-num">20,000</div>
+          <div class="chronicle-stat-label">Master Artisans & Sculptors</div>
+          <div class="chronicle-stat-desc">Inlayers, carvers, calligraphers, and stone cutters assembled in Agra.</div>
+        </div>
+
+        <div class="chronicle-stat-item">
+          <div class="chronicle-stat-num">28 TYPES</div>
+          <div class="chronicle-stat-label">Rare Precious Gemstones</div>
+          <div class="chronicle-stat-desc">Lapis lazuli, jade, carnelian, turquoise, and jasper inlaid into marble.</div>
+        </div>
+
+        <div>
+          <div class="chronicle-stat-num">1632 — 1653</div>
+          <div class="chronicle-stat-label">22 Years of Continuous Build</div>
+          <div class="chronicle-stat-desc">Completed with an imperial expenditure of over 32 million Mughal rupees.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Pietra Dura Gemstone Loupe -->
+  <section class="taj-section" id="pietradura">
+    <div class="taj-section-header">
+      <span class="taj-eyebrow">PARCHIN KARI CRAFTSMANSHIP</span>
+      <h2 class="taj-title">PETALS OF LAPIS, JADE & CARNELIAN</h2>
+      <p class="taj-subtitle">
+        Touch the interactive hotspots on the marble column below to inspect how individual gemstones were cut with diamond-tipped tools and seamlessly inlaid into Makrana marble.
+      </p>
+    </div>
+
+    <div class="pietra-dura-container">
+      <!-- Interactive Media Frame with Hotspots -->
+      <div class="pietra-media-frame">
+        <img src="assets/images/taj_pietra_dura_macro.jpg" alt="Macro detail of Mughal Pietra Dura gemstone inlays in translucent white Makrana marble">
+        
+        <!-- Gemstone Hotspots -->
+        <button class="gem-hotspot gem-spot-lapis active" data-gem="lapis" title="Lapis Lazuli Petals"></button>
+        <button class="gem-hotspot gem-spot-malachite" data-gem="malachite" title="Malachite Foliage"></button>
+        <button class="gem-hotspot gem-spot-carnelian" data-gem="carnelian" title="Carnelian Buds"></button>
+        <button class="gem-hotspot gem-spot-marble" data-gem="marble" title="Translucent Makrana Marble"></button>
+      </div>
+
+      <!-- Gemstone Explorer Panel -->
+      <div class="gemstone-info-panel">
+        <div>
+          <div class="gem-origin-badge" id="gemOriginBadge">BADAKHSHAN, AFGHANISTAN</div>
+          <h3 class="gem-name-heading" id="gemNameHeading">Lapis Lazuli (Lajward)</h3>
+        </div>
+
+        <p class="gem-desc-p" id="gemDescP">
+          Precious deep ultramarine blue stone with microscopic golden pyrite flecks. Master artisans cut thin slivers into curved flower petals, creating the iconic royal blue floral sprays along the tomb archways.
+        </p>
+
+        <div class="gem-types-row">
+          <div class="gem-chip">
+            <strong>JOINERY PRECISION</strong>
+            Seamless zero-gap stone bonding
+          </div>
+          <div class="gem-chip">
+            <strong>FLORAL MOTIF</strong>
+            60+ gemstone cuts per flower
+          </div>
+        </div>
+
+        <div style="margin-top: 16px;">
+          <button class="btn-primary-taj js-open-taj-modal" style="width: 100%;">
+            Book Agra Artisan Studio Tour
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacred Geometry & Optical Symmetry -->
+  <section class="taj-section" id="geometry">
+    <div class="taj-section-header">
+      <span class="taj-eyebrow">MATHEMATICAL HARMONY</span>
+      <h2 class="taj-title">THE GENIUS OF MUGHAL SYMMETRY</h2>
+      <p class="taj-subtitle">
+        Every element of the Taj Mahal is governed by strict bilateral symmetry, golden ratios, and intentional optical corrections.
+      </p>
+    </div>
+
+    <div class="architecture-grid">
+      <div class="arch-card">
+        <div class="arch-icon">🏛️</div>
+        <h3 class="arch-card-title">73M Central Onion Dome</h3>
+        <p class="arch-card-desc">
+          Double-dome engineering where an inner dome provides perfect interior proportions while the outer bulbous dome soars 73 meters into the sky.
+        </p>
+      </div>
+
+      <div class="arch-card">
+        <div class="arch-icon">📐</div>
+        <h3 class="arch-card-title">2° Outward Tilted Minarets</h3>
+        <p class="arch-card-desc">
+          The four 40-meter minarets lean outward by 2 degrees so that in the event of an earthquake, they fall away from the sacred central tomb.
+        </p>
+      </div>
+
+      <div class="arch-card">
+        <div class="arch-icon">🌿</div>
+        <h3 class="arch-card-title">Charbagh Paradise Garden</h3>
+        <p class="arch-card-desc">
+          Persian quadripartite garden divided into 16 sunken flowerbeds by four intersecting watercourses representing rivers of paradise.
+        </p>
+      </div>
+
+      <div class="arch-card">
+        <div class="arch-icon">📜</div>
+        <h3 class="arch-card-title">Ascending Optical Calligraphy</h3>
+        <p class="arch-card-desc">
+          Calligrapher Amanat Khan subtly enlarged the Quranic lettering as it climbed higher up the arch so it appears perfectly uniform from ground level.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Moon Night Viewing Section -->
+  <section class="taj-section" id="moonlight">
+    <div class="moonlight-section-wrapper">
+      <div class="moonlight-media-frame">
+        <img src="assets/images/taj_night_moonlight.jpg" alt="Taj Mahal glowing under full silver moon reflected across the tranquil Yamuna river">
+      </div>
+
+      <div>
+        <span class="taj-eyebrow">NOCTURNAL MAGIC · CHAMKI</span>
+        <h2 class="taj-title" style="font-size: clamp(28px, 3.2vw, 42px);">THE FULL MOON OVER THE YAMUNA</h2>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--t-text-secondary); margin-bottom: 20px; font-weight: 300;">
+          For five nights each lunar month (on the full moon, two nights before, and two nights after), the Taj Mahal is opened for nocturnal viewing. Under the silver lunar glare, the Makrana calcite crystals luminesce with a hypnotic pearl-blue glow.
+        </p>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--t-text-secondary); margin-bottom: 28px; font-weight: 300;">
+          The inlaid carnelian and jasper gems catch the moonbeams, shimmering like stars across the silent waters of the Yamuna River.
+        </p>
+
+        <button class="btn-primary-taj js-open-taj-modal">
+          Reserve Full Moon Night Viewing
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Moon Reservation / Heritage Walk Modal -->
+  <div class="taj-modal-overlay" id="tajModal">
+    <div class="taj-modal-card">
+      <button class="taj-modal-close" id="closeTajModal" aria-label="Close modal">✕</button>
+      
+      <span class="taj-eyebrow">HERITAGE EXPERIENCE & NIGHT VIEWING</span>
+      <h3 style="font-family: var(--font-cinzel); font-size: 24px; color: #fff; margin: 8px 0 20px;">Experience the Taj Mahal</h3>
+      
+      <form id="tajInquiryForm">
+        <div class="taj-form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="e.g. Eleanor Vance" required>
+        </div>
+        <div class="taj-form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="eleanor@heritage-voyage.com" required>
+        </div>
+        <div class="taj-form-group">
+          <label>Selected Heritage Experience</label>
+          <select required>
+            <option value="fullmoon">Exclusive Full Moon Night Viewing (Chamki Experience)</option>
+            <option value="sunrise">Private Sunrise Photography & Heritage Walk</option>
+            <option value="pietradura">Mughal Parchin Kari Masterclass in Agra</option>
+            <option value="vip">Full VIP Guided Architectural Expedition</option>
+          </select>
+        </div>
+        <div class="taj-form-group">
+          <label>Preferred Visit Date / Special Request</label>
+          <textarea rows="3" placeholder="Specify date or full-moon lunar calendar preference..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary-taj" style="width: 100%; margin-top: 10px;">
+          Submit Heritage Reservation
+        </button>
+      </form>
+
+      <div id="tajConfirmMsg" style="display: none; text-align: center; padding: 24px 0;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(212, 175, 55, 0.15); color: #d4af37; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">🏛️</div>
+        <h4 style="font-family: var(--font-cinzel); font-size: 22px; color: #fff; margin-bottom: 8px;">Reservation Received</h4>
+        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.7;">
+          Our Agra heritage concierge will review your preferred date and contact you with ASI night viewing permits and itinerary details within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Taj Mahal Footer -->
+  <footer class="taj-footer">
+    <div class="taj-footer-inner">
+      <div class="taj-footer-brand">
+        <div class="taj-brand">
+          <div class="taj-emblem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3v18M3 12h18M6 6l12 12M6 18L18 6"/>
+            </svg>
+          </div>
+          <div class="taj-brand-title">TAJ <span>MAHAL</span></div>
+        </div>
+        <p>
+          A tribute to the pinnacle of Mughal architecture, eternal romance, and the unmatched lapidary heritage of Agra, India.
+        </p>
+      </div>
+
+      <div>
+        <div class="taj-footer-col-title">ARCHITECTURE</div>
+        <ul class="taj-footer-links">
+          <li><a href="#pietradura">Parchin Kari Inlays</a></li>
+          <li><a href="#geometry">Makrana Calcite Marble</a></li>
+          <li><a href="#geometry">Bilateral Symmetry</a></li>
+          <li><a href="#geometry">Double Onion Dome</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="taj-footer-col-title">EXPERIENCES</div>
+        <ul class="taj-footer-links">
+          <li><a href="#moonlight">Full Moon Night Viewing</a></li>
+          <li><a href="#chronicle">The 1632 Chronicle</a></li>
+          <li><a href="#" class="js-open-taj-modal">Agra Heritage Walks</a></li>
+          <li><a href="everest.html">Explore Himalayan Everest</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="taj-footer-col-title">LOCATION</div>
+        <ul class="taj-footer-links">
+          <li>Dharmapuri, Forest Colony, Tajganj</li>
+          <li>Agra, Uttar Pradesh 282001, India</li>
+          <li>UNESCO Monument #252</li>
+          <li><a href="index.html" style="color: var(--t-gold-bright);">View Master Portal →</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="taj-footer-bottom">
+      <div>© 2026 The Taj Mahal Heritage Tribute. Preserving India's timeless architectural wonder.</div>
+      <div>
+        <a href="index.html" style="color: #cbd5e1; text-decoration: none;">Return to Showcase Portal →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/tajmahal.js"></script>
+</body>
+</html>

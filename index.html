@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Master Portal Showcase: Nomad Foils (Electric Hydrofoils), Kisen Ceramics Kyoto (Wood-Fired Teaware), and Himalayan Apex (India's Mount Everest Mountaineering Legacy).">
-  <title>TRIPLE BRAND SHOWCASE // Nomad Foils · Kyoto Ceramics · Himalayan Everest</title>
+  <meta name="description" content="Master Portal Showcase: The Taj Mahal (Mughal Architecture), Himalayan Everest (Indian Mountaineering), Nomad Foils (Electric Hydrofoils), and Kisen Ceramics Kyoto (Wood-Fired Teaware).">
+  <title>FOUR HORIZONS SHOWCASE // Taj Mahal · Everest · Nomad Foils · Kyoto Ceramics</title>
   
   <link rel="stylesheet" href="css/common.css">
   <style>
@@ -33,7 +33,7 @@
       font-family: 'Space Grotesk', monospace;
       font-size: 11px;
       letter-spacing: 0.22em;
-      color: #00e5ff;
+      color: #f5d061;
       text-transform: uppercase;
       margin-bottom: 12px;
       display: inline-block;
@@ -56,12 +56,12 @@
       margin: 0 auto 36px;
     }
 
-    /* Triple Showcase Grid */
+    /* Quad Showcase Grid */
     .portal-grid-showcase {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1360px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1440px;
       margin: 0 auto 60px;
       padding: 0 24px;
       width: 100%;
@@ -75,7 +75,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 32px 28px;
+      padding: 28px 24px;
       min-height: 520px;
       text-decoration: none;
       color: inherit;
@@ -119,6 +119,14 @@
       z-index: 2;
     }
 
+    .portal-card.taj-portal .portal-card-gradient {
+      background: linear-gradient(180deg, rgba(7, 9, 13, 0.15) 0%, rgba(7, 9, 13, 0.8) 55%, rgba(7, 9, 13, 0.98) 100%);
+    }
+
+    .portal-card.everest-portal .portal-card-gradient {
+      background: linear-gradient(180deg, rgba(6, 9, 14, 0.15) 0%, rgba(6, 9, 14, 0.8) 55%, rgba(6, 9, 14, 0.98) 100%);
+    }
+
     .portal-card.nomad-portal .portal-card-gradient {
       background: linear-gradient(180deg, rgba(6, 10, 15, 0.15) 0%, rgba(6, 10, 15, 0.8) 55%, rgba(6, 10, 15, 0.98) 100%);
     }
@@ -127,29 +135,39 @@
       background: linear-gradient(180deg, rgba(27, 23, 22, 0.15) 0%, rgba(27, 23, 22, 0.8) 55%, rgba(27, 23, 22, 0.98) 100%);
     }
 
-    .portal-card.everest-portal .portal-card-gradient {
-      background: linear-gradient(180deg, rgba(6, 9, 14, 0.15) 0%, rgba(6, 9, 14, 0.8) 55%, rgba(6, 9, 14, 0.98) 100%);
-    }
-
     .portal-card-content {
       position: relative;
       z-index: 5;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
 
     .portal-tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 5px 12px;
+      padding: 4px 10px;
       border-radius: 9999px;
       width: fit-content;
+    }
+
+    .taj-portal .portal-tag {
+      background: rgba(212, 175, 55, 0.2);
+      color: #f5d061;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      font-family: 'Cinzel', serif;
+    }
+
+    .everest-portal .portal-tag {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      font-family: 'Space Grotesk', monospace;
     }
 
     .nomad-portal .portal-tag {
@@ -166,34 +184,29 @@
       font-family: 'Noto Serif JP', serif;
     }
 
-    .everest-portal .portal-tag {
-      background: rgba(245, 158, 11, 0.2);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      font-family: 'Space Grotesk', monospace;
-    }
-
     .portal-brand-title {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.15;
     }
 
-    .kyoto-portal .portal-brand-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
-      font-weight: 400;
+    .taj-portal .portal-brand-title {
+      font-family: 'Cinzel', serif;
     }
 
     .everest-portal .portal-brand-title {
       font-family: 'Cinzel', serif;
+    }
+
+    .kyoto-portal .portal-brand-title {
+      font-family: 'Cormorant Garamond', serif;
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 400;
     }
 
     .portal-brand-desc {
-      font-size: 13px;
+      font-size: 12px;
       color: #cbd5e1;
       line-height: 1.6;
     }
@@ -201,7 +214,7 @@
     .portal-feature-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 5px;
       margin-top: 2px;
     }
 
@@ -217,15 +230,35 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 18px;
+      padding: 9px 16px;
       border-radius: 6px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-top: 6px;
       width: fit-content;
       transition: all 0.2s ease;
+    }
+
+    .taj-portal .portal-cta-btn {
+      background: linear-gradient(135deg, #f5d061, #d4af37);
+      color: #080a0e;
+    }
+
+    .taj-portal .portal-cta-btn:hover {
+      background: #fff2b2;
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.6);
+    }
+
+    .everest-portal .portal-cta-btn {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #06090e;
+    }
+
+    .everest-portal .portal-cta-btn:hover {
+      background: #fbbf24;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
     }
 
     .nomad-portal .portal-cta-btn {
@@ -248,19 +281,9 @@
       box-shadow: 0 0 16px rgba(212, 163, 115, 0.5);
     }
 
-    .everest-portal .portal-cta-btn {
-      background: linear-gradient(135deg, #f59e0b, #d97706);
-      color: #06090e;
-    }
-
-    .everest-portal .portal-cta-btn:hover {
-      background: #fbbf24;
-      box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
-    }
-
     /* Comparison Table */
     .portal-meta-section {
-      max-width: 1360px;
+      max-width: 1440px;
       margin: 0 auto 60px;
       padding: 0 24px;
       width: 100%;
@@ -284,11 +307,11 @@
     .meta-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .meta-table th, .meta-table td {
-      padding: 12px 14px;
+      padding: 12px 12px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       text-align: left;
     }
@@ -306,11 +329,18 @@
       color: #cbd5e1;
     }
 
-    .meta-table td:nth-child(2) { color: #00e5ff; }
-    .meta-table td:nth-child(3) { color: #d4a373; }
-    .meta-table td:nth-child(4) { color: #f59e0b; }
+    .meta-table td:nth-child(2) { color: #f5d061; }
+    .meta-table td:nth-child(3) { color: #f59e0b; }
+    .meta-table td:nth-child(4) { color: #00e5ff; }
+    .meta-table td:nth-child(5) { color: #d4a373; }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
+      .portal-grid-showcase {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
       .portal-grid-showcase {
         grid-template-columns: 1fr;
       }
@@ -329,6 +359,14 @@
       <span>Experience Mode: <strong>Master Portal</strong></span>
     </div>
     <div class="switcher-nav-pills">
+      <a href="tajmahal.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Taj Mahal (Agra)
+      </a>
+      <a href="everest.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
+        Himalayan Everest
+      </a>
       <a href="nomad.html" class="switcher-pill">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         Nomad Foils
@@ -337,78 +375,48 @@
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
         Kyoto Ceramics
       </a>
-      <a href="everest.html" class="switcher-pill">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
-        Himalayan Everest
-      </a>
       <a href="index.html" class="switcher-pill active">
         Portal Overview
       </a>
     </div>
     <div class="switcher-status">
-      <span>3 Production Landing Pages</span>
+      <span>4 Production Landing Pages</span>
     </div>
   </header>
 
   <!-- Portal Hero -->
   <header class="portal-hero">
-    <span class="portal-eyebrow">AESTHETIC & INTERACTIVE SHOWCASE</span>
-    <h1 class="portal-main-title">Craftsmanship Across Three Horizons</h1>
+    <span class="portal-eyebrow">AESTHETIC & INTERACTIVE SUITE</span>
+    <h1 class="portal-main-title">Craftsmanship Across Four Horizons</h1>
     <p class="portal-main-desc">
-      Explore three distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & route simulation tools, custom typography, and zero placeholders.
+      Explore four distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & loupe tools, authentic audio synthesis, and zero placeholders.
     </p>
   </header>
 
-  <!-- Portal Triple Cards -->
+  <!-- Portal Quad Cards -->
   <main class="portal-grid-showcase">
     
-    <!-- Nomad Foils Card -->
-    <a href="nomad.html" class="portal-card nomad-portal">
+    <!-- Taj Mahal Card -->
+    <a href="tajmahal.html" class="portal-card taj-portal">
       <div class="portal-card-bg">
-        <img src="assets/images/nomad_hero_ocean.jpg" alt="Nomad Foils Electric Carbon-Fiber Hydrofoil">
+        <img src="assets/images/taj_hero_sunrise.jpg" alt="Taj Mahal at Dawn Reflection in Agra">
       </div>
       <div class="portal-card-gradient"></div>
       <div class="portal-card-content">
         <div class="portal-tag">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          OCEAN HYDROFOILS
+          MUGHAL IMPERIAL HERITAGE
         </div>
-        <h2 class="portal-brand-title">Nomad Foils // Electric Carbon E-Foils</h2>
+        <h2 class="portal-brand-title">The Taj Mahal // Immortal Love</h2>
         <p class="portal-brand-desc">
-          Electric carbon-fiber hydrofoil boards engineered for silent open-ocean riding, downwind swell carving, and weightless aquatic flight.
+          Mughal imperial architecture, translucent Makrana white marble, Parchin Kari gemstone inlays, and moonlight transitions.
         </p>
         <div class="portal-feature-badges">
-          <span class="feature-pill">Live Flight HUD</span>
-          <span class="feature-pill">Hotspot Anatomy</span>
-          <span class="feature-pill">Range Simulator</span>
+          <span class="feature-pill">Dawn-to-Moonlight Mode</span>
+          <span class="feature-pill">Pietra Dura Loupe</span>
+          <span class="feature-pill">Tanpura Drone</span>
         </div>
         <div class="portal-cta-btn">
-          Explore Nomad Foils →
-        </div>
-      </div>
-    </a>
-
-    <!-- Kyoto Ceramic Studio Card -->
-    <a href="kyoto.html" class="portal-card kyoto-portal">
-      <div class="portal-card-bg">
-        <img src="assets/images/kyoto_hero_matcha.jpg" alt="Kisen Kyoto Wood-Fired Matcha Bowls and Teaware">
-      </div>
-      <div class="portal-card-gradient"></div>
-      <div class="portal-card-content">
-        <div class="portal-tag">
-          木泉窯 · KYOTO WABI-SABI
-        </div>
-        <h2 class="portal-brand-title">Kisen Ceramics Kyoto // Handcrafted Teaware</h2>
-        <p class="portal-brand-desc">
-          Small-batch, wood-fired matcha bowls (chawan) and handcrafted teaware sculpted from native Kyoto clay and fired in a 7-day Anagama kiln.
-        </p>
-        <div class="portal-feature-badges">
-          <span class="feature-pill">Glaze Loupe</span>
-          <span class="feature-pill">7-Day Kiln Timeline</span>
-          <span class="feature-pill">Web Audio Soundscape</span>
-        </div>
-        <div class="portal-cta-btn">
-          Explore Kyoto Studio →
+          Explore Taj Mahal →
         </div>
       </div>
     </a>
@@ -425,7 +433,7 @@
         </div>
         <h2 class="portal-brand-title">Himalayan Apex // India's Everest Legacy</h2>
         <p class="portal-brand-desc">
-          Celebrating India's connection to Mount Everest, from Radhanath Sickdhar's 1852 calculation to legendary Indian climbers in the Death Zone.
+          Celebrating India's connection to Mount Everest, from Radhanath Sickdhar's 1852 calculation to Indian climbers in the Death Zone.
         </p>
         <div class="portal-feature-badges">
           <span class="feature-pill">Altitude Scrubber</span>
@@ -433,7 +441,58 @@
           <span class="feature-pill">Indian Pioneers</span>
         </div>
         <div class="portal-cta-btn">
-          Ascend the Summit →
+          Ascend Summit →
+        </div>
+      </div>
+    </a>
+
+    <!-- Nomad Foils Card -->
+    <a href="nomad.html" class="portal-card nomad-portal">
+      <div class="portal-card-bg">
+        <img src="assets/images/nomad_hero_ocean.jpg" alt="Nomad Foils Electric Carbon-Fiber Hydrofoil">
+      </div>
+      <div class="portal-card-gradient"></div>
+      <div class="portal-card-content">
+        <div class="portal-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          OCEAN HYDROFOILS
+        </div>
+        <h2 class="portal-brand-title">Nomad Foils // Electric E-Foils</h2>
+        <p class="portal-brand-desc">
+          Electric carbon-fiber hydrofoil boards engineered for silent open-ocean riding, downwind swell carving, and aquatic flight.
+        </p>
+        <div class="portal-feature-badges">
+          <span class="feature-pill">Live Flight HUD</span>
+          <span class="feature-pill">Hotspot Anatomy</span>
+          <span class="feature-pill">Range Simulator</span>
+        </div>
+        <div class="portal-cta-btn">
+          Explore Nomad →
+        </div>
+      </div>
+    </a>
+
+    <!-- Kyoto Ceramic Studio Card -->
+    <a href="kyoto.html" class="portal-card kyoto-portal">
+      <div class="portal-card-bg">
+        <img src="assets/images/kyoto_hero_matcha.jpg" alt="Kisen Kyoto Wood-Fired Matcha Bowls and Teaware">
+      </div>
+      <div class="portal-card-gradient"></div>
+      <div class="portal-card-content">
+        <div class="portal-tag">
+          木泉窯 · KYOTO WABI-SABI
+        </div>
+        <h2 class="portal-brand-title">Kisen Ceramics // Handcrafted Teaware</h2>
+        <p class="portal-brand-desc">
+          Small-batch, wood-fired matcha bowls (chawan) and handcrafted teaware sculpted from native Kyoto clay and fired in a 7-day Anagama kiln.
+        </p>
+        <div class="portal-feature-badges">
+          <span class="feature-pill">Glaze Loupe</span>
+          <span class="feature-pill">7-Day Kiln Timeline</span>
+          <span class="feature-pill">Web Audio Soundscape</span>
+        </div>
+        <div class="portal-cta-btn">
+          Explore Kyoto →
         </div>
       </div>
     </a>
@@ -448,41 +507,47 @@
         <thead>
           <tr>
             <th>Dimension</th>
+            <th>The Taj Mahal</th>
+            <th>Himalayan Apex</th>
             <th>Nomad Foils</th>
             <th>Kisen Ceramics Kyoto</th>
-            <th>Himalayan Apex (Everest)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Brand Domain</td>
-            <td>Electric Ocean Hydrofoil Tech</td>
-            <td>Wood-Fired Japanese Teaware Atelier</td>
+            <td>Mughal Heritage & Architecture</td>
             <td>High-Altitude Alpine Mountaineering</td>
+            <td>Electric Ocean Hydrofoil Tech</td>
+            <td>Wood-Fired Japanese Teaware</td>
           </tr>
           <tr>
             <td>Palette</td>
+            <td>Makrana Ivory, Royal Onyx & Gold</td>
+            <td>Glacier Obsidian, Frost & Saffron</td>
             <td>Oceanic Obsidian & Cyan</td>
             <td>Rice Paper, Charcoal & Terracotta</td>
-            <td>Glacier Obsidian, Ice Blue & Saffron</td>
           </tr>
           <tr>
             <td>Typography</td>
+            <td>Cinzel & Cormorant Garamond</td>
+            <td>Cinzel & Space Grotesk</td>
             <td>Space Grotesk & Jakarta Sans</td>
             <td>Cormorant Garamond & Noto Serif JP</td>
-            <td>Cinzel & Space Grotesk</td>
           </tr>
           <tr>
             <td>Interactive Modules</td>
+            <td>Dawn-to-Moonlight & Pietra Dura</td>
+            <td>Altitude Scrubber & Summit HUD</td>
             <td>Throttle HUD & Swell Estimator</td>
             <td>Glaze Loupe & 7-Day Kiln Scrubber</td>
-            <td>Altitude Route Scrubber & Summit HUD</td>
           </tr>
           <tr>
             <td>Audio Experience</td>
-            <td>Live Dynamic Telemetry</td>
+            <td>Classical Tanpura Drone</td>
+            <td>Himalayan Wind & Tibetan Bell</td>
+            <td>Flight Telemetry Simulation</td>
             <td>Japanese Water Chime Synth</td>
-            <td>Himalayan High Wind & Tibetan Bell</td>
           </tr>
         </tbody>
       </table>
