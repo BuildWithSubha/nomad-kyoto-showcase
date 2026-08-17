@@ -206,19 +206,14 @@ body.amazon-theme {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: linear-gradient(135deg, #022013, #073b22, #04120a);
 }
 
-.amazon-hero-bg-art {
-  position: absolute;
-  top: 0;
-  left: 0;
+.amazon-hero-bg img {
   width: 100%;
   height: 100%;
-  opacity: 0.35;
-  background-image: radial-gradient(#10b981 1px, transparent 1px), radial-gradient(#059669 1px, #040f09 1px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.85) contrast(1.05);
 }
 
 .amazon-hero-overlay {
@@ -230,8 +225,8 @@ body.amazon-theme {
   z-index: 2;
   background: linear-gradient(
     180deg,
-    rgba(4, 15, 9, 0.3) 0%,
-    rgba(4, 15, 9, 0.2) 30%,
+    rgba(4, 15, 9, 0.35) 0%,
+    rgba(4, 15, 9, 0.15) 30%,
     rgba(4, 15, 9, 0.85) 80%,
     rgba(4, 15, 9, 1) 100%
   );
@@ -535,7 +530,34 @@ body.amazon-theme {
   color: #ffffff;
 }
 
-/* Wildlife & Biodiversity Section */
+/* Wildlife & Jaguar Spotlight Split */
+.jaguar-spotlight-section {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  background: var(--a-bg-surface);
+  border: 1px solid var(--a-border-emerald);
+  border-radius: var(--a-radius-lg);
+  padding: 48px;
+  margin: 60px 0;
+}
+
+.jaguar-media-frame {
+  border-radius: var(--a-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--a-border-emerald);
+  box-shadow: var(--a-shadow-jungle);
+}
+
+.jaguar-media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Wildlife & Biodiversity Grid */
 .wildlife-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -597,14 +619,29 @@ body.amazon-theme {
   align-items: center;
 }
 
+.river-media-frame {
+  border-radius: var(--a-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--a-border-emerald);
+  box-shadow: var(--a-shadow-jungle);
+}
+
+.river-media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .river-comparison-box {
   background: var(--a-bg-card);
   border: 1px solid var(--a-border-subtle);
   border-radius: var(--a-radius-md);
-  padding: 28px;
+  padding: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .river-card {
@@ -624,7 +661,7 @@ body.amazon-theme {
 
 .river-name {
   font-family: var(--font-syne);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 4px;
@@ -636,7 +673,7 @@ body.amazon-theme {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 /* Indigenous Guardianship Section */
@@ -649,6 +686,20 @@ body.amazon-theme {
   border: 1px solid var(--a-border-emerald);
   border-radius: var(--a-radius-lg);
   padding: 48px;
+}
+
+.indigenous-media-frame {
+  border-radius: var(--a-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--a-border-emerald);
+  box-shadow: var(--a-shadow-jungle);
+}
+
+.indigenous-media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Modal Drawer */
@@ -791,7 +842,7 @@ body.amazon-theme {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .amazon-hero-content, .canopy-elevator-container, .river-mixer-container, .indigenous-split-grid {
+  .amazon-hero-content, .canopy-elevator-container, .jaguar-spotlight-section, .river-mixer-container, .indigenous-split-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
