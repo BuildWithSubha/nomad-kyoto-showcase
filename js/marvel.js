@@ -1,7 +1,7 @@
 // Marvel Cinematic Universe — Complete Multiverse Interactive Archive Engine (Phases 1 — 6)
 
 const MCU_MOVIES = [
-  // --- PHASE 1 ---
+  // --- PHASE 1 (The Infinity Saga) ---
   {
     id: 'ironman1',
     title: 'Iron Man',
@@ -129,7 +129,7 @@ const MCU_MOVIES = [
     connections: 'Culmination of Phase 1. Features the Space Stone (Tesseract) and Mind Stone (Loki\'s Scepter). Post-credits scene reveals Thanos for the first time.'
   },
 
-  // --- PHASE 2 ---
+  // --- PHASE 2 (The Infinity Saga) ---
   {
     id: 'ironman3',
     title: 'Iron Man 3',
@@ -257,7 +257,7 @@ const MCU_MOVIES = [
     connections: 'First introduction of the Quantum Realm — the scientific cornerstone used for the Time Heist in *Avengers: Endgame*.'
   },
 
-  // --- PHASE 3 ---
+  // --- PHASE 3 (The Infinity Saga) ---
   {
     id: 'cap3',
     title: 'Captain America: Civil War',
@@ -490,7 +490,7 @@ const MCU_MOVIES = [
     connections: 'Epilogue to the Infinity Saga. Post-credits reveals Peter Parker\'s secret identity to the entire world and frames him for murder.'
   },
 
-  // --- PHASE 4 ---
+  // --- PHASE 4 (The Multiverse Saga) ---
   {
     id: 'blackwidow',
     title: 'Black Widow',
@@ -639,7 +639,7 @@ const MCU_MOVIES = [
     connections: 'Introduced Riri Williams (Ironheart), Namor and the Talokan underwater civilization, and concludes Phase 4.'
   },
 
-  // --- PHASE 5 ---
+  // --- PHASE 5 (The Multiverse Saga) ---
   {
     id: 'antman3',
     title: 'Ant-Man and the Wasp: Quantumania',
@@ -767,7 +767,7 @@ const MCU_MOVIES = [
     connections: 'Brings together government operatives from Black Widow, Falcon & Winter Soldier, and Ant-Man 2.'
   },
 
-  // --- PHASE 6 (2025, 2026, 2027+) ---
+  // --- PHASE 6 (The Multiverse Saga: 2025 — 2027) ---
   {
     id: 'fantasticfour',
     title: 'The Fantastic Four: First Steps',
@@ -790,40 +790,40 @@ const MCU_MOVIES = [
     connections: 'Opens Phase 6. The Fantastic Four will cross through the Multiverse into the prime MCU timeline for *Avengers: Doomsday* and *Avengers: Secret Wars*.'
   },
   {
-    id: 'blade',
-    title: 'Blade',
-    releaseYear: 2025,
-    releaseDate: 'November 7, 2025 (Scheduled)',
-    chronoYear: '2026+',
+    id: 'spiderman4',
+    title: 'Spider-Man: Brand New Day',
+    releaseYear: 2026,
+    releaseDate: 'July 29, 2026',
+    chronoYear: '2026',
     chronoIndex: 38,
     releaseIndex: 38,
     phase: 'Phase 6',
     saga: 'The Multiverse Saga',
     status: 'Official Release Date Announced',
-    director: 'Marvel Studios Production',
+    director: 'Destin Daniel Cretton',
     runtime: 'TBD',
-    boxOffice: 'Theatrical Release: Nov 7, 2025 / 2026',
-    poster: 'assets/images/posters/mcu_blade.jpg',
-    heroes: ['Eric Brooks (Blade / The Daywalker)', 'Black Knight (Dane Whitman)'],
-    villains: ['Vampire Underworld', 'Dracula / Varnae'],
-    teams: ['Midnight Sons'],
-    synopsis: 'The legendary half-human, half-vampire Daywalker Eric Brooks stalks the criminal underworld with his titanium sword, hunting bloodthirsty vampire covens across the shadows of the Marvel Cinematic Universe.',
-    connections: 'First heard in the post-credits scene of *Eternals* advising Dane Whitman regarding the Ebony Blade.'
+    boxOffice: 'Theatrical Release: July 29, 2026',
+    poster: 'assets/images/posters/mcu_spiderman4.jpg',
+    heroes: ['Peter Parker (Spider-Man - Tom Holland)', 'Daredevil (Matt Murdock)'],
+    villains: ['Kingpin (Wilson Fisk)', 'Venom Symbiote'],
+    teams: ['Street-Level Heroes of NYC'],
+    synopsis: 'Living in total anonymity following Doctor Strange\'s memory spell, Peter Parker navigates a brand-new street-level chapter in New York City with a classic cloth suit, defending the boroughs from Kingpin and subterranean crime syndicates.',
+    connections: 'Directed by Destin Daniel Cretton (*Shang-Chi*), bridging the street-level consequences into the multiversal incursion crisis of *Avengers: Doomsday*.'
   },
   {
     id: 'avengersdoomsday',
     title: 'Avengers: Doomsday',
     releaseYear: 2026,
-    releaseDate: 'May 1, 2026',
+    releaseDate: 'December 18, 2026',
     chronoYear: '2026 — 2027 (Multiverse Crisis)',
     chronoIndex: 39,
     releaseIndex: 39,
     phase: 'Phase 6',
     saga: 'The Multiverse Saga',
-    status: 'Official Release Date Announced (SDCC 2024)',
+    status: 'Official Release Date Announced',
     director: 'Anthony and Joe Russo',
     runtime: 'TBD',
-    boxOffice: 'Theatrical Release: May 1, 2026',
+    boxOffice: 'Theatrical Release: Dec 18, 2026',
     poster: 'assets/images/posters/mcu_avengersdoomsday.jpg',
     heroes: ['Doctor Strange', 'Spider-Man', 'The Fantastic Four', 'Sam Wilson (Cap)', 'Thor', 'Thunderbolts'],
     villains: ['Victor von Doom (Doctor Doom - Robert Downey Jr.)'],
@@ -832,67 +832,25 @@ const MCU_MOVIES = [
     connections: 'Direct prelude to *Avengers: Secret Wars*. Features Robert Downey Jr.\'s historic return as Doctor Doom.'
   },
   {
-    id: 'spiderman4',
-    title: 'Spider-Man 4 (Untitled)',
-    releaseYear: 2026,
-    releaseDate: 'July 24, 2026',
-    chronoYear: '2026',
+    id: 'avengerssecretwars',
+    title: 'Avengers: Secret Wars',
+    releaseYear: 2027,
+    releaseDate: 'December 17, 2027',
+    chronoYear: 'The End of Time (Battleworld)',
     chronoIndex: 40,
     releaseIndex: 40,
     phase: 'Phase 6',
     saga: 'The Multiverse Saga',
     status: 'Official Release Date Announced',
-    director: 'Destin Daniel Cretton',
-    runtime: 'TBD',
-    boxOffice: 'Theatrical Release: July 24, 2026',
-    poster: 'assets/images/posters/mcu_spiderman4.jpg',
-    heroes: ['Peter Parker (Spider-Man - Tom Holland)', 'Daredevil (Matt Murdock)'],
-    villains: ['Kingpin (Wilson Fisk)', 'Venom Symbiote'],
-    teams: ['Street-Level Heroes of NYC'],
-    synopsis: 'Living in total anonymity following Doctor Strange\'s memory spell, Peter Parker navigates street-level crime in New York City with a classic cloth suit, defending the boroughs from Kingpin and supernatural crime lords.',
-    connections: 'Bridging film between *Avengers: Doomsday* and *Avengers: Secret Wars*, directed by Destin Daniel Cretton (*Shang-Chi*).'
-  },
-  {
-    id: 'avengerssecretwars',
-    title: 'Avengers: Secret Wars',
-    releaseYear: 2027,
-    releaseDate: 'May 7, 2027',
-    chronoYear: 'The End of Time (Battleworld)',
-    chronoIndex: 41,
-    releaseIndex: 41,
-    phase: 'Phase 6',
-    saga: 'The Multiverse Saga',
-    status: 'Official Release Date Announced',
     director: 'Anthony and Joe Russo',
     runtime: 'TBD',
-    boxOffice: 'Theatrical Release: May 7, 2027',
+    boxOffice: 'Theatrical Release: Dec 17, 2027',
     poster: 'assets/images/posters/mcu_avengerssecretwars.jpg',
     heroes: ['All MCU & Multiverse Legacy Heroes (Avengers, X-Men, Fantastic Four, Spider-Men, Tobey, Hugh Jackman)'],
     villains: ['God Emperor Doom / The Beyonders'],
     teams: ['Battleworld Survivors'],
     synopsis: 'The climactic culmination of the Multiverse Saga. Incursions collapse the entire Marvel multiverse into a singular patchwork realm known as Battleworld, where legendary heroes from every Marvel reality unite for the ultimate battle to rebirth existence.',
     connections: 'The definitive finale of the Multiverse Saga (Phases 4–6), resetting the MCU timeline.'
-  },
-  {
-    id: 'armorwars',
-    title: 'Armor Wars',
-    releaseYear: 2027,
-    releaseDate: 'Announced (In Development)',
-    chronoYear: '2027+',
-    chronoIndex: 42,
-    releaseIndex: 42,
-    phase: 'Phase 6',
-    saga: 'The Multiverse Saga',
-    status: 'Announced Marvel Studios Feature',
-    director: 'Marvel Studios',
-    runtime: 'TBD',
-    boxOffice: 'Theatrical Release: TBD',
-    poster: 'assets/images/posters/mcu_armorwars.jpg',
-    heroes: ['Colonel James Rhodes (War Machine - Don Cheadle)', 'Riri Williams (Ironheart)'],
-    villains: ['Justin Hammer', 'Stolen Stark Tech Cartels'],
-    teams: ['US Department of Defense', 'Stark Legacy'],
-    synopsis: 'Colonel James "Rhodey" Rhodes confronts Tony Stark\'s greatest nightmare: what happens when revolutionary Stark armor technology falls into the wrong hands and sparks an international technological arms race.',
-    connections: 'Follows the revelation of Rhodey\'s identity post-*Secret Invasion* and defends the technological legacy of Tony Stark.'
   }
 ];
 
@@ -1002,7 +960,7 @@ function initTimelineToggles() {
       const orderLabel = document.getElementById('currentOrderLabel');
       if (orderLabel) {
         orderLabel.textContent = currentOrderMode === 'release' 
-          ? 'THEATRICAL RELEASE ORDER (2008 — 2027+)' 
+          ? 'THEATRICAL RELEASE ORDER (2008 — 2027)' 
           : 'MCU CHRONOLOGICAL TIMELINE (1942 — BATTLEWORLD)';
       }
 
