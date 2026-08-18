@@ -1,0 +1,981 @@
+/* Marvel Cinematic Universe — Multiverse Interactive Archive Stylesheet */
+:root {
+  --m-bg-dark: #04060c;
+  --m-bg-surface: #0a0e1a;
+  --m-bg-card: #0f1526;
+  --m-red-marvel: #e62429;
+  --m-red-glow: rgba(230, 36, 41, 0.45);
+  --m-cyan-arc: #00e5ff;
+  --m-cyan-glow: rgba(0, 229, 255, 0.4);
+  --m-gold-infinity: #f5d061;
+  --m-purple-quantum: #a855f7;
+  --m-text-primary: #f8fafc;
+  --m-text-secondary: #94a3b8;
+  --m-text-muted: #64748b;
+  --m-border-subtle: rgba(255, 255, 255, 0.08);
+  --m-border-glow: rgba(0, 229, 255, 0.3);
+  --font-syne: 'Syne', sans-serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --m-radius-sm: 6px;
+  --m-radius-md: 12px;
+  --m-radius-lg: 20px;
+  --m-shadow-cinema: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+}
+
+body.marvel-theme {
+  background-color: var(--m-bg-dark);
+  color: var(--m-text-primary);
+  font-family: var(--m-sans);
+  padding-top: 45px;
+  position: relative;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(230, 36, 41, 0.1), transparent 60%),
+    radial-gradient(ellipse at 80% 40%, rgba(0, 229, 255, 0.08), transparent 50%),
+    radial-gradient(ellipse at 20% 70%, rgba(168, 85, 247, 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Cosmic Background Canvas */
+#marvelCosmicCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Main Container Relative to Canvas */
+.marvel-main-wrap {
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Navigation */
+.marvel-header {
+  position: sticky;
+  top: 45px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 48px;
+  background: rgba(4, 6, 12, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(230, 36, 41, 0.25);
+}
+
+.marvel-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--m-text-primary);
+}
+
+.marvel-brand-badge {
+  background: var(--m-red-marvel);
+  color: #ffffff;
+  font-family: var(--font-syne);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 14px var(--m-red-glow);
+}
+
+.marvel-brand-text {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.marvel-brand-text span {
+  color: var(--m-cyan-arc);
+}
+
+.marvel-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.marvel-nav a {
+  text-decoration: none;
+  color: var(--m-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.marvel-nav a:hover {
+  color: var(--m-cyan-arc);
+}
+
+.marvel-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Order Switcher Toggle in Nav */
+.timeline-toggle-wrap {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--m-border-glow);
+  padding: 3px;
+  border-radius: 20px;
+}
+
+.timeline-toggle-btn {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--m-text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.timeline-toggle-btn:hover {
+  color: #ffffff;
+}
+
+.timeline-toggle-btn.active {
+  background: linear-gradient(135deg, var(--m-red-marvel), #b91c1c);
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--m-red-glow);
+}
+
+.timeline-toggle-btn.active.chronological {
+  background: linear-gradient(135deg, var(--m-cyan-arc), #0284c7);
+  color: #040810;
+  box-shadow: 0 0 12px var(--m-cyan-glow);
+}
+
+/* Hero Section */
+.marvel-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 48px 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.marvel-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--m-cyan-arc);
+  margin-bottom: 16px;
+}
+
+.marvel-hero-title {
+  font-family: var(--font-syne);
+  font-size: clamp(38px, 5.2vw, 76px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 22px;
+  max-width: 960px;
+}
+
+.marvel-hero-title span {
+  background: linear-gradient(135deg, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marvel-hero-title em {
+  font-style: normal;
+  color: var(--m-red-marvel);
+  text-shadow: 0 0 25px var(--m-red-glow);
+}
+
+.marvel-hero-desc {
+  font-size: 16px;
+  color: var(--m-text-secondary);
+  line-height: 1.7;
+  max-width: 680px;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+/* Universe Stats HUD */
+.universe-stats-hud {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  background: rgba(10, 14, 26, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--m-border-glow);
+  border-radius: var(--m-radius-md);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--m-shadow-cinema);
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--m-cyan-arc);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-value span {
+  font-size: 12px;
+  color: var(--m-text-secondary);
+  font-weight: 400;
+}
+
+/* Character Journey Bar */
+.character-journey-section {
+  padding: 24px 48px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.character-journey-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--m-text-secondary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.character-pills-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+
+.hero-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--m-border-subtle);
+  border-radius: 9999px;
+  color: var(--m-text-primary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.hero-pill-btn:hover {
+  background: rgba(0, 229, 255, 0.12);
+  border-color: var(--m-cyan-arc);
+  transform: translateY(-2px);
+}
+
+.hero-pill-btn.active {
+  background: var(--m-cyan-arc);
+  color: #04060c;
+  border-color: var(--m-cyan-arc);
+  box-shadow: 0 0 14px var(--m-cyan-glow);
+  font-weight: 700;
+}
+
+/* Search & Filter Bar */
+.marvel-controls-section {
+  padding: 0 48px 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-input-wrap {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  background: rgba(15, 21, 38, 0.8);
+  border: 1px solid var(--m-border-subtle);
+  border-radius: var(--m-radius-sm);
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input-wrap input:focus {
+  border-color: var(--m-cyan-arc);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+}
+
+.search-icon-svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: var(--m-text-muted);
+  pointer-events: none;
+}
+
+.phase-filters-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.phase-filter-pill {
+  padding: 7px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--m-border-subtle);
+  border-radius: var(--m-radius-sm);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--m-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.phase-filter-pill:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.phase-filter-pill.active {
+  background: var(--m-red-marvel);
+  color: #ffffff;
+  border-color: var(--m-red-marvel);
+  box-shadow: 0 0 10px var(--m-red-glow);
+}
+
+/* Movie Poster Grid with 3D Tilt Physics */
+.marvel-grid-section {
+  padding: 0 48px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.movie-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 24px;
+  perspective: 1200px;
+}
+
+.movie-poster-card {
+  position: relative;
+  border-radius: var(--m-radius-md);
+  overflow: hidden;
+  background: var(--m-bg-card);
+  border: 1px solid var(--m-border-subtle);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.movie-poster-card:hover {
+  border-color: var(--m-cyan-arc);
+  box-shadow: 0 20px 40px -10px rgba(0, 229, 255, 0.3);
+  z-index: 5;
+}
+
+.card-poster-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #090d16;
+}
+
+.card-poster-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.movie-poster-card:hover .card-poster-thumb img {
+  transform: scale(1.05);
+}
+
+/* Dynamic Holographic Glare Overlay */
+.card-holographic-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(0, 229, 255, 0.15) 40%,
+    transparent 70%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.movie-poster-card:hover .card-holographic-glare {
+  opacity: 1;
+}
+
+.card-phase-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(4, 6, 12, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--m-border-subtle);
+  color: #ffffff;
+}
+
+.card-chrono-year {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  background: rgba(0, 229, 255, 0.2);
+  border: 1px solid rgba(0, 229, 255, 0.5);
+  color: var(--m-cyan-arc);
+  backdrop-filter: blur(8px);
+}
+
+.card-content-bar {
+  padding: 14px;
+  background: linear-gradient(180deg, rgba(15, 21, 38, 0.95), rgba(10, 14, 26, 0.98));
+}
+
+.card-movie-title {
+  font-family: var(--font-syne);
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--m-text-muted);
+}
+
+/* Sagas Comparison Section */
+.sagas-section {
+  padding: 80px 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sagas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.saga-card {
+  position: relative;
+  background: var(--m-bg-surface);
+  border-radius: var(--m-radius-lg);
+  padding: 40px;
+  border: 1px solid var(--m-border-subtle);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.saga-card.infinity-saga {
+  border-color: rgba(245, 208, 97, 0.3);
+}
+
+.saga-card.infinity-saga:hover {
+  box-shadow: 0 0 35px rgba(245, 208, 97, 0.18);
+  border-color: var(--m-gold-infinity);
+}
+
+.saga-card.multiverse-saga {
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.saga-card.multiverse-saga:hover {
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.18);
+  border-color: var(--m-purple-quantum);
+}
+
+.saga-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.infinity-saga .saga-tag { color: var(--m-gold-infinity); }
+.multiverse-saga .saga-tag { color: var(--m-purple-quantum); }
+
+.saga-title {
+  font-family: var(--font-syne);
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.saga-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--m-text-secondary);
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.saga-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  border-top: 1px solid var(--m-border-subtle);
+  padding-top: 20px;
+}
+
+.saga-metric-item strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.saga-metric-item span {
+  font-size: 11px;
+  color: var(--m-text-muted);
+}
+
+/* Upcoming Releases Section */
+.upcoming-section {
+  padding: 60px 48px 90px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.upcoming-card {
+  background: var(--m-bg-surface);
+  border: 1px solid var(--m-border-glow);
+  border-radius: var(--m-radius-md);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.upcoming-phase-pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  background: var(--m-red-marvel);
+  color: #ffffff;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.upcoming-film-title {
+  font-family: var(--font-syne);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.upcoming-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--m-cyan-arc);
+  margin-bottom: 12px;
+}
+
+.upcoming-desc {
+  font-size: 13px;
+  color: var(--m-text-secondary);
+  line-height: 1.6;
+}
+
+/* Film Detail Dossier Modal (Stark HUD) */
+.marvel-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 6, 12, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.marvel-modal-overlay.open {
+  display: flex;
+}
+
+.marvel-dossier-card {
+  background: var(--m-bg-surface);
+  border: 1px solid var(--m-cyan-arc);
+  box-shadow: 0 0 50px rgba(0, 229, 255, 0.25);
+  border-radius: var(--m-radius-lg);
+  max-width: 940px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  animation: starkHoloPop 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes starkHoloPop {
+  0% { opacity: 0; transform: scale(0.92) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.dossier-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--m-border-subtle);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.2s ease;
+}
+
+.dossier-close-btn:hover {
+  background: var(--m-red-marvel);
+  border-color: var(--m-red-marvel);
+}
+
+.dossier-poster-col {
+  position: relative;
+  background: #000000;
+}
+
+.dossier-poster-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dossier-info-col {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dossier-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dossier-pill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.dossier-pill.phase { background: var(--m-red-marvel); color: #ffffff; }
+.dossier-pill.timeline { background: rgba(0, 229, 255, 0.2); color: var(--m-cyan-arc); border: 1px solid var(--m-cyan-arc); }
+.dossier-pill.runtime { background: rgba(255, 255, 255, 0.08); color: #ffffff; }
+
+.dossier-title {
+  font-family: var(--font-syne);
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.dossier-director {
+  font-size: 13px;
+  color: var(--m-text-secondary);
+}
+
+.dossier-director span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dossier-synopsis {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  font-weight: 300;
+}
+
+.dossier-cast-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: var(--m-bg-card);
+  padding: 16px;
+  border-radius: var(--m-radius-sm);
+  border: 1px solid var(--m-border-subtle);
+}
+
+.dossier-cast-block strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--m-cyan-arc);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.dossier-cast-block p {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.dossier-connections-box {
+  background: rgba(245, 208, 97, 0.08);
+  border: 1px solid rgba(245, 208, 97, 0.3);
+  border-radius: var(--m-radius-sm);
+  padding: 14px;
+  font-size: 12px;
+  color: #fde68a;
+  line-height: 1.6;
+}
+
+.dossier-connections-box strong {
+  color: var(--m-gold-infinity);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.dossier-nav-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.dossier-jump-btn {
+  flex: 1;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--m-border-subtle);
+  border-radius: var(--m-radius-sm);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.dossier-jump-btn:hover {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: var(--m-cyan-arc);
+}
+
+/* Marvel Footer */
+.marvel-footer {
+  border-top: 1px solid rgba(230, 36, 41, 0.25);
+  background: #020306;
+  padding: 72px 48px 36px;
+}
+
+.marvel-footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.marvel-footer-brand p {
+  font-size: 13px;
+  color: var(--m-text-secondary);
+  max-width: 360px;
+  margin-top: 14px;
+  line-height: 1.7;
+}
+
+.marvel-footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--m-cyan-arc);
+  margin-bottom: 16px;
+}
+
+.marvel-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.marvel-footer-links a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--m-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.marvel-footer-links a:hover {
+  color: var(--m-cyan-arc);
+}
+
+.marvel-footer-bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  border-top: 1px solid var(--m-border-subtle);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--m-text-muted);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .universe-stats-hud {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sagas-grid {
+    grid-template-columns: 1fr;
+  }
+  .upcoming-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .marvel-dossier-card {
+    grid-template-columns: 1fr;
+  }
+  .dossier-poster-col {
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marvel-header {
+    padding: 12px 20px;
+  }
+  .marvel-nav {
+    display: none;
+  }
+  .marvel-hero {
+    padding: 32px 20px;
+  }
+  .universe-stats-hud {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+  }
+  .character-journey-section, .marvel-controls-section, .marvel-grid-section, .sagas-section, .upcoming-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .upcoming-grid {
+    grid-template-columns: 1fr;
+  }
+  .marvel-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

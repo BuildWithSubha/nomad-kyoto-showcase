@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Five Horizons Showcase: Amazon Rainforest, The Taj Mahal, Himalayan Everest, Nomad Foils, and Kisen Ceramics Kyoto.">
-  <title>FIVE HORIZONS SHOWCASE // Amazon · Taj Mahal · Everest · Nomad Foils · Kyoto</title>
+  <meta name="description" content="Six Horizons Showcase: Marvel Cinematic Universe, Amazon Rainforest, The Taj Mahal, Himalayan Everest, Nomad Foils, and Kisen Ceramics Kyoto.">
+  <title>SIX HORIZONS SHOWCASE // Marvel MCU · Amazon · Taj Mahal · Everest · Nomad · Kyoto</title>
   
   <link rel="stylesheet" href="css/common.css">
   <style>
-    :root {
-      --portal-dark: #070a0f;
-    }
-
     body.portal-body {
-      background: #06090e;
+      background: #04070d;
       color: #f8fafc;
       font-family: 'Plus Jakarta Sans', sans-serif;
       padding-top: 45px;
@@ -33,7 +29,7 @@
       font-family: 'Space Grotesk', monospace;
       font-size: 11px;
       letter-spacing: 0.22em;
-      color: #34d399;
+      color: #e62429;
       text-transform: uppercase;
       margin-bottom: 12px;
       display: inline-block;
@@ -52,16 +48,16 @@
       font-size: 16px;
       color: #94a3b8;
       line-height: 1.6;
-      max-width: 740px;
+      max-width: 760px;
       margin: 0 auto 36px;
     }
 
-    /* 5-Card Showcase Grid */
+    /* 6-Card Showcase Grid */
     .portal-grid-showcase {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
-      max-width: 1480px;
+      max-width: 1540px;
       margin: 0 auto 60px;
       padding: 0 24px;
       width: 100%;
@@ -120,6 +116,10 @@
       z-index: 2;
     }
 
+    .portal-card.marvel-portal .portal-card-gradient {
+      background: linear-gradient(180deg, rgba(4, 6, 12, 0.15) 0%, rgba(4, 6, 12, 0.8) 50%, rgba(4, 6, 12, 0.98) 100%);
+    }
+
     .portal-card.amazon-portal .portal-card-gradient {
       background: linear-gradient(180deg, rgba(4, 15, 9, 0.15) 0%, rgba(4, 15, 9, 0.8) 50%, rgba(4, 15, 9, 0.98) 100%);
     }
@@ -159,6 +159,13 @@
       padding: 4px 10px;
       border-radius: 9999px;
       width: fit-content;
+    }
+
+    .marvel-portal .portal-tag {
+      background: rgba(230, 36, 41, 0.2);
+      color: #ff5252;
+      border: 1px solid rgba(230, 36, 41, 0.4);
+      font-family: 'Space Grotesk', monospace;
     }
 
     .amazon-portal .portal-tag {
@@ -203,6 +210,7 @@
       line-height: 1.15;
     }
 
+    .marvel-portal .portal-brand-title { font-family: 'Syne', sans-serif; }
     .amazon-portal .portal-brand-title { font-family: 'Syne', sans-serif; }
     .taj-portal .portal-brand-title { font-family: 'Cinzel', serif; }
     .everest-portal .portal-brand-title { font-family: 'Cinzel', serif; }
@@ -242,6 +250,16 @@
       margin-top: 4px;
       width: fit-content;
       transition: all 0.2s ease;
+    }
+
+    .marvel-portal .portal-cta-btn {
+      background: linear-gradient(135deg, #e62429, #b91c1c);
+      color: #ffffff;
+    }
+
+    .marvel-portal .portal-cta-btn:hover {
+      background: #ff5252;
+      box-shadow: 0 0 16px rgba(230, 36, 41, 0.6);
     }
 
     .amazon-portal .portal-cta-btn {
@@ -296,7 +314,7 @@
 
     /* Comparison Table */
     .portal-meta-section {
-      max-width: 1480px;
+      max-width: 1540px;
       margin: 0 auto 60px;
       padding: 0 24px;
       width: 100%;
@@ -329,7 +347,7 @@
       padding: 12px 12px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       text-align: left;
-      min-width: 150px;
+      min-width: 140px;
     }
 
     .meta-table th {
@@ -345,11 +363,12 @@
       color: #cbd5e1;
     }
 
-    .meta-table td:nth-child(2) { color: #34d399; }
-    .meta-table td:nth-child(3) { color: #f5d061; }
-    .meta-table td:nth-child(4) { color: #f59e0b; }
-    .meta-table td:nth-child(5) { color: #00e5ff; }
-    .meta-table td:nth-child(6) { color: #d4a373; }
+    .meta-table td:nth-child(2) { color: #ff5252; }
+    .meta-table td:nth-child(3) { color: #34d399; }
+    .meta-table td:nth-child(4) { color: #f5d061; }
+    .meta-table td:nth-child(5) { color: #f59e0b; }
+    .meta-table td:nth-child(6) { color: #00e5ff; }
+    .meta-table td:nth-child(7) { color: #d4a373; }
   </style>
 </head>
 <body class="portal-body">
@@ -361,6 +380,10 @@
       <span>Experience Mode: <strong>Master Portal</strong></span>
     </div>
     <div class="switcher-nav-pills">
+      <a href="marvel.html" class="switcher-pill">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Marvel MCU
+      </a>
       <a href="amazon.html" class="switcher-pill">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         Amazon Rainforest
@@ -386,22 +409,45 @@
       </a>
     </div>
     <div class="switcher-status">
-      <span>5 Production Landing Pages</span>
+      <span>6 Production Landing Pages</span>
     </div>
   </header>
 
   <!-- Portal Hero -->
   <header class="portal-hero">
     <span class="portal-eyebrow">AESTHETIC & INTERACTIVE SUITE</span>
-    <h1 class="portal-main-title">Craftsmanship Across Five Horizons</h1>
+    <h1 class="portal-main-title">Craftsmanship Across Six Horizons</h1>
     <p class="portal-main-desc">
-      Explore five distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & loupe tools, authentic audio synthesis, and zero placeholders.
+      Explore six distinct, production-grade landing pages crafted with bespoke art direction, interactive telemetry & loupe tools, authentic audio synthesis, and zero placeholders.
     </p>
   </header>
 
-  <!-- Portal 5-Card Grid -->
+  <!-- Portal 6-Card Grid -->
   <main class="portal-grid-showcase">
     
+    <!-- Marvel MCU Card -->
+    <a href="marvel.html" class="portal-card marvel-portal">
+      <div class="portal-card-bg" style="background: linear-gradient(135deg, #1c0507, #060914);"></div>
+      <div class="portal-card-gradient"></div>
+      <div class="portal-card-content">
+        <div class="portal-tag">
+          PHASES 1 — 6 · 36 MOVIES
+        </div>
+        <h2 class="portal-brand-title">Marvel MCU // Multiverse Archive</h2>
+        <p class="portal-brand-desc">
+          The complete Marvel Cinematic Universe timeline, dual-order release vs chronological sorting, character journeys, and Stark HUD dossiers.
+        </p>
+        <div class="portal-feature-badges">
+          <span class="feature-pill">Dual-Mode Timeline</span>
+          <span class="feature-pill">3D Card Tilt</span>
+          <span class="feature-pill">Cosmic Particles</span>
+        </div>
+        <div class="portal-cta-btn">
+          Enter MCU Archive →
+        </div>
+      </div>
+    </a>
+
     <!-- Amazon Rainforest Card -->
     <a href="amazon.html" class="portal-card amazon-portal">
       <div class="portal-card-bg">
@@ -538,6 +584,7 @@
         <thead>
           <tr>
             <th>Dimension</th>
+            <th>Marvel MCU Archive</th>
             <th>Amazon Rainforest</th>
             <th>The Taj Mahal</th>
             <th>Himalayan Apex</th>
@@ -548,6 +595,7 @@
         <tbody>
           <tr>
             <td>Brand Domain</td>
+            <td>Superhero Multiverse Archive</td>
             <td>Tropical Rainforest Biome</td>
             <td>Mughal Heritage & Architecture</td>
             <td>High-Altitude Mountaineering</td>
@@ -556,6 +604,7 @@
           </tr>
           <tr>
             <td>Palette</td>
+            <td>Crimson, Arc Cyan & Gold</td>
             <td>Canopy Emerald & Fern</td>
             <td>Makrana Ivory & Gold</td>
             <td>Glacier Obsidian & Saffron</td>
@@ -564,6 +613,7 @@
           </tr>
           <tr>
             <td>Typography</td>
+            <td>Syne & Space Grotesk</td>
             <td>Syne & Jakarta Sans</td>
             <td>Cinzel & Cormorant</td>
             <td>Cinzel & Space Grotesk</td>
@@ -572,6 +622,7 @@
           </tr>
           <tr>
             <td>Interactive Modules</td>
+            <td>Dual-Mode Timeline & 3D Tilt</td>
             <td>4-Layer Canopy Elevator</td>
             <td>Dawn-to-Moonlight Mode</td>
             <td>Altitude Route Scrubber</td>
@@ -579,12 +630,13 @@
             <td>Glaze Loupe & Kiln Scrubber</td>
           </tr>
           <tr>
-            <td>Audio Experience</td>
-            <td>Tropical Rain & Tree Frogs</td>
-            <td>Classical Tanpura Drone</td>
-            <td>High Wind & Tibetan Bell</td>
-            <td>Flight Dynamics HUD</td>
-            <td>Japanese Water Chime</td>
+            <td>Motion Systems</td>
+            <td>Cosmic Particles & 3D Tilt</td>
+            <td>Atmospheric Mist & Transpiration</td>
+            <td>Lighting Cycle Transformations</td>
+            <td>Altitude Progression Curves</td>
+            <td>Live Velocity HUD Physics</td>
+            <td>Glaze Refraction Optics</td>
           </tr>
         </tbody>
       </table>

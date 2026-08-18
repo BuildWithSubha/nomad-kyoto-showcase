@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marvel Cinematic Universe (MCU) Multiverse Archive — Explore all 36+ Marvel films across 6 Phases and 2 Sagas with switchable Theatrical Release and Chronological Timeline orders, character journeys, and film dossiers.">
+  <title>MARVEL CINEMATIC UNIVERSE // The Multiverse Film Archive & Timeline</title>
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/marvel.css">
+</head>
+<body class="marvel-theme">
+
+  <!-- Realtime Cosmic & Quantum Particle Canvas -->
+  <canvas id="marvelCosmicCanvas"></canvas>
+
+  <div class="marvel-main-wrap">
+
+    <!-- Global Project Switcher Bar -->
+    <header class="project-switcher-bar">
+      <div class="switcher-brand-tag marvel-active">
+        <span class="indicator-dot"></span>
+        <span>Experience Mode: <strong>Marvel MCU Archive</strong></span>
+      </div>
+      <div class="switcher-nav-pills">
+        <a href="marvel.html" class="switcher-pill active marvel">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Marvel Cinematic Universe
+        </a>
+        <a href="amazon.html" class="switcher-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Amazon Rainforest
+        </a>
+        <a href="tajmahal.html" class="switcher-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Taj Mahal (Agra)
+        </a>
+        <a href="everest.html" class="switcher-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
+          Himalayan Everest
+        </a>
+        <a href="nomad.html" class="switcher-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Nomad Foils
+        </a>
+        <a href="kyoto.html" class="switcher-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          Kyoto Ceramics
+        </a>
+        <a href="index.html" class="switcher-pill">
+          Portal Overview
+        </a>
+      </div>
+      <div class="switcher-status">
+        <span>36 MCU Theatrical Films</span>
+        <span>•</span>
+        <span>Phases 1–6</span>
+      </div>
+    </header>
+
+    <!-- Marvel Header Navigation -->
+    <nav class="marvel-header">
+      <a href="marvel.html" class="marvel-brand">
+        <span class="marvel-brand-badge">MARVEL</span>
+        <div class="marvel-brand-text">CINEMATIC <span>ARCHIVE</span></div>
+      </a>
+
+      <div class="marvel-nav">
+        <a href="#timeline">Timeline Grid</a>
+        <a href="#characters">Character Arcs</a>
+        <a href="#sagas">Infinity vs Multiverse</a>
+        <a href="#upcoming">Upcoming Slate</a>
+      </div>
+
+      <div class="marvel-actions">
+        <!-- Dual Mode Order Switcher -->
+        <div class="timeline-toggle-wrap">
+          <button class="timeline-toggle-btn active" data-order="release">
+            Theatrical Release
+          </button>
+          <button class="timeline-toggle-btn" data-order="chronological">
+            MCU Timeline (1942+)
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Marvel Hero Section -->
+    <header class="marvel-hero">
+      <div class="marvel-hero-eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span>SACRED TIMELINE & MULTIVERSE REGISTRY · PHASES 1 — 6</span>
+      </div>
+
+      <h1 class="marvel-hero-title">
+        EXPLORE THE <em>MARVEL</em><br><span>CINEMATIC UNIVERSE</span>.
+      </h1>
+
+      <p class="marvel-hero-desc">
+        A futuristic archive spanning 36+ theatrical blockbusters. Switch between Theatrical Release Order and in-universe Chronological Timeline Order, explore character journeys, and inspect deep-dive film dossiers.
+      </p>
+
+      <!-- Universe Stats HUD -->
+      <div class="universe-stats-hud">
+        <div class="stat-box">
+          <span class="stat-label">TOTAL FILMS</span>
+          <div class="stat-value">36 <span>TITLES</span></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">GLOBAL BOX OFFICE</span>
+          <div class="stat-value">$30.2B <span>USD</span></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">MCU PHASES</span>
+          <div class="stat-value">6 <span>PHASES</span></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">EPIC SAGAS</span>
+          <div class="stat-value">2 <span>SAGAS</span></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">TIMELINE SPAN</span>
+          <div class="stat-value">1942 <span>— 2026+</span></div>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">TOTAL RUNTIME</span>
+          <div class="stat-value">80+ <span>HOURS</span></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Character Journey Filter Row -->
+    <section class="character-journey-section" id="characters">
+      <div class="character-journey-title">
+        <span>⚡ FILTER BY CHARACTER JOURNEY:</span>
+      </div>
+      <div class="character-pills-row">
+        <button class="hero-pill-btn active" data-hero="all">All Characters (36)</button>
+        <button class="hero-pill-btn" data-hero="Iron Man">Iron Man (Tony Stark)</button>
+        <button class="hero-pill-btn" data-hero="Captain America">Captain America</button>
+        <button class="hero-pill-btn" data-hero="Thor">Thor Odinson</button>
+        <button class="hero-pill-btn" data-hero="Spider-Man">Spider-Man (Peter Parker)</button>
+        <button class="hero-pill-btn" data-hero="Doctor Strange">Doctor Strange</button>
+        <button class="hero-pill-btn" data-hero="Black Panther">Black Panther</button>
+        <button class="hero-pill-btn" data-hero="Deadpool">Deadpool & Wolverine</button>
+        <button class="hero-pill-btn" data-hero="Guardians">Guardians of the Galaxy</button>
+        <button class="hero-pill-btn" data-hero="Avengers">The Avengers</button>
+      </div>
+    </section>
+
+    <!-- Search & Phase Filter Controls -->
+    <section class="marvel-controls-section" id="timeline">
+      <div class="search-input-wrap">
+        <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="mcuSearchInput" placeholder="Search by title, villain, director, hero...">
+      </div>
+
+      <div class="phase-filters-group">
+        <button class="phase-filter-pill active" data-phase="all">All Movies</button>
+        <button class="phase-filter-pill" data-phase="phase1">Phase 1</button>
+        <button class="phase-filter-pill" data-phase="phase2">Phase 2</button>
+        <button class="phase-filter-pill" data-phase="phase3">Phase 3</button>
+        <button class="phase-filter-pill" data-phase="phase4">Phase 4</button>
+        <button class="phase-filter-pill" data-phase="phase5">Phase 5</button>
+        <button class="phase-filter-pill" data-phase="infinity">Infinity Saga</button>
+        <button class="phase-filter-pill" data-phase="multiverse">Multiverse Saga</button>
+      </div>
+    </section>
+
+    <!-- Current Ordering Status Indicator -->
+    <div style="padding: 0 48px 16px; max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--m-cyan-arc); letter-spacing: 0.14em; text-transform: uppercase;" id="currentOrderLabel">
+        THEATRICAL RELEASE ORDER (2008 — PRESENT)
+      </span>
+      <span style="font-size: 11px; color: var(--m-text-muted);">
+        Click any poster card for full film dossier & narrative connections
+      </span>
+    </div>
+
+    <!-- 3D Holographic Movie Cards Grid -->
+    <section class="marvel-grid-section">
+      <div class="movie-cards-grid" id="movieCardsGrid">
+        <!-- Rendered dynamically by js/marvel.js -->
+      </div>
+    </section>
+
+    <!-- Infinity Saga vs Multiverse Saga Comparison -->
+    <section class="sagas-section" id="sagas">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 48px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--m-gold-infinity); letter-spacing: 0.2em; text-transform: uppercase; display: inline-block; margin-bottom: 8px;">
+          NARRATIVE ARCHITECTURE
+        </span>
+        <h2 style="font-family: var(--font-syne); font-size: 36px; font-weight: 800; color: #fff;">
+          THE TWO GREAT SAGAS
+        </h2>
+      </div>
+
+      <div class="sagas-grid">
+        <!-- Infinity Saga Card -->
+        <div class="saga-card infinity-saga">
+          <span class="saga-tag">2008 — 2019 · 23 FILMS</span>
+          <h3 class="saga-title">The Infinity Saga</h3>
+          <p class="saga-desc">
+            The foundational 23-film epic chronicling the assembly of the original six Avengers and the cosmic race to prevent Thanos from gathering the six Infinity Stones to wipe out half of all universal life in *Avengers: Infinity War* and *Endgame*.
+          </p>
+          <div class="saga-metrics">
+            <div class="saga-metric-item">
+              <strong>Phases 1 — 3</strong>
+              <span>Phases</span>
+            </div>
+            <div class="saga-metric-item">
+              <strong>$22.6 Billion</strong>
+              <span>Global Gross</span>
+            </div>
+            <div class="saga-metric-item">
+              <strong>6 Stones</strong>
+              <span>Infinity Relics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multiverse Saga Card -->
+        <div class="saga-card multiverse-saga">
+          <span class="saga-tag">2021 — 2027 · PHASES 4 — 6</span>
+          <h3 class="saga-title">The Multiverse Saga</h3>
+          <p class="saga-desc">
+            The infinite expansion into alternate timelines, incursions, variant realities, the Quantum Realm, the TVA, and the arrival of Doctor Doom leading into the cataclysmic reality collapse of *Avengers: Doomsday* and *Avengers: Secret Wars*.
+          </p>
+          <div class="saga-metrics">
+            <div class="saga-metric-item">
+              <strong>Phases 4 — 6</strong>
+              <span>Phases</span>
+            </div>
+            <div class="saga-metric-item">
+              <strong>13+ Films</strong>
+              <span>Theatrical Slate</span>
+            </div>
+            <div class="saga-metric-item">
+              <strong>Battleworld</strong>
+              <span>Culmination</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming MCU Releases Tracker -->
+    <section class="upcoming-section" id="upcoming">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 48px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--m-red-marvel); letter-spacing: 0.2em; text-transform: uppercase; display: inline-block; margin-bottom: 8px;">
+          FUTURE TIMELINE
+        </span>
+        <h2 style="font-family: var(--font-syne); font-size: 36px; font-weight: 800; color: #fff;">
+          UPCOMING MARVEL THEATRICAL SLATE
+        </h2>
+      </div>
+
+      <div class="upcoming-grid">
+        <div class="upcoming-card">
+          <div class="upcoming-phase-pill">PHASE 5</div>
+          <h3 class="upcoming-film-title">Captain America: Brave New World</h3>
+          <div class="upcoming-date">February 14, 2025</div>
+          <p class="upcoming-desc">Sam Wilson takes the shield into global geopolitical conflict with President Ross (Red Hulk) and the discovery of Adamantium.</p>
+        </div>
+
+        <div class="upcoming-card">
+          <div class="upcoming-phase-pill">PHASE 5</div>
+          <h3 class="upcoming-film-title">Thunderbolts*</h3>
+          <div class="upcoming-date">May 2, 2025</div>
+          <p class="upcoming-desc">Yelena Belova, Bucky Barnes, Red Guardian, and John Walker unite as the government's covert strike force confronting Sentry.</p>
+        </div>
+
+        <div class="upcoming-card">
+          <div class="upcoming-phase-pill">PHASE 6</div>
+          <h3 class="upcoming-film-title">The Fantastic Four: First Steps</h3>
+          <div class="upcoming-date">July 25, 2025</div>
+          <p class="upcoming-desc">Marvel's First Family (Pedro Pascal as Reed Richards) journeys through a retro-futuristic 1960s universe facing Galactus and the Silver Surfer.</p>
+        </div>
+
+        <div class="upcoming-card">
+          <div class="upcoming-phase-pill">PHASE 6</div>
+          <h3 class="upcoming-film-title">Avengers: Doomsday</h3>
+          <div class="upcoming-date">May 1, 2026</div>
+          <p class="upcoming-desc">Robert Downey Jr. returns to the MCU as Victor Von Doom (Doctor Doom) in the catastrophic prelude to universal incursion and Battleworld.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Film Detail Dossier Modal Drawer (Stark HUD) -->
+    <div class="marvel-modal-overlay" id="marvelDossierModal">
+      <div class="marvel-dossier-card">
+        <button class="dossier-close-btn" id="closeDossierBtn" aria-label="Close dossier">✕</button>
+
+        <div class="dossier-poster-col">
+          <img src="" alt="Movie Poster" id="dossierPosterImg">
+        </div>
+
+        <div class="dossier-info-col">
+          <div class="dossier-tag-row">
+            <span class="dossier-pill phase" id="dossierPhasePill">Phase 1</span>
+            <span class="dossier-pill timeline" id="dossierChronoPill">Timeline: 2012</span>
+            <span class="dossier-pill runtime" id="dossierRuntimePill">143 min</span>
+          </div>
+
+          <h2 class="dossier-title" id="dossierTitle">The Avengers</h2>
+          
+          <div class="dossier-director">
+            Director: <span id="dossierDirector">Joss Whedon</span> • Box Office: <span id="dossierBoxOffice">$1.518B</span>
+          </div>
+
+          <p class="dossier-synopsis" id="dossierSynopsis"></p>
+
+          <div class="dossier-cast-grid">
+            <div class="dossier-cast-block">
+              <strong>PRIMARY HEROES</strong>
+              <p id="dossierHeroes"></p>
+            </div>
+            <div class="dossier-cast-block">
+              <strong>ADVERSARIES & VILLAINS</strong>
+              <p id="dossierVillains"></p>
+            </div>
+          </div>
+
+          <div class="dossier-connections-box">
+            <strong>CRITICAL MCU NARRATIVE CONNECTIONS</strong>
+            <span id="dossierConnections"></span>
+          </div>
+
+          <div class="dossier-nav-btns">
+            <button class="dossier-jump-btn" id="dossierPrevBtn">← Previous in Order</button>
+            <button class="dossier-jump-btn" id="dossierNextBtn">Next in Order →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marvel Footer -->
+    <footer class="marvel-footer">
+      <div class="marvel-footer-inner">
+        <div class="marvel-footer-brand">
+          <div class="marvel-brand">
+            <span class="marvel-brand-badge">MARVEL</span>
+            <div class="marvel-brand-text">CINEMATIC <span>ARCHIVE</span></div>
+          </div>
+          <p>
+            An interactive archive celebrating the 36-film Marvel Cinematic Universe epic, character journeys, and multiverse timelines.
+          </p>
+        </div>
+
+        <div>
+          <div class="marvel-footer-col-title">THE PHASES</div>
+          <ul class="marvel-footer-links">
+            <li><a href="#timeline">Phase 1: Avengers Assembled</a></li>
+            <li><a href="#timeline">Phase 2: Cosmic Expansion</a></li>
+            <li><a href="#timeline">Phase 3: The Infinity War</a></li>
+            <li><a href="#timeline">Phase 4 & 5: Multiverse Unleashed</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="marvel-footer-col-title">CHARACTER ARCS</div>
+          <ul class="marvel-footer-links">
+            <li><a href="#characters">Iron Man Legacy</a></li>
+            <li><a href="#characters">Captain America Journey</a></li>
+            <li><a href="#characters">Spider-Man Multiverse</a></li>
+            <li><a href="#characters">Thor Asgardian Chronicles</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="marvel-footer-col-title">NAVIGATION</div>
+          <ul class="marvel-footer-links">
+            <li><a href="amazon.html">The Amazon Rainforest</a></li>
+            <li><a href="tajmahal.html">The Taj Mahal</a></li>
+            <li><a href="everest.html">Himalayan Everest</a></li>
+            <li><a href="index.html" style="color: var(--m-cyan-arc);">View Master Portal →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="marvel-footer-bottom">
+        <div>© 2026 Marvel Cinematic Universe Multiverse Archive. Fan tribute and cinematic registry.</div>
+        <div>
+          <a href="index.html" style="color: var(--m-cyan-arc); text-decoration: none;">Return to Showcase Portal →</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/marvel.js"></script>
+</body>
+</html>

@@ -50,4 +50,5 @@ server.listen(PORT, () => {
   console.log(`- Himalayan Everest: http://localhost:${PORT}/everest.html`);
   console.log(`- The Taj Mahal: http://localhost:${PORT}/tajmahal.html`);
   console.log(`- Amazon Rainforest: http://localhost:${PORT}/amazon.html`);
+  console.log(`- Marvel MCU Archive: http://localhost:${PORT}/marvel.html`);
 });

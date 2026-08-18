@@ -76,6 +76,11 @@ body {
   box-shadow: 0 0 8px #10b981;
 }
 
+.switcher-brand-tag.marvel-active .indicator-dot {
+  background: #e62429;
+  box-shadow: 0 0 8px #e62429;
+}
+
 .switcher-nav-pills {
   display: flex;
   align-items: center;
@@ -139,6 +144,11 @@ body {
   color: #022c19;
 }
 
+.switcher-pill.active.marvel {
+  background: linear-gradient(135deg, #e62429, #b91c1c);
+  color: #ffffff;
+}
+
 .switcher-status {
   display: flex;
   align-items: center;
@@ -147,7 +157,7 @@ body {
   color: #64748b;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   .switcher-status {
     display: none;
   }
