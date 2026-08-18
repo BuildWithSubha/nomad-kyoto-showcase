@@ -1,46 +1,7 @@
-// Marvel Cinematic Universe — Multiverse Interactive Archive Engine
+// Marvel Cinematic Universe — Complete Multiverse Interactive Archive Engine (Phases 1 — 6)
 
 const MCU_MOVIES = [
-  {
-    id: 'cap1',
-    title: 'Captain America: The First Avenger',
-    releaseYear: 2011,
-    releaseDate: 'July 22, 2011',
-    chronoYear: '1942 — 1945',
-    chronoIndex: 1,
-    releaseIndex: 5,
-    phase: 'Phase 1',
-    saga: 'The Infinity Saga',
-    director: 'Joe Johnston',
-    runtime: '124 min',
-    boxOffice: '$370.6M',
-    poster: 'assets/images/posters/mcu_cap1.jpg',
-    heroes: ['Steve Rogers (Captain America)', 'Bucky Barnes', 'Peggy Carter'],
-    villains: ['Red Skull (Johann Schmidt)', 'HYDRA'],
-    teams: ['Howling Commandos', 'SSR'],
-    synopsis: 'During World War II, frail recruit Steve Rogers is transformed into the super-soldier Captain America. Armed with an indestructible Vibranium shield, he battles the Nazi science division HYDRA led by the power-mad Red Skull.',
-    connections: 'First chronological appearance of an Infinity Stone: The Tesseract (Space Stone) and the origin of Howard Stark and SSR (future S.H.I.E.L.D.).'
-  },
-  {
-    id: 'capmarv',
-    title: 'Captain Marvel',
-    releaseYear: 2019,
-    releaseDate: 'March 8, 2019',
-    chronoYear: '1995',
-    chronoIndex: 2,
-    releaseIndex: 21,
-    phase: 'Phase 3',
-    saga: 'The Infinity Saga',
-    director: 'Anna Boden, Ryan Fleck',
-    runtime: '123 min',
-    boxOffice: '$1.131B',
-    poster: 'assets/images/posters/mcu_capmarv.jpg',
-    heroes: ['Carol Danvers (Captain Marvel)', 'Nick Fury', 'Talos'],
-    villains: ['Yon-Rogg', 'Supreme Intelligence', 'Starforce'],
-    teams: ['Starforce', 'Kree Empire', 'Skrulls'],
-    synopsis: 'In 1995, extraterrestrial Kree warrior Vers crash-lands on Earth. Teaming with young S.H.I.E.L.D. agent Nick Fury, she uncovers suppressed memories of her human identity as US Air Force pilot Carol Danvers and discovers cosmic photon powers.',
-    connections: 'Explains how Nick Fury lost his eye, how S.H.I.E.L.D. gained the Tesseract, and why Fury conceived "The Avengers Initiative".'
-  },
+  // --- PHASE 1 ---
   {
     id: 'ironman1',
     title: 'Iron Man',
@@ -51,6 +12,7 @@ const MCU_MOVIES = [
     releaseIndex: 1,
     phase: 'Phase 1',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Jon Favreau',
     runtime: '126 min',
     boxOffice: '$585.8M',
@@ -62,26 +24,6 @@ const MCU_MOVIES = [
     connections: 'The foundational birth of the MCU. Introduced Tony Stark, Jarvis, and the iconic post-credits scene where Nick Fury invites Stark to the Avengers Initiative.'
   },
   {
-    id: 'ironman2',
-    title: 'Iron Man 2',
-    releaseYear: 2010,
-    releaseDate: 'May 7, 2010',
-    chronoYear: '2011',
-    chronoIndex: 4,
-    releaseIndex: 3,
-    phase: 'Phase 1',
-    saga: 'The Infinity Saga',
-    director: 'Jon Favreau',
-    runtime: '124 min',
-    boxOffice: '$623.9M',
-    poster: 'assets/images/posters/mcu_ironman2.jpg',
-    heroes: ['Tony Stark', 'Natasha Romanoff (Black Widow)', 'James Rhodes (War Machine)'],
-    villains: ['Ivan Vanko (Whiplash)', 'Justin Hammer'],
-    teams: ['S.H.I.E.L.D.', 'Hammer Advanced Robotics'],
-    synopsis: 'With the world now aware of his double life, Tony Stark faces declining health from palladium poisoning, government pressure to share his weaponized suit tech, and vengeful physicist Ivan Vanko.',
-    connections: 'First MCU appearance of Natasha Romanoff (Black Widow) and War Machine. Previews Mjolnir in New Mexico.'
-  },
-  {
     id: 'hulk',
     title: 'The Incredible Hulk',
     releaseYear: 2008,
@@ -91,6 +33,7 @@ const MCU_MOVIES = [
     releaseIndex: 2,
     phase: 'Phase 1',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Louis Leterrier',
     runtime: '112 min',
     boxOffice: '$264.8M',
@@ -102,6 +45,27 @@ const MCU_MOVIES = [
     connections: 'Introduced General Thaddeus Ross (future Secretary of State / Red Hulk). Tony Stark makes a cameo to discuss putting a team together.'
   },
   {
+    id: 'ironman2',
+    title: 'Iron Man 2',
+    releaseYear: 2010,
+    releaseDate: 'May 7, 2010',
+    chronoYear: '2011',
+    chronoIndex: 4,
+    releaseIndex: 3,
+    phase: 'Phase 1',
+    saga: 'The Infinity Saga',
+    status: 'Released',
+    director: 'Jon Favreau',
+    runtime: '124 min',
+    boxOffice: '$623.9M',
+    poster: 'assets/images/posters/mcu_ironman2.jpg',
+    heroes: ['Tony Stark', 'Natasha Romanoff (Black Widow)', 'James Rhodes (War Machine)'],
+    villains: ['Ivan Vanko (Whiplash)', 'Justin Hammer'],
+    teams: ['S.H.I.E.L.D.', 'Hammer Advanced Robotics'],
+    synopsis: 'With the world now aware of his double life, Tony Stark faces declining health from palladium poisoning, government pressure to share his weaponized suit tech, and vengeful physicist Ivan Vanko.',
+    connections: 'First MCU appearance of Natasha Romanoff (Black Widow) and War Machine. Previews Mjolnir in New Mexico.'
+  },
+  {
     id: 'thor1',
     title: 'Thor',
     releaseYear: 2011,
@@ -111,6 +75,7 @@ const MCU_MOVIES = [
     releaseIndex: 4,
     phase: 'Phase 1',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Kenneth Branagh',
     runtime: '115 min',
     boxOffice: '$449.3M',
@@ -122,6 +87,27 @@ const MCU_MOVIES = [
     connections: 'Introduced Asgard, the Nine Realms, cosmic mythology, Loki, and Clint Barton (Hawkeye).'
   },
   {
+    id: 'cap1',
+    title: 'Captain America: The First Avenger',
+    releaseYear: 2011,
+    releaseDate: 'July 22, 2011',
+    chronoYear: '1942 — 1945',
+    chronoIndex: 1,
+    releaseIndex: 5,
+    phase: 'Phase 1',
+    saga: 'The Infinity Saga',
+    status: 'Released',
+    director: 'Joe Johnston',
+    runtime: '124 min',
+    boxOffice: '$370.6M',
+    poster: 'assets/images/posters/mcu_cap1.jpg',
+    heroes: ['Steve Rogers (Captain America)', 'Bucky Barnes', 'Peggy Carter'],
+    villains: ['Red Skull (Johann Schmidt)', 'HYDRA'],
+    teams: ['Howling Commandos', 'SSR'],
+    synopsis: 'During World War II, frail recruit Steve Rogers is transformed into the super-soldier Captain America. Armed with an indestructible Vibranium shield, he battles the Nazi science division HYDRA led by the power-mad Red Skull.',
+    connections: 'First chronological appearance of an Infinity Stone: The Tesseract (Space Stone) and the origin of Howard Stark and SSR (future S.H.I.E.L.D.).'
+  },
+  {
     id: 'avengers1',
     title: 'The Avengers',
     releaseYear: 2012,
@@ -131,6 +117,7 @@ const MCU_MOVIES = [
     releaseIndex: 6,
     phase: 'Phase 1',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Joss Whedon',
     runtime: '143 min',
     boxOffice: '$1.518B',
@@ -141,6 +128,8 @@ const MCU_MOVIES = [
     synopsis: 'When Loki steals the Tesseract and leads an alien Chitauri invasion against New York City, Nick Fury brings together six extraordinary individuals to form Earth\'s Mightiest Heroes.',
     connections: 'Culmination of Phase 1. Features the Space Stone (Tesseract) and Mind Stone (Loki\'s Scepter). Post-credits scene reveals Thanos for the first time.'
   },
+
+  // --- PHASE 2 ---
   {
     id: 'ironman3',
     title: 'Iron Man 3',
@@ -151,6 +140,7 @@ const MCU_MOVIES = [
     releaseIndex: 7,
     phase: 'Phase 2',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Shane Black',
     runtime: '130 min',
     boxOffice: '$1.215B',
@@ -171,6 +161,7 @@ const MCU_MOVIES = [
     releaseIndex: 8,
     phase: 'Phase 2',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Alan Taylor',
     runtime: '112 min',
     boxOffice: '$644.8M',
@@ -191,6 +182,7 @@ const MCU_MOVIES = [
     releaseIndex: 9,
     phase: 'Phase 2',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Anthony and Joe Russo',
     runtime: '136 min',
     boxOffice: '$714.4M',
@@ -211,6 +203,7 @@ const MCU_MOVIES = [
     releaseIndex: 10,
     phase: 'Phase 2',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'James Gunn',
     runtime: '121 min',
     boxOffice: '$773.3M',
@@ -222,26 +215,6 @@ const MCU_MOVIES = [
     connections: 'Introduced the Power Stone (The Orb), the cosmic realm, Knowhere, Celestials lore, and established Thanos as Gamora & Nebula\'s father.'
   },
   {
-    id: 'gotg2',
-    title: 'Guardians of the Galaxy Vol. 2',
-    releaseYear: 2017,
-    releaseDate: 'May 5, 2017',
-    chronoYear: '2014',
-    chronoIndex: 12,
-    releaseIndex: 15,
-    phase: 'Phase 3',
-    saga: 'The Infinity Saga',
-    director: 'James Gunn',
-    runtime: '136 min',
-    boxOffice: '$863.8M',
-    poster: 'assets/images/posters/mcu_gotg2.jpg',
-    heroes: ['Star-Lord', 'Gamora', 'Drax', 'Rocket', 'Baby Groot', 'Yondu Udonta', 'Mantis'],
-    villains: ['Ego the Living Planet', 'Ayesha (Sovereign)'],
-    teams: ['Guardians of the Galaxy', 'Ravagers'],
-    synopsis: 'The Guardians travel across the cosmos while struggling to keep their newfound family together as they unravel the mystery of Peter Quill\'s true parentage: a living Celestial planet named Ego.',
-    connections: 'Introduced Mantis, Yondu\'s emotional redemption, Celestial godhood biology, and teased Adam Warlock.'
-  },
-  {
     id: 'avengers2',
     title: 'Avengers: Age of Ultron',
     releaseYear: 2015,
@@ -251,6 +224,7 @@ const MCU_MOVIES = [
     releaseIndex: 11,
     phase: 'Phase 2',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Joss Whedon',
     runtime: '141 min',
     boxOffice: '$1.405B',
@@ -271,6 +245,7 @@ const MCU_MOVIES = [
     releaseIndex: 12,
     phase: 'Phase 2',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Peyton Reed',
     runtime: '117 min',
     boxOffice: '$519.3M',
@@ -281,6 +256,8 @@ const MCU_MOVIES = [
     synopsis: 'Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang embraces his inner hero and helps his mentor Dr. Hank Pym protect the secret of the Pym Particle.',
     connections: 'First introduction of the Quantum Realm — the scientific cornerstone used for the Time Heist in *Avengers: Endgame*.'
   },
+
+  // --- PHASE 3 ---
   {
     id: 'cap3',
     title: 'Captain America: Civil War',
@@ -291,6 +268,7 @@ const MCU_MOVIES = [
     releaseIndex: 13,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Anthony and Joe Russo',
     runtime: '147 min',
     boxOffice: '$1.155B',
@@ -302,46 +280,6 @@ const MCU_MOVIES = [
     connections: 'Introduced Peter Parker (Spider-Man) and T\'Challa (Black Panther) into the MCU. Shatters the Avengers, leaving Earth vulnerable to Thanos.'
   },
   {
-    id: 'blackwidow',
-    title: 'Black Widow',
-    releaseYear: 2021,
-    releaseDate: 'July 9, 2021',
-    chronoYear: '2016',
-    chronoIndex: 16,
-    releaseIndex: 24,
-    phase: 'Phase 4',
-    saga: 'The Multiverse Saga',
-    director: 'Cate Shortland',
-    runtime: '134 min',
-    boxOffice: '$379.8M',
-    poster: 'assets/images/posters/mcu_blackwidow.jpg',
-    heroes: ['Natasha Romanoff', 'Yelena Belova', 'Alexei Shostakov (Red Guardian)', 'Melina Vostokoff'],
-    villains: ['General Dreykov', 'Taskmaster (Antonia Dreykov)'],
-    teams: ['Red Room Widows'],
-    synopsis: 'Following the events of Civil War, fugitive Natasha Romanoff confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past emerges, reuniting with her surrogate Russian spy family.',
-    connections: 'Introduced Yelena Belova and Red Guardian (key members of the upcoming *Thunderbolts** team).'
-  },
-  {
-    id: 'spiderman1',
-    title: 'Spider-Man: Homecoming',
-    releaseYear: 2017,
-    releaseDate: 'July 7, 2017',
-    chronoYear: '2016',
-    chronoIndex: 17,
-    releaseIndex: 16,
-    phase: 'Phase 3',
-    saga: 'The Infinity Saga',
-    director: 'Jon Watts',
-    runtime: '133 min',
-    boxOffice: '$880.2M',
-    poster: 'assets/images/posters/mcu_spiderman1.jpg',
-    heroes: ['Peter Parker (Spider-Man)', 'Tony Stark', 'Ned Leeds', 'Happy Hogan'],
-    villains: ['Adrian Toomes (Vulture)', 'Shocker'],
-    teams: ['Midtown High Academic Decathlon'],
-    synopsis: 'Peter Parker balances his high school student life in Queens with his superhero alter-ego Spider-Man under the watchful eye of his mentor Tony Stark, discovering an illegal Chitauri alien weapons ring operated by the Vulture.',
-    connections: 'Solidifies Spider-Man\'s arc from street-level hero to Avenger. Deepens the Tony Stark-Peter Parker father-son bond.'
-  },
-  {
     id: 'docstrange1',
     title: 'Doctor Strange',
     releaseYear: 2016,
@@ -351,6 +289,7 @@ const MCU_MOVIES = [
     releaseIndex: 14,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Scott Derrickson',
     runtime: '115 min',
     boxOffice: '$677.8M',
@@ -362,24 +301,46 @@ const MCU_MOVIES = [
     connections: 'Introduced the Time Stone (The Eye of Agamotto), the Mirror Dimension, the Dark Dimension, and the Multiverse concept.'
   },
   {
-    id: 'blackpanther1',
-    title: 'Black Panther',
-    releaseYear: 2018,
-    releaseDate: 'February 16, 2018',
-    chronoYear: '2016',
-    chronoIndex: 19,
-    releaseIndex: 18,
+    id: 'gotg2',
+    title: 'Guardians of the Galaxy Vol. 2',
+    releaseYear: 2017,
+    releaseDate: 'May 5, 2017',
+    chronoYear: '2014',
+    chronoIndex: 12,
+    releaseIndex: 15,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
-    director: 'Ryan Coogler',
-    runtime: '134 min',
-    boxOffice: '$1.347B',
-    poster: 'assets/images/posters/mcu_blackpanther1.jpg',
-    heroes: ['T\'Challa (Black Panther)', 'Shuri', 'Okoye', 'Nakia', 'M\'Baku'],
-    villains: ['Erik Killmonger (N\'Jadaka)', 'Ulysses Klaue'],
-    teams: ['Dora Milaje', 'Jabari Tribe', 'Wakandan Golden Tribe'],
-    synopsis: 'T\'Challa returns home to the isolated, technologically advanced African nation of Wakanda to take his rightful place as King. However, when a powerful adversary named Killmonger appears, T\'Challa\'s mettle is tested.',
-    connections: 'Reveals Wakanda\'s global Vibranium supremacy and establishes Wakanda as the front-line battleground for *Avengers: Infinity War*.'
+    status: 'Released',
+    director: 'James Gunn',
+    runtime: '136 min',
+    boxOffice: '$863.8M',
+    poster: 'assets/images/posters/mcu_gotg2.jpg',
+    heroes: ['Star-Lord', 'Gamora', 'Drax', 'Rocket', 'Baby Groot', 'Yondu Udonta', 'Mantis'],
+    villains: ['Ego the Living Planet', 'Ayesha (Sovereign)'],
+    teams: ['Guardians of the Galaxy', 'Ravagers'],
+    synopsis: 'The Guardians travel across the cosmos while struggling to keep their newfound family together as they unravel the mystery of Peter Quill\'s true parentage: a living Celestial planet named Ego.',
+    connections: 'Introduced Mantis, Yondu\'s emotional redemption, Celestial godhood biology, and teased Adam Warlock.'
+  },
+  {
+    id: 'spiderman1',
+    title: 'Spider-Man: Homecoming',
+    releaseYear: 2017,
+    releaseDate: 'July 7, 2017',
+    chronoYear: '2016',
+    chronoIndex: 17,
+    releaseIndex: 16,
+    phase: 'Phase 3',
+    saga: 'The Infinity Saga',
+    status: 'Released',
+    director: 'Jon Watts',
+    runtime: '133 min',
+    boxOffice: '$880.2M',
+    poster: 'assets/images/posters/mcu_spiderman1.jpg',
+    heroes: ['Peter Parker (Spider-Man)', 'Tony Stark', 'Ned Leeds', 'Happy Hogan'],
+    villains: ['Adrian Toomes (Vulture)', 'Shocker'],
+    teams: ['Midtown High Academic Decathlon'],
+    synopsis: 'Peter Parker balances his high school student life in Queens with his superhero alter-ego Spider-Man under the watchful eye of his mentor Tony Stark, discovering an illegal Chitauri alien weapons ring operated by the Vulture.',
+    connections: 'Solidifies Spider-Man\'s arc from street-level hero to Avenger. Deepens the Tony Stark-Peter Parker father-son bond.'
   },
   {
     id: 'thor3',
@@ -391,6 +352,7 @@ const MCU_MOVIES = [
     releaseIndex: 17,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Taika Waititi',
     runtime: '130 min',
     boxOffice: '$855.3M',
@@ -402,6 +364,27 @@ const MCU_MOVIES = [
     connections: 'Destruction of Asgard. Directly leads into the opening scene of *Avengers: Infinity War* with Thanos intercepting the Asgardian refugee ship.'
   },
   {
+    id: 'blackpanther1',
+    title: 'Black Panther',
+    releaseYear: 2018,
+    releaseDate: 'February 16, 2018',
+    chronoYear: '2016',
+    chronoIndex: 19,
+    releaseIndex: 18,
+    phase: 'Phase 3',
+    saga: 'The Infinity Saga',
+    status: 'Released',
+    director: 'Ryan Coogler',
+    runtime: '134 min',
+    boxOffice: '$1.347B',
+    poster: 'assets/images/posters/mcu_blackpanther1.jpg',
+    heroes: ['T\'Challa (Black Panther)', 'Shuri', 'Okoye', 'Nakia', 'M\'Baku'],
+    villains: ['Erik Killmonger (N\'Jadaka)', 'Ulysses Klaue'],
+    teams: ['Dora Milaje', 'Jabari Tribe', 'Wakandan Golden Tribe'],
+    synopsis: 'T\'Challa returns home to the isolated, technologically advanced African nation of Wakanda to take his rightful place as King. However, when a powerful adversary named Killmonger appears, T\'Challa\'s mettle is tested.',
+    connections: 'Reveals Wakanda\'s global Vibranium supremacy and establishes Wakanda as the front-line battleground for *Avengers: Infinity War*.'
+  },
+  {
     id: 'infinitywar',
     title: 'Avengers: Infinity War',
     releaseYear: 2018,
@@ -411,6 +394,7 @@ const MCU_MOVIES = [
     releaseIndex: 19,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Anthony and Joe Russo',
     runtime: '149 min',
     boxOffice: '$2.048B',
@@ -431,6 +415,7 @@ const MCU_MOVIES = [
     releaseIndex: 20,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Peyton Reed',
     runtime: '118 min',
     boxOffice: '$622.7M',
@@ -442,6 +427,27 @@ const MCU_MOVIES = [
     connections: 'Post-credits scene shows Hank, Janet, and Hope dusted by Thanos\'s Snap, trapping Scott Lang in the Quantum Realm until *Endgame*.'
   },
   {
+    id: 'capmarv',
+    title: 'Captain Marvel',
+    releaseYear: 2019,
+    releaseDate: 'March 8, 2019',
+    chronoYear: '1995',
+    chronoIndex: 2,
+    releaseIndex: 21,
+    phase: 'Phase 3',
+    saga: 'The Infinity Saga',
+    status: 'Released',
+    director: 'Anna Boden, Ryan Fleck',
+    runtime: '123 min',
+    boxOffice: '$1.131B',
+    poster: 'assets/images/posters/mcu_capmarv.jpg',
+    heroes: ['Carol Danvers (Captain Marvel)', 'Nick Fury', 'Talos'],
+    villains: ['Yon-Rogg', 'Supreme Intelligence', 'Starforce'],
+    teams: ['Starforce', 'Kree Empire', 'Skrulls'],
+    synopsis: 'In 1995, extraterrestrial Kree warrior Vers crash-lands on Earth. Teaming with young S.H.I.E.L.D. agent Nick Fury, she uncovers suppressed memories of her human identity as US Air Force pilot Carol Danvers and discovers cosmic photon powers.',
+    connections: 'Explains how Nick Fury lost his eye, how S.H.I.E.L.D. gained the Tesseract, and why Fury conceived "The Avengers Initiative".'
+  },
+  {
     id: 'endgame',
     title: 'Avengers: Endgame',
     releaseYear: 2019,
@@ -451,6 +457,7 @@ const MCU_MOVIES = [
     releaseIndex: 22,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Anthony and Joe Russo',
     runtime: '181 min',
     boxOffice: '$2.798B',
@@ -471,6 +478,7 @@ const MCU_MOVIES = [
     releaseIndex: 23,
     phase: 'Phase 3',
     saga: 'The Infinity Saga',
+    status: 'Released',
     director: 'Jon Watts',
     runtime: '129 min',
     boxOffice: '$1.132B',
@@ -480,6 +488,29 @@ const MCU_MOVIES = [
     teams: ['Stark E.D.I.T.H. Defense'],
     synopsis: 'Grieving Tony Stark\'s death during a European school trip, Peter Parker is recruited by Nick Fury to battle elemental creatures alongside Quentin Beck (Mysterio), discovering Beck is a disgruntled ex-Stark employee staging holographic illusions.',
     connections: 'Epilogue to the Infinity Saga. Post-credits reveals Peter Parker\'s secret identity to the entire world and frames him for murder.'
+  },
+
+  // --- PHASE 4 ---
+  {
+    id: 'blackwidow',
+    title: 'Black Widow',
+    releaseYear: 2021,
+    releaseDate: 'July 9, 2021',
+    chronoYear: '2016',
+    chronoIndex: 16,
+    releaseIndex: 24,
+    phase: 'Phase 4',
+    saga: 'The Multiverse Saga',
+    status: 'Released',
+    director: 'Cate Shortland',
+    runtime: '134 min',
+    boxOffice: '$379.8M',
+    poster: 'assets/images/posters/mcu_blackwidow.jpg',
+    heroes: ['Natasha Romanoff', 'Yelena Belova', 'Alexei Shostakov (Red Guardian)', 'Melina Vostokoff'],
+    villains: ['General Dreykov', 'Taskmaster (Antonia Dreykov)'],
+    teams: ['Red Room Widows'],
+    synopsis: 'Following the events of Civil War, fugitive Natasha Romanoff confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past emerges, reuniting with her surrogate Russian spy family.',
+    connections: 'Introduced Yelena Belova and Red Guardian (key members of the upcoming *Thunderbolts** team).'
   },
   {
     id: 'shangchi',
@@ -491,6 +522,7 @@ const MCU_MOVIES = [
     releaseIndex: 25,
     phase: 'Phase 4',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Destin Daniel Cretton',
     runtime: '132 min',
     boxOffice: '$432.2M',
@@ -511,6 +543,7 @@ const MCU_MOVIES = [
     releaseIndex: 26,
     phase: 'Phase 4',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Chloé Zhao',
     runtime: '156 min',
     boxOffice: '$402.1M',
@@ -531,6 +564,7 @@ const MCU_MOVIES = [
     releaseIndex: 27,
     phase: 'Phase 4',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Jon Watts',
     runtime: '148 min',
     boxOffice: '$1.922B',
@@ -551,6 +585,7 @@ const MCU_MOVIES = [
     releaseIndex: 28,
     phase: 'Phase 4',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Sam Raimi',
     runtime: '126 min',
     boxOffice: '$955.8M',
@@ -571,6 +606,7 @@ const MCU_MOVIES = [
     releaseIndex: 29,
     phase: 'Phase 4',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Taika Waititi',
     runtime: '119 min',
     boxOffice: '$760.9M',
@@ -591,6 +627,7 @@ const MCU_MOVIES = [
     releaseIndex: 30,
     phase: 'Phase 4',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Ryan Coogler',
     runtime: '161 min',
     boxOffice: '$859.2M',
@@ -601,6 +638,8 @@ const MCU_MOVIES = [
     synopsis: 'Grieving the loss of King T\'Challa, Queen Ramonda, Shuri, and the Dora Milaje fight to protect their nation from intervening world powers and the hidden underwater kingdom of Talokan led by mutant Namor.',
     connections: 'Introduced Riri Williams (Ironheart), Namor and the Talokan underwater civilization, and concludes Phase 4.'
   },
+
+  // --- PHASE 5 ---
   {
     id: 'antman3',
     title: 'Ant-Man and the Wasp: Quantumania',
@@ -611,6 +650,7 @@ const MCU_MOVIES = [
     releaseIndex: 31,
     phase: 'Phase 5',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Peyton Reed',
     runtime: '124 min',
     boxOffice: '$476.1M',
@@ -631,6 +671,7 @@ const MCU_MOVIES = [
     releaseIndex: 32,
     phase: 'Phase 5',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'James Gunn',
     runtime: '150 min',
     boxOffice: '$845.6M',
@@ -651,6 +692,7 @@ const MCU_MOVIES = [
     releaseIndex: 33,
     phase: 'Phase 5',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Nia DaCosta',
     runtime: '105 min',
     boxOffice: '$206.1M',
@@ -671,6 +713,7 @@ const MCU_MOVIES = [
     releaseIndex: 34,
     phase: 'Phase 5',
     saga: 'The Multiverse Saga',
+    status: 'Released',
     director: 'Shawn Levy',
     runtime: '128 min',
     boxOffice: '$1.338B',
@@ -691,9 +734,10 @@ const MCU_MOVIES = [
     releaseIndex: 35,
     phase: 'Phase 5',
     saga: 'The Multiverse Saga',
+    status: 'Official Release Date Announced',
     director: 'Julius Onah',
     runtime: '118 min',
-    boxOffice: 'Upcoming / 2025',
+    boxOffice: 'Theatrical Release: Feb 14, 2025',
     poster: 'assets/images/posters/mcu_cap4.jpg',
     heroes: ['Sam Wilson (Captain America)', 'Joaquin Torres (Falcon)', 'Isaiah Bradley'],
     villains: ['President Thaddeus Ross (Red Hulk)', 'Samuel Sterns (The Leader)'],
@@ -711,15 +755,144 @@ const MCU_MOVIES = [
     releaseIndex: 36,
     phase: 'Phase 5',
     saga: 'The Multiverse Saga',
+    status: 'Official Release Date Announced',
     director: 'Jake Schreier',
     runtime: 'TBD',
-    boxOffice: 'Upcoming / 2025',
+    boxOffice: 'Theatrical Release: May 2, 2025',
     poster: 'assets/images/posters/mcu_thunderbolts.jpg',
     heroes: ['Yelena Belova', 'Bucky Barnes', 'John Walker (U.S. Agent)', 'Red Guardian', 'Taskmaster', 'Ghost', 'Sentry (Bob Reynolds)'],
     villains: ['Valentina Allegra de Fontaine', 'The Void'],
     teams: ['The Thunderbolts* (Government Black Ops)'],
     synopsis: 'An irreverent team of reformed antiheroes and assassins are sent on dangerous covert missions by CIA Director Valentina Allegra de Fontaine, confronting the god-like entity Sentry / The Void.',
     connections: 'Brings together government operatives from Black Widow, Falcon & Winter Soldier, and Ant-Man 2.'
+  },
+
+  // --- PHASE 6 (2025, 2026, 2027+) ---
+  {
+    id: 'fantasticfour',
+    title: 'The Fantastic Four: First Steps',
+    releaseYear: 2025,
+    releaseDate: 'July 25, 2025',
+    chronoYear: '1960s (Retro-Futuristic Multiverse)',
+    chronoIndex: 37,
+    releaseIndex: 37,
+    phase: 'Phase 6',
+    saga: 'The Multiverse Saga',
+    status: 'Official Release Date Announced',
+    director: 'Matt Shakman',
+    runtime: 'TBD',
+    boxOffice: 'Theatrical Release: July 25, 2025',
+    poster: 'assets/images/posters/mcu_fantasticfour.jpg',
+    heroes: ['Reed Richards (Mister Fantastic)', 'Sue Storm (Invisible Woman)', 'Johnny Storm (Human Torch)', 'Ben Grimm (The Thing)'],
+    villains: ['Galactus (World Eater)', 'Silver Surfer (Shalla-Bal)'],
+    teams: ['The Fantastic Four (Marvel\'s First Family)'],
+    synopsis: 'Set in a vibrant 1960s retro-futuristic alternate universe, Marvel\'s First Family balances cosmic family dynamics while defending Earth from the colossal planet-devouring cosmic entity Galactus and his enigmatic herald.',
+    connections: 'Opens Phase 6. The Fantastic Four will cross through the Multiverse into the prime MCU timeline for *Avengers: Doomsday* and *Avengers: Secret Wars*.'
+  },
+  {
+    id: 'blade',
+    title: 'Blade',
+    releaseYear: 2025,
+    releaseDate: 'November 7, 2025 (Scheduled)',
+    chronoYear: '2026+',
+    chronoIndex: 38,
+    releaseIndex: 38,
+    phase: 'Phase 6',
+    saga: 'The Multiverse Saga',
+    status: 'Official Release Date Announced',
+    director: 'Marvel Studios Production',
+    runtime: 'TBD',
+    boxOffice: 'Theatrical Release: Nov 7, 2025 / 2026',
+    poster: 'assets/images/posters/mcu_blade.jpg',
+    heroes: ['Eric Brooks (Blade / The Daywalker)', 'Black Knight (Dane Whitman)'],
+    villains: ['Vampire Underworld', 'Dracula / Varnae'],
+    teams: ['Midnight Sons'],
+    synopsis: 'The legendary half-human, half-vampire Daywalker Eric Brooks stalks the criminal underworld with his titanium sword, hunting bloodthirsty vampire covens across the shadows of the Marvel Cinematic Universe.',
+    connections: 'First heard in the post-credits scene of *Eternals* advising Dane Whitman regarding the Ebony Blade.'
+  },
+  {
+    id: 'avengersdoomsday',
+    title: 'Avengers: Doomsday',
+    releaseYear: 2026,
+    releaseDate: 'May 1, 2026',
+    chronoYear: '2026 — 2027 (Multiverse Crisis)',
+    chronoIndex: 39,
+    releaseIndex: 39,
+    phase: 'Phase 6',
+    saga: 'The Multiverse Saga',
+    status: 'Official Release Date Announced (SDCC 2024)',
+    director: 'Anthony and Joe Russo',
+    runtime: 'TBD',
+    boxOffice: 'Theatrical Release: May 1, 2026',
+    poster: 'assets/images/posters/mcu_avengersdoomsday.jpg',
+    heroes: ['Doctor Strange', 'Spider-Man', 'The Fantastic Four', 'Sam Wilson (Cap)', 'Thor', 'Thunderbolts'],
+    villains: ['Victor von Doom (Doctor Doom - Robert Downey Jr.)'],
+    teams: ['The Avengers', 'The Fantastic Four', 'Multiverse Alliance'],
+    synopsis: 'Directed by the Russo Brothers, Earth\'s Mightiest Heroes and the Fantastic Four collide with supreme Latverian monarch Victor von Doom (Robert Downey Jr.), whose mastery of cosmic science and dark magic threatens absolute multiversal annihilation.',
+    connections: 'Direct prelude to *Avengers: Secret Wars*. Features Robert Downey Jr.\'s historic return as Doctor Doom.'
+  },
+  {
+    id: 'spiderman4',
+    title: 'Spider-Man 4 (Untitled)',
+    releaseYear: 2026,
+    releaseDate: 'July 24, 2026',
+    chronoYear: '2026',
+    chronoIndex: 40,
+    releaseIndex: 40,
+    phase: 'Phase 6',
+    saga: 'The Multiverse Saga',
+    status: 'Official Release Date Announced',
+    director: 'Destin Daniel Cretton',
+    runtime: 'TBD',
+    boxOffice: 'Theatrical Release: July 24, 2026',
+    poster: 'assets/images/posters/mcu_spiderman4.jpg',
+    heroes: ['Peter Parker (Spider-Man - Tom Holland)', 'Daredevil (Matt Murdock)'],
+    villains: ['Kingpin (Wilson Fisk)', 'Venom Symbiote'],
+    teams: ['Street-Level Heroes of NYC'],
+    synopsis: 'Living in total anonymity following Doctor Strange\'s memory spell, Peter Parker navigates street-level crime in New York City with a classic cloth suit, defending the boroughs from Kingpin and supernatural crime lords.',
+    connections: 'Bridging film between *Avengers: Doomsday* and *Avengers: Secret Wars*, directed by Destin Daniel Cretton (*Shang-Chi*).'
+  },
+  {
+    id: 'avengerssecretwars',
+    title: 'Avengers: Secret Wars',
+    releaseYear: 2027,
+    releaseDate: 'May 7, 2027',
+    chronoYear: 'The End of Time (Battleworld)',
+    chronoIndex: 41,
+    releaseIndex: 41,
+    phase: 'Phase 6',
+    saga: 'The Multiverse Saga',
+    status: 'Official Release Date Announced',
+    director: 'Anthony and Joe Russo',
+    runtime: 'TBD',
+    boxOffice: 'Theatrical Release: May 7, 2027',
+    poster: 'assets/images/posters/mcu_avengerssecretwars.jpg',
+    heroes: ['All MCU & Multiverse Legacy Heroes (Avengers, X-Men, Fantastic Four, Spider-Men, Tobey, Hugh Jackman)'],
+    villains: ['God Emperor Doom / The Beyonders'],
+    teams: ['Battleworld Survivors'],
+    synopsis: 'The climactic culmination of the Multiverse Saga. Incursions collapse the entire Marvel multiverse into a singular patchwork realm known as Battleworld, where legendary heroes from every Marvel reality unite for the ultimate battle to rebirth existence.',
+    connections: 'The definitive finale of the Multiverse Saga (Phases 4–6), resetting the MCU timeline.'
+  },
+  {
+    id: 'armorwars',
+    title: 'Armor Wars',
+    releaseYear: 2027,
+    releaseDate: 'Announced (In Development)',
+    chronoYear: '2027+',
+    chronoIndex: 42,
+    releaseIndex: 42,
+    phase: 'Phase 6',
+    saga: 'The Multiverse Saga',
+    status: 'Announced Marvel Studios Feature',
+    director: 'Marvel Studios',
+    runtime: 'TBD',
+    boxOffice: 'Theatrical Release: TBD',
+    poster: 'assets/images/posters/mcu_armorwars.jpg',
+    heroes: ['Colonel James Rhodes (War Machine - Don Cheadle)', 'Riri Williams (Ironheart)'],
+    villains: ['Justin Hammer', 'Stolen Stark Tech Cartels'],
+    teams: ['US Department of Defense', 'Stark Legacy'],
+    synopsis: 'Colonel James "Rhodey" Rhodes confronts Tony Stark\'s greatest nightmare: what happens when revolutionary Stark armor technology falls into the wrong hands and sparks an international technological arms race.',
+    connections: 'Follows the revelation of Rhodey\'s identity post-*Secret Invasion* and defends the technological legacy of Tony Stark.'
   }
 ];
 
@@ -829,8 +1002,8 @@ function initTimelineToggles() {
       const orderLabel = document.getElementById('currentOrderLabel');
       if (orderLabel) {
         orderLabel.textContent = currentOrderMode === 'release' 
-          ? 'THEATRICAL RELEASE ORDER (2008 — PRESENT)' 
-          : 'MCU CHRONOLOGICAL TIMELINE (1942 — 2026+)';
+          ? 'THEATRICAL RELEASE ORDER (2008 — 2027+)' 
+          : 'MCU CHRONOLOGICAL TIMELINE (1942 — BATTLEWORLD)';
       }
 
       renderMovieGrid();
@@ -895,7 +1068,7 @@ function renderMovieGrid() {
     }
     // Search query
     if (searchQuery) {
-      const searchBlob = `${m.title} ${m.director} ${m.heroes.join(' ')} ${m.villains.join(' ')} ${m.phase} ${m.releaseYear}`.toLowerCase();
+      const searchBlob = `${m.title} ${m.director} ${m.heroes.join(' ')} ${m.villains.join(' ')} ${m.phase} ${m.releaseYear} ${m.releaseDate}`.toLowerCase();
       if (!searchBlob.includes(searchQuery)) return false;
     }
     return true;
@@ -930,18 +1103,22 @@ function renderMovieGrid() {
       ? `<span class="card-chrono-year">⏱️ ${m.chronoYear}</span>` 
       : `<span class="card-chrono-year">📅 ${m.releaseYear}</span>`;
 
+    const isUpcoming = m.status && m.status !== 'Released';
+    const statusPill = isUpcoming ? `<span style="position: absolute; bottom: 8px; left: 8px; background: rgba(0, 229, 255, 0.85); color: #04070d; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px; z-index: 5;">${m.releaseDate.split(',')[0]}</span>` : '';
+
     card.innerHTML = `
       <div class="card-poster-thumb">
-        <img src="${m.poster}" alt="${m.title} Official Theatrical Poster" loading="lazy">
+        <img src="${m.poster}" alt="${m.title} Official Poster" loading="lazy">
         <div class="card-holographic-glare"></div>
         <span class="card-phase-badge">${m.phase}</span>
         ${badgeTop}
+        ${statusPill}
       </div>
       <div class="card-content-bar">
         <h3 class="card-movie-title" title="${m.title}">${m.title}</h3>
         <div class="card-meta-row">
-          <span>${m.runtime}</span>
-          <span style="color: var(--m-cyan-arc); font-family: var(--font-mono);">${m.boxOffice}</span>
+          <span>${m.releaseDate}</span>
+          <span style="color: var(--m-cyan-arc); font-family: var(--font-mono); font-size: 10px;">${m.boxOffice}</span>
         </div>
       </div>
     `;
@@ -1020,7 +1197,7 @@ function openMovieDossier(movieId) {
   if (!modal) return;
 
   document.getElementById('dossierPosterImg').src = movie.poster;
-  document.getElementById('dossierPhasePill').textContent = movie.phase;
+  document.getElementById('dossierPhasePill').textContent = `${movie.phase} • ${movie.saga}`;
   document.getElementById('dossierChronoPill').textContent = `In-Universe: ${movie.chronoYear}`;
   document.getElementById('dossierRuntimePill').textContent = `${movie.runtime} • ${movie.releaseDate}`;
   document.getElementById('dossierTitle').textContent = movie.title;
